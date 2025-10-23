@@ -21,8 +21,10 @@
     "vite": "^5.1.4"
   },
   "devDependencies": {
+    "@tailwindcss/postcss": "^4.1.16",
     "@types/react": "^18.2.61",
     "@types/react-dom": "^18.2.19",
+    "autoprefixer": "^10.4.21",
     "eslint": "^8.57.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-prettier": "^9.1.0",
@@ -33,9 +35,10 @@
     "eslint-plugin-react": "^7.33.2",
     "eslint-plugin-react-hooks": "^4.6.0",
     "lint-staged": "^15.2.2",
+    "postcss": "^8.5.6",
     "prettier": "^3.2.5",
-    "sass": "^1.71.1",
-    "simple-git-hooks": "^2.9.0"
+    "simple-git-hooks": "^2.9.0",
+    "tailwindcss": "^4.1.16"
   },
   "simple-git-hooks": {
     "pre-commit": "pnpm precommit"
@@ -45,7 +48,7 @@
       "pnpm lint",
       "pnpm pretty"
     ],
-    "*.scss": [
+    "*.css": [
       "pnpm pretty"
     ]
   }

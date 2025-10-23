@@ -1,10 +1,8 @@
-import styles from "./Button.module.scss";
-
 const Button = ({ type, children, onClick }) => {
   return (
     <button
       type={type}
-      className={`${styles.btn} ${styles["btn-large"]}`}
+      className="outline-none border border-gdsc-blue-1 px-2 py-1 w-80"
       onClick={onClick}
     >
       {children}
