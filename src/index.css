@@ -1,8 +1,16 @@
 @import "tailwindcss";
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
+@font-face {
+  font-family: "Pokemon Solid";
+  src: url("/fonts/PokemonSolid.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 @theme {
   --font-poppins: "Poppins", sans-serif;
+  --font-pokemon: "'Pokemon Solid', sans-serif";
 
   --color-gdsc-blue-1: #4885ed;
   --color-gdsc-blue-2: #4285f4;
@@ -27,4 +35,16 @@
   padding: 0;
   box-sizing: border-box;
   font-family: var(--font-poppins);
+}
+
+/* Optional: Add base styles for better consistency */
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background-image: url("images/background.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
