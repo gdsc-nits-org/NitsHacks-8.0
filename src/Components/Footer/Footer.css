@@ -1,0 +1,245 @@
+@font-face {
+  font-family: 'PokemonFireRed';
+  src: url('/fonts/pokemon_fire_red.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+/* ========= MAIN FOOTER ========== */
+.footer {
+  width: 100%;
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  padding-top: 8rem; 
+  padding-bottom: 0rem; 
+  flex-shrink: 0;
+}
+
+.footer-container {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-family: 'PokemonFireRed', sans-serif;
+}
+
+/* ========= MAIN FLEX LAYOUT ========== */
+.footer-main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3rem; 
+  margin-bottom: 1.5rem;
+}
+
+@media (min-width: 768px) {
+  .footer-main {
+    flex-direction: row;
+    align-items: flex-start;
+  }
+}
+
+/* ========= LEFT SECTION ========== */
+.footer-left {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  order: 2;
+}
+
+@media (min-width: 768px) {
+  .footer-left {
+    align-items: flex-start;
+    order: 1;
+    transform: translateY(10px);
+    transform: translateX(30px);
+    width: 200px;
+    flex-shrink: 1; 
+  }
+}
+
+/* Visit Technoesis Button */
+.visit-technoesis-img {
+  width: 200px;
+  height: auto;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+}
+
+.visit-technoesis-img:hover {
+  transform: scale(1.05);
+}
+
+@media (min-width: 768px) {
+  .visit-technoesis-img {
+    width: 180px;
+  }
+}
+
+/* Contact Section */
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+@media (min-width: 768px) {
+  .contact-section {
+    align-items: flex-start;
+    width: 250px;
+  }
+}
+
+.contact-us-img {
+  width: 180px;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .contact-us-img {
+    width: 150px;
+  }
+}
+
+/* Social Media Icons */
+.social-icons {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+}
+
+@media (min-width: 768px) {
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Email */
+.footer-email {
+  font-size: 1rem;
+  font-weight: 500;
+font-family: 'PokemonFireRed', sans-serif;
+  color: #2d2d2d;
+}
+
+@media (min-width: 768px) {
+  .footer-email {
+    font-size: 0.875rem;
+  }
+}
+
+/* ========= CENTER SECTION ========== */
+.footer-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  order: 1;
+
+}
+
+@media (min-width: 768px) {
+  .footer-center {
+    order: 2;
+    transform: translateY(-100px);
+    flex-shrink: 0; 
+  }
+}
+
+.nits-logo {
+  width: 300px;
+  height: auto;
+}
+
+@media (min-width: 768px) {
+  .nits-logo {
+    width: 300px;
+  }
+}
+
+/* ========= RIGHT SECTION ========== */
+.footer-right {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  order: 3;
+  width: 100%;
+  max-width: 366px;
+ 
+}
+
+@media (min-width: 768px) {
+  .footer-right {
+    align-items: flex-start;
+    width: 300px;
+    flex-shrink: 1; 
+    transform: translateX(-30px);
+    transform: translateY(-20px);
+   
+  }
+}
+
+.reach-title {
+  font-size:rem;
+  font-weight: 600;
+   font-family: 'PokemonFireRed', sans-serif;
+  color: #2d2d2d;
+  margin-bottom: 0.75rem;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .reach-title {
+    font-size: 1rem;
+    text-align: left;
+  }
+}
+
+/* Google Maps Container */
+.map-container {
+  width: 200px;
+  height: 150px;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 768px) {
+  .map-container {
+    width: 200px;
+    height: 120px;
+  }
+}
+
+.map-frame {
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/* ========= BOTTOM SECTION ========== */
+.footer-bottom {
+  text-align: center;
+  border-top: 1px solid transparent;
+}
+
+.footer-bottom p {
+  font-size: 0.75rem;
+  font-weight: 500;
+font-family: 'PokemonFireRed', sans-serif;
+  color: #2d2d2d;
+  margin: 0.25rem 0;
+}
+
+@media (min-width: 768px) {
+  .footer-bottom p {
+    font-size: 0.875rem;
+  }
+}
