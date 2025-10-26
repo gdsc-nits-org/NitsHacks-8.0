@@ -36,15 +36,9 @@
   box-sizing: border-box;
   font-family: var(--font-poppins);
 }
-
-/* Optional: Add base styles for better consistency */
-html {
-  scroll-behavior: smooth;
-}
-
-body {
-  background-image: url("images/background.jpg");
-  background-size: cover;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
+@font-face {
+  font-family: "PokemonFireRed";
+  src: url("/fonts/PokemonFireRed.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
 }

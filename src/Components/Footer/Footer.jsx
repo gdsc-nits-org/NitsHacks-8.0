@@ -1,49 +1,95 @@
+import React from "react";
 import "./Footer.css";
-import { FaInstagram, FaLinkedin, FaFacebook, FaXTwitter } from "react-icons/fa6";
+
+const backgroundPattern = "/images/footerbg.png";
+const visitTechnoesisBtn = "/images/visittechno.png";
+const contactUsText = "/images/Contact Us.png";
+const instagramIcon = "/images/insta.png";
+const linkedinIcon = "/images/linkedin.png";
+const facebookIcon = "/images/facebook.png";
+const xIcon = "/images/X.png";
+const nitsHacksLogo = "/images/Nitshackslogo.png";
 
 const Footer = () => {
   return (
-    <footer className="footer">
-      <div className="footer-bg">
-        <img
-          src="/images/footer-logo.png"
-          alt="NITS Hacks 8.0 Logo"
-          className="footer-logo"
-        />
+    <footer className="footer" style={{ backgroundImage: `url(${backgroundPattern})` }}>
+      <div className="footer-container">
+        <div className="footer-main">
+          <div className="footer-left">
+            <a
+              href="https://tecnoesis.co.in/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="visit-technoesis"
+            >
+              <img
+                src={visitTechnoesisBtn}
+                alt="Visit Technoesis Button"
+                className="visit-technoesis-img"
+              />
+            </a>
 
-        <div className="bottom-section">
-          <div className="left-column">
-            <button className="visit-btn">VISIT TECHNOESIS</button>
+            <div className="contact-section">
+              <img src={contactUsText} alt="Contact Us" className="contact-us-img" />
 
-            <h2 className="contact-title">CONTACT US</h2>
-            <div className="social-icons">
-              <FaInstagram className="social-icon" />
-              <FaLinkedin className="social-icon" />
-              <FaFacebook className="social-icon" />
-              <FaXTwitter className="social-icon" />
+              <div className="social-icons">
+                <a
+                  href="https://www.instagram.com/nitshacks?igsh=MXFlbXY5azd6YTJi"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={instagramIcon} alt="Instagram" className="icon" />
+                </a>
+                <a
+                  href="https://in.linkedin.com/in/nitshacks"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={linkedinIcon} alt="LinkedIn" className="icon" />
+                </a>
+                <a
+                  href="https://www.facebook.com/NITSHacks/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={facebookIcon} alt="Facebook" className="icon" />
+                </a>
+                <a
+                  href="https://x.com/nitshacks?lang=en"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <img src={xIcon} alt="X (Twitter)" className="icon" />
+                </a>
+              </div>
+
+              <p className="footer-email">nitshacks.nits@gmail.com</p>
             </div>
-            <p className="contact-email">nitshacks.nits@gmail.com</p>
           </div>
 
-          <div className="right-column">
-            <p className="map-title">How to reach ? </p>
-            <iframe
-              title="NIT Silchar Map"
-              className="map-embed"
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3553.7686074224844!2d92.79366297544475!3d24.75713707801488!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x374ef42d0e9c3d45%3A0x7c4f9c0f2bb1d8b3!2sNational%20Institute%20of%20Technology%2C%20Silchar!5e0!3m2!1sen!2sin!4v1699105200000!5m2!1sen!2sin"
-              allowFullScreen=""
-              loading="lazy"
-              referrerPolicy="no-referrer-when-downgrade"
-            ></iframe>
+          <div className="footer-center">
+            <img src={nitsHacksLogo} alt="Nits Hacks Logo" className="nits-logo" />
+          </div>
+
+          <div className="footer-right">
+            <h3 className="reach-title">How to Reach?</h3>
+            <div className="map-container">
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3623.080553857051!2d92.79180337473419!3d24.758427077996007!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x374e49dcb63bae9b%3A0x81efa836714a289b!2sNational%20Institute%20of%20Technology%2C%20Silchar!5e0!3m2!1sen!2sin!4v1761330758712!5m2!1sen!2sin"
+                className="map-frame"
+                style={{ border: 0 }}
+                allowFullScreen=""
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+                title="NIT Silchar Location"
+              ></iframe>
+            </div>
           </div>
         </div>
 
         <div className="footer-bottom">
-          <p className="made-by">Made By GDG On Campus NIT SILCHAR</p>
-          <hr className="footer-divider" />
-          <p className="copyright">
-            © 2025, NITS Hacks 8.0, National Institute of Technology, Silchar
-          </p>
+          <p>Made By GDG On Campus NIT SILCHAR</p>
+          <p>Copyright 2025, Nits Hacks 8.0, National Institute of Technology, Silchar</p>
         </div>
       </div>
     </footer>
