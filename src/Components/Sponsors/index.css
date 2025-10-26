@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@font-face {
+  font-family: 'Pocket Monk';
+  src: url('./assets/Pocket.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+.font-pocket-monk {
+  font-family: 'Pocket Monk', sans-serif;
+}
+@font-face {
+  font-family: 'Space';
+ 
+  src: url('./assets/SpaceMono-Bold.ttf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+.font-space {
+  font-family: 'Space', sans-serif;
+}
