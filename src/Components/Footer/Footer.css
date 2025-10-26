@@ -17,7 +17,7 @@
   background: url("/src/assets/footer-bg.png") center center / cover no-repeat;
   font-family: "PocketMonk";
   color: #000;
-  padding: 3rem 1rem 2rem 1rem;
+  padding: 3rem 1rem 1rem 1rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -31,8 +31,8 @@
 }
 
 .footer-logo {
-  width: 650px;
-  max-width: 90%;
+  width: 500px;
+  max-width: 70%;
   margin-top: 150px;
 }
 
@@ -61,7 +61,11 @@
   color: white;
   font-family: "PocketMonk", cursive;
   font-size: 34px;
-  text-shadow: -2px -2px 0 black, 2px -2px 0 black, -2px 2px 0 black, 2px 2px 0 black;
+  text-shadow:
+    -2px -2px 0 black,
+    2px -2px 0 black,
+    -2px 2px 0 black,
+    2px 2px 0 black;
   border: none;
   border-radius: 25px;
   padding: 0.6rem 2rem 0.6rem 3rem;
