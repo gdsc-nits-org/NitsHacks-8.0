@@ -5,6 +5,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  padding-top: 10vh;
+  overflow-y: auto;
+  
 }
 
 .team-header {
@@ -37,11 +40,21 @@
   .team-grid {
     grid-template-columns: repeat(2, 1fr);
   }
+  .team-container{
+    padding-top: 15vh;
+    overflow-y: auto;
+  }
 }
 
 @media (min-width: 900px) {
   .team-grid {
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .team-container{
+    padding-top: 18vh;
+  }
+  .outer{
+    object-fit: fit;
   }
 }
 
@@ -49,10 +62,14 @@
   .team-grid {
     grid-template-columns: repeat(3, 1fr);
   }
+  .team-container{
+    padding-top: 35vh;
+    margin-bottom: 30vh;
+  }
 }
 .font-fire {
     font-family: "Pocket Monk", sans-serif;
-    font-size: 36px;
+    font-size: 86px;
     color: #ffeb3b;
     text-shadow:
         -2px -2px 0 #00008b,
@@ -62,4 +79,7 @@
     text-decoration: none;
     transition: all 0.3s ease;
     white-space: nowrap;
+}
+.outer {
+  object-position: top center;
 }
