@@ -7,6 +7,7 @@ export default {
       fontFamily: {
         "press-start": ['"Press Start 2P"', "cursive"], // The pixel font
         poppins: ['"Poppins"', "sans-serif"],
+        pocket: ['"Pocket Monk"', "sans-serif"],
       },
 
       // --- ADD YOUR COLORS HERE (from the design) ---

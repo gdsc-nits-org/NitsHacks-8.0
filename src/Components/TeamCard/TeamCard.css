@@ -1,0 +1,61 @@
+@font-face {
+    font-family: "Pocket Monk";
+    src: url("/fonts/PocketMonk.otf") format("opentype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: "Pokemon Fire";
+    src: url("/fonts/pokemon_fire_red.ttf") format("truetype");
+    font-weight: normal;
+    font-style: normal;
+}
+
+.font-pocket {
+    font-family: "Pocket Monk", sans-serif;
+}
+
+.font-fire {
+    font-family: "Pocket Monk", sans-serif;
+    font-size: 36px;
+    color: #ffeb3b;
+    text-shadow:
+        -2px -2px 0 #00008b,
+        2px -2px 0 #00008b,
+        -2px 2px 0 #00008b,
+        2px 2px 0 #00008b;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+.pad{
+    margin-bottom: 32px;
+}
+.padright{
+    margin-left: 15px;
+}
+
+/* Smooth animation */
+.willUp {
+  transition: transform 0.3s ease, margin-bottom 0.3s ease;
+}
+
+/* Social icons hidden by default */
+.socials {
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transition: opacity 0.3s ease, max-height 0.3s ease;
+}
+
+/* When the card is hovered */
+.relative:hover .willUp {
+  transform: translateY(-15px); /* move up */
+  margin-bottom: 10px; /* create space visually */
+}
+
+.relative:hover .socials {
+  opacity: 1;
+  max-height: 50px; /* allow space for icons */
+}
