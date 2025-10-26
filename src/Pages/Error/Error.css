@@ -1,0 +1,174 @@
+
+
+.error-container {
+  min-height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  padding: 2rem 1rem;
+}
+
+/* ========== MAIN STACK SPACING ========== */
+.main-stack {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.main-stack > :not([hidden]) ~ :not([hidden]) {
+  --tw-space-y-reverse: 0;
+  margin-top: calc(2.5rem * calc(1 - var(--tw-space-y-reverse)));
+  margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
+}
+
+
+@media (min-width: 768px) {
+  .main-stack > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(3rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(3rem * var(--tw-space-y-reverse));
+  }
+}
+
+
+@media (min-width: 1024px) {
+  .main-stack > :not([hidden]) ~ :not([hidden]) {
+    --tw-space-y-reverse: 0;
+    margin-top: calc(3.5rem * calc(1 - var(--tw-space-y-reverse)));
+    margin-bottom: calc(3.5rem * var(--tw-space-y-reverse));
+  }
+}
+
+/* ========== TEXT SECTION ========== */
+
+
+.error-text-img {
+  width: 12rem; 
+  height: auto;
+}
+@media (min-width: 768px) {
+  .error-text-img {
+    width: 14rem; /* md:w-56 */
+  }
+}
+@media (min-width: 1024px) {
+  .error-text-img {
+    width: 16rem;
+  }
+}
+
+
+.psyduck-section {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem; 
+}
+@media (min-width: 768px) {
+  .psyduck-section {
+    gap: 2rem; 
+  }
+}
+
+.psyduck-section-img-4 {
+  width: 5rem; 
+  height: auto;
+}
+@media (min-width: 768px) {
+  .psyduck-section-img-4 {
+    width: 7rem; 
+  }
+}
+@media (min-width: 1024px) {
+  .psyduck-section-img-4 {
+    width: 8rem; 
+  }
+}
+
+.psyduck-section-img-psyduck {
+  width: 7rem; 
+  height: auto;
+}
+@media (min-width: 768px) {
+  .psyduck-section-img-psyduck {
+    width: 9rem; 
+  }
+}
+@media (min-width: 1024px) {
+  .psyduck-section-img-psyduck {
+    width: 10rem; 
+  }
+}
+
+/* ========== TEAM ROCKET SECTION ========== */
+
+
+.team-rocket-img {
+  width: 100%;
+  max-width: 24rem; 
+  height: auto;
+}
+@media (min-width: 768px) {
+  .team-rocket-img {
+    max-width: 28rem; 
+  }
+}
+@media (min-width: 1024px) {
+  .team-rocket-img {
+    max-width: 32rem; 
+  }
+}
+
+/* ========== HOME BUTTON SECTION ========== */
+
+
+.home-button {
+  position: relative;
+  cursor: pointer;
+  transition: transform 200ms ease;
+  outline: none;
+}
+
+.home-button:hover {
+  transform: scale(1.05);
+}
+
+.home-button-frame {
+  width: 13rem; 
+  height: auto;
+}
+@media (min-width: 768px) {
+  .home-button-frame {
+    width: 15rem; 
+  }
+}
+@media (min-width: 1024px) {
+  .home-button-frame {
+    width: 16rem; 
+  }
+}
+
+.home-button-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 9rem; 
+  height: auto;
+}
+@media (min-width: 768px) {
+  .home-button-text {
+    width: 10rem; 
+  }
+}
+@media (min-width: 1024px) {
+  .home-button-text {
+    width: 12rem; 
+  }
+}
