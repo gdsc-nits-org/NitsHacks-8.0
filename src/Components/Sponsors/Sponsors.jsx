@@ -1,5 +1,4 @@
-import React from "react";
-import "./App.css"; // Import the CSS file with raw margin/padding
+import "./Sponsors.css"; // Import the CSS file with raw margin/padding
 import Card from "./Card.jsx";
 import AmulLogo from "../../../public/images/amul.png";
 import sponsorsImg from "../../../public/images/SPONSORS.svg";
@@ -16,9 +15,9 @@ const sponsorData = [
   { logo: AmulLogo, name: "AMUL" },
 ];
 
-const Sponsor=()=> {
+const Sponsor = () => {
   return (
-    <div className="appRoot font-sans">
+    <div id="sponsors" className="appRoot font-sans mt-80">
       <div className="appContainer">
         <button className="buttonWrapper">
           <img src={button} className="buttonImg cursor-pointer" alt="Button" />
@@ -42,6 +41,6 @@ const Sponsor=()=> {
       </div>
     </div>
   );
-}
+};
 
 export default Sponsor;

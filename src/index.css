@@ -31,13 +31,10 @@
 }
 
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: var(--font-poppins);
 }
 
-/* Optional: Add base styles for better consistency */
 html {
   scroll-behavior: smooth;
 }
