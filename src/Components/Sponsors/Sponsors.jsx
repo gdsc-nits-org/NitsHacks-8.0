@@ -1,39 +1,96 @@
-import "./Sponsors.css"; // Import the CSS file with raw margin/padding
-import Card from "./Card.jsx";
+import { useLayoutEffect, useRef } from "react";
+import { gsap } from "gsap";
+import Card from "./Card";
 import AmulLogo from "../../../public/images/amul.png";
 import sponsorsImg from "../../../public/images/SPONSORS.svg";
 import button from "../../../public/images/button.svg";
-
 const sponsorData = [
-  { logo: AmulLogo, name: "AMUL" },
-  { logo: AmulLogo, name: "AMUL" },
-  { logo: AmulLogo, name: "AMUL" },
-  { logo: AmulLogo, name: "AMUL" },
-  { logo: AmulLogo, name: "AMUL" },
-  { logo: AmulLogo, name: "AMUL" },
-  { logo: AmulLogo, name: "AMUL" },
-  { logo: AmulLogo, name: "AMUL" },
+  {
+    logo: AmulLogo,
+    name: "AMUL",
+  },
+  {
+    logo: AmulLogo,
+    name: "AMUL",
+  },
+  {
+    logo: AmulLogo,
+    name: "AMUL",
+  },
+  {
+    logo: AmulLogo,
+    name: "AMUL",
+  },
+  {
+    logo: AmulLogo,
+    name: "AMUL",
+  },
+  {
+    logo: AmulLogo,
+    name: "AMUL",
+  },
+  {
+    logo: AmulLogo,
+    name: "AMUL",
+  },
+  {
+    logo: AmulLogo,
+    name: "AMUL",
+  },
 ];
-
-const Sponsor = () => {
+const Sponsors = () => {
+  const containerRef = useRef(null);
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.matchMedia().add("(min-width: 768px)", () => {
+        gsap.fromTo(
+          ".card-item",
+          {
+            opacity: 0,
+            y: 30,
+          },
+          {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            stagger: 0.25,
+            delay: 0.4,
+          }
+        );
+      });
+    }, containerRef);
+    return () => ctx.revert();
+  }, []);
   return (
-    <div id="sponsors" className="appRoot font-sans mt-80">
-      <div className="appContainer">
-        <button className="buttonWrapper">
-          <img src={button} className="buttonImg cursor-pointer" alt="Button" />
-        </button>
-
-        <div className="sponsorHeader flex items-center justify-center mt-10">
+    <div className="min-h-screen bg-[url(../../../public/images/background.svg)] p-8 font-sans">
+      <div className="container mx-auto">
+        <button>
           <img
-            src={sponsorsImg}
-            className="sponsorHeaderImg w-full max-w-md"
-            alt="Sponsors"
+            src={button}
+            alt="Go back"
+            className="w-30 md:w-48 md:ml-9 cursor-pointer"
           />
+        </button>
+        <div className="flex items-center justify-center mt-10">
+          <img src={sponsorsImg} className="w-full max-w-md" alt="Sponsors" />
         </div>
-
-        <div className="sponsorGrid grid grid-cols-2 gap-y-27 md:grid-cols-3 lg:grid-cols-4 gap-x-4 lg:gap-y-14 md:gap-y-23 mt-16">
+        <div
+          ref={containerRef}
+          className="mt-21 md:mt-16 
+            flex flex-row gap-x-4 overflow-x-auto py-4 no-scrollbar 
+            md:grid md:grid-cols-3 lg:grid-cols-4 
+            md:gap-x-4 md:gap-y-23 lg:gap-y-14 
+            md:overflow-visible md:py-0"
+        >
           {sponsorData.map((sponsor, index) => (
-            <div key={index} className="sponsorCard">
+            <div
+              className={`
+                card-item
+                shrink-0 basis-[calc(50%-0.5rem)] 
+                md:basis-auto md:w-auto 
+                ${index % 2 === 1 ? "mt-38 md:mt-8" : ""}
+              `}
+            >
               <Card logoImage={sponsor.logo} sponsorName={sponsor.name} />
             </div>
           ))}
@@ -43,4 +100,4 @@ const Sponsor = () => {
   );
 };
 
-export default Sponsor;
+export default Sponsors;
