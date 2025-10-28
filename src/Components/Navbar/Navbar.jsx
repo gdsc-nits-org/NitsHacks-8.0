@@ -35,7 +35,7 @@ const Navbar = () => {
         <a href="#sponsors" className="navbar-link">
           Sponsors
         </a>
-        <a href="#team" className="navbar-link">
+        <a href="team" className="navbar-link">
           Teams
         </a>
       </div>
