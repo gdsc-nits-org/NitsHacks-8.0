@@ -29,16 +29,39 @@
   --color-grey-text: rgba(101, 108, 115, 1);
   --color-grey-text-70: rgba(101, 108, 115, 0.7);
 }
+@font-face {
+  font-family: "Pocket Monk";
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: var(--font-poppins);
+  src: url("../public/fonts/PocketMonk.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-pocket-monk {
+  font-family: "Pocket Monk", sans-serif;
+}
+@font-face {
+  font-family: "Space";
+
+  src: url("../public/fonts/SpaceMono-Bold.ttf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.font-space {
+  font-family: "Space", sans-serif;
 }
 @font-face {
   font-family: "PokemonFireRed";
   src: url("/fonts/PokemonFireRed.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
