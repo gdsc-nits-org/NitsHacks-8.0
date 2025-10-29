@@ -1,9 +1,9 @@
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Card from "./Card";
-import AmulLogo from "/public/images/amul.png";
-import sponsorsImg from "/public/images/SPONSORS.svg";
-import button from "/public/images/button.svg";
+import AmulLogo from "../../../public/images/amul.png";
+import sponsorsImg from "../../../public/images/SPONSORS.svg";
+import button from "../../../public/images/button.svg";
 const sponsorData = [
   {
     logo: AmulLogo,

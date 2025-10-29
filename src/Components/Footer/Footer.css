@@ -7,10 +7,23 @@
 /* ========= MAIN FOOTER ========== */
 .footer {
   width: 100%;
-  background: url("/images/footer-bg.png") center center / cover no-repeat;
-  font-family: "PocketMonk";
-  color: #000;
-  padding: 3rem 1rem 1rem 1rem;
+  background-size: cover;
+  background-position: center;
+  background-repeat: repeat;
+  padding-top: 8rem;
+  padding-bottom: 0rem;
+  flex-shrink: 0;
+}
+
+.footer-container {
+  max-width: 2000px;
+  margin: 0 auto;
+  padding: 0 1rem;
+  font-family: "PokemonFireRed", sans-serif;
+}
+
+/* ========= MAIN FLEX LAYOUT ========== */
+.footer-main {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -102,16 +115,19 @@
   height: 30px;
 }
 
-.visit-btn::before {
-  content: "";
-  position: absolute;
-  left: -10%;
-  top: 50%;
-  transform: translateY(-50%);
-  width: 80px;
-  height: 70px;
-  background: url("/images/footerPoke.png") no-repeat center center;
-  background-size: contain;
+@media (min-width: 768px) {
+  .icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+/* Email */
+.footer-email {
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: "PokemonFireRed", sans-serif;
+  color: #2d2d2d;
 }
 
 @media (min-width: 768px) {

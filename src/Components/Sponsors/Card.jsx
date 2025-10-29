@@ -1,5 +1,5 @@
 import firstPokemon from "../../../public/images/pokeball.svg";
-import pokeball1 from "../../../public/images/pokeball1.svg"
+import pokeball1 from "../../../public/images/pokeball1.svg";
 import pokeball2 from "../../../public/images/pokeball2.svg";
 import pokeball3 from "../../../public/images/pokeball3.svg";
 const Card = ({ logoImage, sponsorName }) => {
