@@ -2,7 +2,7 @@ import { Routes, Route } from "react-router-dom";
 
 import { Home, Error } from "./Pages";
 
-import { Navbar, Footer } from "./Components";
+import { Navbar, About , Footer  } from "./Components";
 
 const App = () => {
   return (
@@ -11,6 +11,7 @@ const App = () => {
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Error />} />
+         <Route path="/About" element={<About />} />
       </Routes>
       <Footer />
     </>
