@@ -7,12 +7,13 @@ import { Navbar, About, Footer } from "./Components";
 const App = () => {
   return (
     <>
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="*" element={<Error />} />
+         <Route path="/loader" element={<Loader />} />
       </Routes>
-      <Footer />
+      {/* <Footer /> */}
     </>
   );
 };
