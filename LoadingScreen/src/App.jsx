@@ -1,4 +1,4 @@
-
+import  PokemonDashboard from "./components/Navigation.jsx"
 
 import LoadingScreen from "./components/loading.jsx"
 function App() {
@@ -7,7 +7,7 @@ function App() {
   return (
     <>
  
-   <LoadingScreen/>
+   <PokemonDashboard/>
     </>
   )
 }
