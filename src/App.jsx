@@ -2,18 +2,18 @@ import { Routes, Route } from "react-router-dom";
 
 import { Home, Error } from "./Pages";
 
-import { Navbar, About, Footer } from "./Components";
+import { Navbar, Footer } from "./Components";
 
 const App = () => {
   return (
     <>
-      {/* <Navbar /> */}
+      <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
+        {/* <Route path="/faq" element={<Home />} /> */}
         <Route path="*" element={<Error />} />
-         <Route path="/loader" element={<Loader />} />
       </Routes>
-      {/* <Footer /> */}
+      <Footer />
     </>
   );
 };

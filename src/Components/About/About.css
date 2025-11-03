@@ -18,7 +18,6 @@
 .about-container {
   background: url("/images/aboutBG.png") center/cover no-repeat;
   min-height: 100vh;
-  padding: 3.75rem 6.25rem;
   font-family: "IBM", monospace;
   color: white;
   box-sizing: border-box;
@@ -63,7 +62,6 @@
   line-height: 1.75;
   padding: 1.25rem 1.5rem;
   text-align: justify;
-  letter-spacing: 0.0125rem;
 }
 
 .highlight {
@@ -190,10 +188,6 @@
 
 /* Large Tablets and Small Desktops (1024px - 1200px) */
 @media (max-width: 1200px) {
-  .about-container {
-    padding: 3rem 4rem;
-  }
-
   .about-heading {
     font-size: 2.5rem;
     letter-spacing: 0.5rem;
@@ -206,12 +200,8 @@
 
 /* Tablets (768px - 1024px) */
 @media (max-width: 1024px) {
-  .about-container {
-    padding: 2.5rem 3rem;
-  }
-
   .about-heading {
-    font-size: 2rem;
+    font-size: 2.5rem;
     letter-spacing: 0.4rem;
   }
 
@@ -220,7 +210,7 @@
   }
 
   .about-text {
-    font-size: 0.95rem;
+    font-size: 1.35rem;
     padding: 1rem 1.25rem;
   }
 
@@ -280,10 +270,6 @@
 
 /* Mobile Landscape and Small Tablets (640px - 768px) */
 @media (max-width: 768px) {
-  .about-container {
-    padding: 2rem 1.5rem;
-  }
-
   .about-heading {
     font-size: 1.75rem;
     letter-spacing: 0.3rem;
@@ -362,10 +348,6 @@
 
 /* Mobile Portrait (480px - 640px) */
 @media (max-width: 640px) {
-  .about-container {
-    padding: 1.5rem 1rem;
-  }
-
   .about-heading {
     font-size: 1.5rem;
     letter-spacing: 0.2rem;
@@ -376,7 +358,7 @@
   }
 
   .about-text {
-    font-size: 0.85rem;
+    font-size: 1.5rem;
     padding: 0.5rem 0.75rem;
   }
 
@@ -437,12 +419,8 @@
 
 /* Small Mobile (320px - 480px) */
 @media (max-width: 480px) {
-  .about-container {
-    padding: 1rem 0.75rem;
-  }
-
   .about-heading {
-    font-size: 1.25rem;
+    font-size: 1.75rem;
     letter-spacing: 0.15rem;
   }
 
@@ -453,8 +431,8 @@
 
   .about-text {
     font-size: 0.8rem;
-    padding: 0.4rem 0.5rem;
     line-height: 1.5;
+    text-align: justify;
   }
 
   /* Brochure Banner 1 */
@@ -524,10 +502,6 @@
 
 /* Extra Small Mobile (below 320px) */
 @media (max-width: 320px) {
-  .about-container {
-    padding: 0.75rem 0.5rem;
-  }
-
   .about-heading {
     font-size: 1rem;
     letter-spacing: 0.1rem;

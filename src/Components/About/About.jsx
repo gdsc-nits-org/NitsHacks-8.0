@@ -1,9 +1,8 @@
-import React from "react";
 import "./About.css";
 
 const About = () => {
   return (
-    <div className="about-container">
+    <div className="about-container pt-24 pb-16 px-8 md:px-16 lg:px-24 lg:pt-32 lg:pb-24">
       {/* NITS HACKS SECTION */}
       <section className="about-section">
         <h2 className="about-heading">ABOUT NITS HACKS</h2>

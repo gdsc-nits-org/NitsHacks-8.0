@@ -17,7 +17,8 @@
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 0 50px;
-  position: relative;
+  position: fixed;
+  z-index: 100;
 }
 
 .navbar-logo-container {
