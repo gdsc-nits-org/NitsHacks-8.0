@@ -1,0 +1,199 @@
+body, html {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+@font-face {
+  font-family: 'Pocket Monk';
+  src: url('/fonts/PocketMonk.otf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.navbar-container {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 300px;
+  width: 100%;
+  height: 92px;
+  background-color: #d6e6f2;
+  border: 4px solid #444;
+  border-radius: 25px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  padding: 0 50px;
+  position: relative;
+}
+
+.navbar-logo-container {
+  display: flex;
+  align-items: center;
+  flex-shrink: 0;
+}
+
+.navbar-logo {
+  width: 96px;
+  height: 80px;
+  object-fit: contain;
+}
+
+.navbar-links-container-desktop {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  height: 42px;
+  gap: 100px;
+  flex-wrap: nowrap;
+}
+
+.navbar-link {
+  font-family: 'Pocket Monk', sans-serif;
+  font-size: 36px;
+  color: #ffeb3b;
+  text-shadow: -2px -2px 0 #00008b, 2px -2px 0 #00008b, -2px 2px 0 #00008b, 2px 2px 0 #00008b;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  white-space: nowrap;
+}
+
+.navbar-link:hover {
+  color: #fff;
+  transform: scale(1.05);
+}
+
+.navbar-toggle {
+  display: none;
+}
+
+.mobile-menu-container {
+  display: none;
+}
+
+.mobile-nav-link-button {
+  display: none;
+}
+
+@media (max-width: 1280px) {
+  .navbar-container {
+    justify-content: space-between;
+    padding: 0 30px;
+    gap: 0;
+    background-color: #b0d0f0;
+    background-image: none;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    height: 80px;
+  }
+
+  .navbar-links-container-desktop {
+    display: none;
+  }
+
+  .navbar-toggle {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    width: 40px;
+    height: 30px;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    z-index: 110;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar-toggle .bar {
+    width: 100%;
+    height: 4px;
+    background-color: white;
+    border-radius: 2px;
+    transition: all 0.3s ease-in-out;
+  }
+
+  .navbar-toggle.open .bar:nth-child(1) {
+    transform: rotate(45deg) translate(8px, 8px);
+  }
+
+  .navbar-toggle.open .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .navbar-toggle.open .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(8px, -8px);
+  }
+
+  .mobile-menu-container {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: #000;
+    z-index: 100;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 150px;
+    gap: 25px;
+    overflow-y: auto;
+  }
+
+  .mobile-menu-container.show {
+    display: flex;
+  }
+
+  .mobile-menu-logo-container {
+    position: absolute;
+    top: 25px;
+    left: 30px;
+  }
+
+  .mobile-nav-link-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 5px solid #fff;
+    outline: 5px solid white;
+    outline-offset: -5px;
+    width: 80%;
+    max-width: 350px;
+    min-height: 70px;
+    background-color: #b0d0f0;
+    text-decoration: none;
+    transition: all 0.1s ease-out;
+    box-sizing: border-box;
+  }
+
+  .mobile-nav-link-button:active {
+    transform: translateY(2px);
+    box-shadow: none;
+  }
+
+  .mobile-nav-link-text {
+    font-family: 'Pocket Monk', sans-serif;
+    font-size: 36px;
+    color: black;
+    text-decoration: none;
+    white-space: nowrap;
+    padding: 0 10px;
+  }
+}
+
+@media (max-width: 767px) {
+  .navbar-container {
+    padding: 0 20px;
+    height: 70px;
+  }
+
+  .mobile-menu-logo-container {
+    top: 20px;
+    left: 20px;
+  }
+
+  .mobile-nav-link-text {
+    font-size: 30px;
+  }
+}
