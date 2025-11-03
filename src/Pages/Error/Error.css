@@ -1,5 +1,3 @@
-
-
 .error-container {
   min-height: 100vh;
   width: 100%;
@@ -27,7 +25,6 @@
   margin-bottom: calc(2.5rem * var(--tw-space-y-reverse));
 }
 
-
 @media (min-width: 768px) {
   .main-stack > :not([hidden]) ~ :not([hidden]) {
     --tw-space-y-reverse: 0;
@@ -35,7 +32,6 @@
     margin-bottom: calc(3rem * var(--tw-space-y-reverse));
   }
 }
-
 
 @media (min-width: 1024px) {
   .main-stack > :not([hidden]) ~ :not([hidden]) {
@@ -47,9 +43,8 @@
 
 /* ========== TEXT SECTION ========== */
 
-
 .error-text-img {
-  width: 12rem; 
+  width: 12rem;
   height: auto;
 }
 @media (min-width: 768px) {
@@ -63,70 +58,67 @@
   }
 }
 
-
 .psyduck-section {
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 1rem; 
+  gap: 1rem;
 }
 @media (min-width: 768px) {
   .psyduck-section {
-    gap: 2rem; 
+    gap: 2rem;
   }
 }
 
 .psyduck-section-img-4 {
-  width: 5rem; 
+  width: 5rem;
   height: auto;
 }
 @media (min-width: 768px) {
   .psyduck-section-img-4 {
-    width: 7rem; 
+    width: 7rem;
   }
 }
 @media (min-width: 1024px) {
   .psyduck-section-img-4 {
-    width: 8rem; 
+    width: 8rem;
   }
 }
 
 .psyduck-section-img-psyduck {
-  width: 7rem; 
+  width: 7rem;
   height: auto;
 }
 @media (min-width: 768px) {
   .psyduck-section-img-psyduck {
-    width: 9rem; 
+    width: 9rem;
   }
 }
 @media (min-width: 1024px) {
   .psyduck-section-img-psyduck {
-    width: 10rem; 
+    width: 10rem;
   }
 }
 
 /* ========== TEAM ROCKET SECTION ========== */
 
-
 .team-rocket-img {
   width: 100%;
-  max-width: 24rem; 
+  max-width: 24rem;
   height: auto;
 }
 @media (min-width: 768px) {
   .team-rocket-img {
-    max-width: 28rem; 
+    max-width: 28rem;
   }
 }
 @media (min-width: 1024px) {
   .team-rocket-img {
-    max-width: 32rem; 
+    max-width: 32rem;
   }
 }
 
 /* ========== HOME BUTTON SECTION ========== */
-
 
 .home-button {
   position: relative;
@@ -140,17 +132,17 @@
 }
 
 .home-button-frame {
-  width: 13rem; 
+  width: 13rem;
   height: auto;
 }
 @media (min-width: 768px) {
   .home-button-frame {
-    width: 15rem; 
+    width: 15rem;
   }
 }
 @media (min-width: 1024px) {
   .home-button-frame {
-    width: 16rem; 
+    width: 16rem;
   }
 }
 
@@ -159,16 +151,16 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 9rem; 
+  width: 9rem;
   height: auto;
 }
 @media (min-width: 768px) {
   .home-button-text {
-    width: 10rem; 
+    width: 10rem;
   }
 }
 @media (min-width: 1024px) {
   .home-button-text {
-    width: 12rem; 
+    width: 12rem;
   }
 }

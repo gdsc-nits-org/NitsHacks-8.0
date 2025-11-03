@@ -1,9 +1,9 @@
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Card from "./Card";
-import AmulLogo from "/public/images/amul.png";
-import sponsorsImg from "/public/images/SPONSORS.svg";
-import button from "/public/images/button.svg";
+import AmulLogo from "../../../public/images/amul.png";
+import sponsorsImg from "../../../public/images/SPONSORS.svg";
+import button from "../../../public/images/button.svg";
 const sponsorData = [
   {
     logo: AmulLogo,
@@ -64,13 +64,13 @@ const Sponsors = () => {
   return (
     <div className="min-h-screen bg-[url(../../../public/images/background.svg)] p-8 font-sans">
       <div className="container mx-auto">
-        <button>
+        {/* <button>
           <img
             src={button}
             alt="Go back"
             className="w-30 md:w-48 md:ml-9 cursor-pointer"
           />
-        </button>
+        </button> */}
         <div className="flex items-center justify-center mt-10">
           <img src={sponsorsImg} className="w-full max-w-md" alt="Sponsors" />
         </div>
