@@ -25,7 +25,7 @@ const trackData = {
   },
 };
 
-function aboutEvents() {
+function AboutEvents() {
   const container = useRef();
   const dexLeft = useRef();
   const dexRight = useRef();
@@ -401,5 +401,5 @@ function aboutEvents() {
     </div>
   );
 }
-export default aboutEvents;
+export default AboutEvents;
 
