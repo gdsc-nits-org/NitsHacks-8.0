@@ -1,14 +1,14 @@
 import { useRef, useState, useEffect } from "react";
 import { useGSAP } from "@gsap/react";
 import gsap from "gsap";
-import back from "./assets/back.svg";
-import softwareGame from "./assets/softwareGame.png";
-import codingGame from "./assets/codingGame.png";
-import uiuxGame from "./assets/uiuxGame.png";
-import dex1 from "./assets/dex1.png";
-import dex2 from "./assets/dex2.png";
-import updex from "./assets/updex.png";
-import downdex from "./assets/downdex.png";
+import back from "../../../public/images/back.svg";
+import softwareGame from "../../../public/images/softwareGame.png";
+import codingGame from "../../../public/images/codingGame.png";
+import uiuxGame from "../../../public/images/uiuxGame.png";
+import dex1 from "../../../public/images/dex1.png";
+import dex2 from "../../../public/images/dex2.png";
+import updex from "../../../public/images/updex.png";
+import downdex from "../../../public/images/downdex.png";
 
 const trackData = {
   software: {
@@ -304,7 +304,7 @@ function aboutEvents() {
   return (
     <div
       ref={container}
-      className="min-h-screen w-full bg-[url(./assets/Software.jpg)] md:bg-[url(./assets/newsoft.jpg)] bg-cover bg-center pt-27 md:p-8 lg:p-16 overflow-x-hidden"
+      className="min-h-screen w-full bg-[url(../../../public/images/Software.jpg)] md:bg-[url(../../../public/images/newsoft.jpg)] bg-cover bg-center pt-27 md:p-8 lg:p-16 overflow-x-hidden"
     >
       <button
         ref={backButtonRef}
