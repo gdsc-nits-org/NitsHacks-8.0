@@ -1,0 +1,37 @@
+[
+  {
+    "id": 1,
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1728832933/WhatsApp_Image_2024-10-13_at_20.44.27_c075d8f0_xtrjic.webp",
+    "name": "Samarjit Roy",
+    "TrackParticipated": "UI/UX Track",
+    "desc": "NITS Hacks provided an incredible platform to challenge my creative and problem-solving skills in UI/UX. The intense competition and collaborative environment pushed me to innovate, and winning the track was a proud moment. It’s an amazing event for anyone looking to grow and showcase their talents."
+  },
+  {
+    "id": 2,
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1728833010/Screenshot_2024-10-10-23-36-39-86_254de13a4bc8758c9908fff1f73e3725_-_012__Gracie_clwnzp.webp",
+    "name": "Gracie G Rabha ",
+    "TrackParticipated": "UI/UX Track",
+    "desc": "I'm thrilled to share my journey as the runner-up in the UI/UX track at NITS Hacks 6.0, where I designed a fun and engaging app showcasing Super Mario's adventures. This experience allowed me to refine my UI/UX skills, tackle creative challenges, and develop solutions for a seamless user experience."
+  },
+  {
+    "id": 3,
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1728832975/0tuls4zt_-_Amit_Ranjan_Das_reigia.webp",
+    "name": "Amit Ranjan Das",
+    "TrackParticipated": "Software Track",
+    "desc": "We, the Team Binary Pixel Labs (BPL) would like to extend our heartfelt gratitude to the organizers of NITS HACK 6.0, for hosting such an incredible event. The hackathon provided an exceptional platform for innovation, collaboration, and skill development, allowing participants to push their creative boundaries and tackle real-world challenges."
+  },
+  {
+    "id": 4,
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/v1728832957/IMG-20221111-WA0020_2_-_Rajdeep_Sarkar_wzjmfy.webp",
+    "name": "Rajdeep Sarkar ",
+    "TrackParticipated": "UI/UX Track",
+    "desc": "I’m proud to have won the UI/UX track at NITS Hacks 6.0 with my Super Mario-themed app! The project helped me sharpen my design skills and create a fun, easy-to-use experience. Grateful to Nits Hacks 6.0, NIT Silchar, for the chance. Excited for what’s next!"
+  },
+  {
+    "id": 5,
+    "image": "https://res.cloudinary.com/dtt4ftdrw/image/upload/w_1000,c_fill,ar_1:1,g_auto,r_max,bo_5px_solid_red,b_rgb:262c35/v1728832944/IMG-20241012-WA0011_-_Sohail_Kazi_puxfeb.webp",
+    "name": "Sohail Kazi",
+    "TrackParticipated": "Software Track",
+    "desc": "Good competition and interesting problem statements. Received the prize money within a few weeks."
+  }
+]
