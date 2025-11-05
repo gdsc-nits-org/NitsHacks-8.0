@@ -2,6 +2,8 @@ import { useState, useEffect } from "react";
 
 const Timeline = () => {
   const [currentDay, setCurrentDay] = useState(1);
+  const [isAnimating, setIsAnimating] = useState(false);
+  const [characterPosition, setCharacterPosition] = useState({ x: 15, y: 85 });
 
   // Define the path coordinates as percentages for responsiveness
   const days = [
@@ -10,26 +12,68 @@ const Timeline = () => {
     { id: 3, label: "DAY 3", x: 70, y: 15, color: "gray" },
     { id: 4, label: "DAY 4", x: 88, y: 52, color: "yellow" },
   ];
+  // Complete path with all waypoints
+
+  const fullPath = [
+    { x: 15, y: 85 }, // Day 1
+    { x: 15, y: 28 }, // Day 2
+    { x: 50, y: 28 }, // Waypoint
+    { x: 50, y: 15 }, // Waypoint
+    { x: 70, y: 15 }, // Day 3
+    { x: 70, y: 52 }, // Waypoint
+    { x: 88, y: 52 }, // Day 4
+  ];
+  // Map day IDs to path indices
+
+  const dayToPathIndex = {
+    1: 0,
+    2: 1,
+    3: 4,
+    4: 6,
+  };
 
   // Path segments connecting the days (only vertical and horizontal)
   const pathSegments = [
-    // Day 1 to Day 2 (vertical)
     { x1: 15, y1: 85, x2: 15, y2: 28 },
-    // Day 2 turn right (horizontal)
     { x1: 15, y1: 28, x2: 50, y2: 28 },
-    // Turn up to Day 3 level (vertical)
     { x1: 50, y1: 28, x2: 50, y2: 15 },
-    // Continue right to Day 3 (horizontal)
     { x1: 50, y1: 15, x2: 70, y2: 15 },
-    // Day 3 to intermediate point (vertical down)
     { x1: 70, y1: 15, x2: 70, y2: 52 },
-    // Final segment to Day 4 (horizontal)
     { x1: 70, y1: 52, x2: 88, y2: 52 },
   ];
 
+  const animateCharacter = (targetDay) => {
+    if (isAnimating) return;
+
+    setIsAnimating(true);
+    const startIndex = dayToPathIndex[currentDay];
+    const endIndex = dayToPathIndex[targetDay];
+
+    // Determine direction and get path points
+    const pathPoints =
+      startIndex < endIndex
+        ? fullPath.slice(startIndex, endIndex + 1)
+        : fullPath.slice(endIndex, startIndex + 1).reverse();
+
+    let currentPointIndex = 0;
+
+    const moveToNextPoint = () => {
+      if (currentPointIndex < pathPoints.length) {
+        setCharacterPosition(pathPoints[currentPointIndex]);
+        currentPointIndex++;
+        setTimeout(moveToNextPoint, 300); // 300ms per segment
+      } else {
+        setIsAnimating(false);
+        setCurrentDay(targetDay);
+      }
+    };
+
+    moveToNextPoint();
+  };
+
   const handleDayClick = (dayId) => {
-    if (dayId <= currentDay + 1) {
-      setCurrentDay(dayId);
+    if (!isAnimating && dayId !== currentDay) {
+      animateCharacter(dayId);
     }
   };
 
@@ -127,10 +171,10 @@ const Timeline = () => {
 
         {/* Player character (on current day) */}
         <div
-          className="absolute w-8 h-8 md:w-10 md:h-10 transform -translate-x-1/2 translate-y-8 md:translate-y-12 z-30 transition-all duration-500"
+          className="absolute w-8 h-8 md:w-10 md:h-10 transform -translate-x-1/2 -translate-y-1/2 z-30 transition-all duration-300 ease-linear"
           style={{
-            left: `${days[currentDay - 1].x}%`,
-            top: `${days[currentDay - 1].y}%`,
+            left: `${characterPosition.x}%`,
+            top: `${characterPosition.y}%`,
           }}
         >
           <div className="relative w-full h-full flex items-center justify-center">
