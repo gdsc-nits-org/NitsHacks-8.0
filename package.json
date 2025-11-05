@@ -14,6 +14,7 @@
     "prepare": "simple-git-hooks"
   },
   "dependencies": {
+    "@gsap/react": "^2.1.2",
     "@vitejs/plugin-react": "^4.2.1",
     "gsap": "^3.13.0",
     "lucide-react": "^0.552.0",
@@ -21,6 +22,7 @@
     "react-dom": "^18.2.0",
     "react-fast-marquee": "^1.6.5",
     "react-icons": "^5.5.0",
+    "react-responsive": "^10.0.1",
     "react-router-dom": "^6.22.2",
     "vite": "^5.1.4"
   },

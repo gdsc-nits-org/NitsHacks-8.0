@@ -1,6 +1,6 @@
 import { Routes, Route } from "react-router-dom";
 
-import { Home, Error } from "./Pages";
+import { Home, Error, Tracks } from "./Pages";
 
 import { Navbar, Footer } from "./Components";
 
@@ -10,7 +10,7 @@ const App = () => {
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
-        {/* <Route path="/faq" element={<Home />} /> */}
+        <Route path="/tracks" element={<Tracks />} />
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />

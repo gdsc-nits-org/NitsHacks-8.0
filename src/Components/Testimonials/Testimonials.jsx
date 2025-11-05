@@ -3,7 +3,7 @@ import testinomialsData from "../../assets/testimonials.json";
 import TestimonialCard from "./TestimonialCard";
 const Testimonials = () => {
   return (
-    <section className="w-screen bg-[url('/images/testimonials/testimonialsBG.png')] bg-cover bg-center py-20">
+    <section className="w-screen max-w-screen overflow-hidden bg-[url('/images/testimonials/testimonialsBG.png')] bg-cover bg-center py-20">
       <h1 className="text-center text-[#FFCB02] font-pocket-monk text-4xl lg:text-6xl mb-4 md:mb-12">
         Testimonails
       </h1>

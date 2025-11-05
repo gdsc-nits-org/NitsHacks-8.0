@@ -17,25 +17,25 @@ const Navbar = () => {
   const handleLinkClick = () => setIsMenuOpen(false);
 
   return (
-    <nav className="navbar-container">
+    <nav className="navbar-container max-w-screen">
       <div className="navbar-logo-container">
         <img src={nitsHacksLogo} alt="NITS HACKS Logo" className="navbar-logo" />
       </div>
 
       <div className="navbar-links-container-desktop">
-        <a href="#home" className="navbar-link">
+        <a href="/#home" className="navbar-link">
           Home
         </a>
-        <a href="#tracks" className="navbar-link">
+        <a href="/tracks" className="navbar-link">
           Tracks
         </a>
-        <a href="#timeline" className="navbar-link">
+        <a href="/timeline" className="navbar-link">
           Timeline
         </a>
-        <a href="#sponsors" className="navbar-link">
+        <a href="/#sponsors" className="navbar-link">
           Sponsors
         </a>
-        <a href="#team" className="navbar-link">
+        <a href="/team" className="navbar-link">
           Teams
         </a>
       </div>
@@ -57,19 +57,19 @@ const Navbar = () => {
           <img src={nitsHacksLogo} alt="NITS HACKS Logo" className="navbar-logo" />
         </div>
 
-        <MobileNavLink href="#home" onClick={handleLinkClick}>
+        <MobileNavLink ink href="/#home" onClick={handleLinkClick}>
           Home
         </MobileNavLink>
-        <MobileNavLink href="#tracks" onClick={handleLinkClick}>
+        <MobileNavLink href="/tracks" onClick={handleLinkClick}>
           Tracks
         </MobileNavLink>
-        <MobileNavLink href="#timeline" onClick={handleLinkClick}>
+        <MobileNavLink href="/timeline" onClick={handleLinkClick}>
           Timeline
         </MobileNavLink>
-        <MobileNavLink href="#sponsors" onClick={handleLinkClick}>
+        <MobileNavLink href="/#sponsors" onClick={handleLinkClick}>
           Sponsors
         </MobileNavLink>
-        <MobileNavLink href="#team" onClick={handleLinkClick}>
+        <MobileNavLink href="/team" onClick={handleLinkClick}>
           Teams
         </MobileNavLink>
       </div>

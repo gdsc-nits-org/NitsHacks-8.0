@@ -62,7 +62,10 @@ const Sponsors = () => {
     return () => ctx.revert();
   }, []);
   return (
-    <div className="min-h-screen bg-[url(../../../public/images/background.svg)] p-8 font-sans">
+    <div
+      id="sponsors"
+      className="min-h-screen bg-[url(../../../public/images/background.svg)] p-8 font-sans"
+    >
       <div className="container mx-auto">
         {/* <button>
           <img

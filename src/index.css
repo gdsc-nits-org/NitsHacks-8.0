@@ -35,16 +35,39 @@
   font-weight: normal;
   font-style: normal;
 }
+@font-face {
+  font-family: "Pokemon Solid";
+  src: url("../public/fonts/PokemonSolid.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pokemon Fire Red";
+  src: url("/fonts/pokemon_fire_red.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
+.font-pokemon-fire-red {
+  font-family: "Pokemon Fire Red", sans-serif;
+}
 .font-pocket-monk {
   font-family: "Pocket Monk", sans-serif;
 }
+.font-pokemon-solid {
+  font-family: "Pokemon Solid", sans-serif;
+}
 @font-face {
   font-family: "Space";
-
-  src: url("../public/fonts/SpaceMono-Bold.ttf") format("opentype");
+  src: url("../public/fonts/SpaceMono-Bold.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
+}
+@layer utilities {
+  .text-stroke-black {
+    -webkit-text-stroke: 1px black;
+    paint-order: stroke fill;
+  }
 }
 
 .font-space {
