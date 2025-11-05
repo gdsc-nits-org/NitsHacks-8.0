@@ -7,7 +7,6 @@ export default {
       fontFamily: {
         "press-start": ['"Press Start 2P"', "cursive"], // The pixel font
         poppins: ['"Poppins"', "sans-serif"],
-        "pokemon-fire-red": ['"Pokemon Fire Red"', "sans-serif"],
       },
 
       colors: {},

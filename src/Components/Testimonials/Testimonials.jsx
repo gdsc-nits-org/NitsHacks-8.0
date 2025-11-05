@@ -8,9 +8,9 @@ const Testimonials = () => {
         Testimonails
       </h1>
       <Marquee speed={100} direction="left" gradientColor="transparent">
-        {testinomialsData.map((testimonial, index) => (
+        {testinomialsData.map((testimonial) => (
           <TestimonialCard
-            key={index}
+            key={testimonial.id}
             image={testimonial.image}
             name={testimonial.name}
             trackParticipated={testimonial.TrackParticipated}

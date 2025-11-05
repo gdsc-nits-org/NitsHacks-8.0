@@ -1,10 +1,9 @@
 import React, { useEffect } from "react";
-import { gsap, SteppedEase } from "gsap";
+import { gsap } from "gsap";
 import "./Loader.css";
 
 const Loader = () => {
-
-    useEffect(() => {
+  useEffect(() => {
     gsap.to(".background-layer.ground", {
       backgroundPositionX: "-2048px",
       ease: "none",
@@ -32,12 +31,12 @@ const Loader = () => {
           style={{ backgroundImage: "url('/images/grass.png')" }}
         ></div>
         <div className="center-content">
-        <div className="comingContainer">
-          <img src="/images/clouds1.png" className="clouds1" id="cloud1" alt="clouds" />
-          <img src="/images/logo.png" className="logo" alt="logo" />
-          <img src="/images/clouds1.png" className="clouds2" id="cloud2" alt="clouds" />
-        </div>
-          
+          <div className="comingContainer">
+            <img src="/images/clouds1.png" className="clouds1" id="cloud1" alt="clouds" />
+            <img src="/images/logo.png" className="logo" alt="logo" />
+            <img src="/images/clouds1.png" className="clouds2" id="cloud2" alt="clouds" />
+          </div>
+
           <div className="character-container">
             <img
               className="character-pikachu"
@@ -50,12 +49,11 @@ const Loader = () => {
               alt="Character on bike"
             />
           </div>
-          
         </div>
-        
-  <div class="loader-container">
-    <div class="loader-bar"></div>
-  </div>
+
+        <div className="loader-container">
+          <div className="loader-bar"></div>
+        </div>
       </div>
     </section>
   );

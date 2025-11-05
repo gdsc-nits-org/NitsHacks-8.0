@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Navbar.css";
-import nitsHacksLogo from "/images/nits-hacks-logo.png";
+// import nitsHacksLogo from "../../../images/nits-hacks-logo.png";
 
 const MobileNavLink = ({ href, children, onClick }) => {
   return (
@@ -19,7 +19,11 @@ const Navbar = () => {
   return (
     <nav className="navbar-container max-w-screen">
       <div className="navbar-logo-container">
-        <img src={nitsHacksLogo} alt="NITS HACKS Logo" className="navbar-logo" />
+        <img
+          src="/images/nits-hacks-logo.png"
+          alt="NITS HACKS Logo"
+          className="w-16 h-16 md:w-20 md:h-20"
+        />
       </div>
 
       <div className="navbar-links-container-desktop">
@@ -34,6 +38,9 @@ const Navbar = () => {
         </a>
         <a href="/#sponsors" className="navbar-link">
           Sponsors
+        </a>
+        <a href="/faq" className="navbar-link">
+          FAQ
         </a>
         <a href="/team" className="navbar-link">
           Teams
@@ -54,7 +61,11 @@ const Navbar = () => {
         className={isMenuOpen ? "mobile-menu-container show" : "mobile-menu-container"}
       >
         <div className="mobile-menu-logo-container">
-          <img src={nitsHacksLogo} alt="NITS HACKS Logo" className="navbar-logo" />
+          <img
+            src="/images/nits-hacks-logo.png"
+            alt="NITS HACKS Logo"
+            className="navbar-logo"
+          />
         </div>
 
         <MobileNavLink ink href="/#home" onClick={handleLinkClick}>
@@ -68,6 +79,9 @@ const Navbar = () => {
         </MobileNavLink>
         <MobileNavLink href="/#sponsors" onClick={handleLinkClick}>
           Sponsors
+        </MobileNavLink>
+        <MobileNavLink href="/faq" onClick={handleLinkClick}>
+          FAQ
         </MobileNavLink>
         <MobileNavLink href="/team" onClick={handleLinkClick}>
           Teams

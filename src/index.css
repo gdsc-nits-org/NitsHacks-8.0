@@ -43,7 +43,7 @@
 }
 @font-face {
   font-family: "Pokemon Fire Red";
-  src: url("/fonts/pokemon_fire_red.ttf") format("truetype");
+  src: url("../public/fonts/pokemon_fire_red.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }

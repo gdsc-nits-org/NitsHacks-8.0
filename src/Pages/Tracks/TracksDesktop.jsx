@@ -10,16 +10,18 @@ const TracksDesktop = () => {
   const handleClick = (track) => {
     setIsOpen(false);
     setShowCovers(false);
-    const timer = setTimeout(() => {}, 200);
-    setData(trackData[track - 1]);
+    const timer = setTimeout(() => {
+      setData(trackData[track - 1]);
+    }, 500);
     open();
+    return () => clearTimeout(timer);
   };
   const open = () => {
     setIsOpen(false);
     const timer = setTimeout(() => {
       setIsOpen(true);
-      const timer = setTimeout(() => setShowCovers(true), 500);
-      return () => clearTimeout(timer);
+      const timer2 = setTimeout(() => setShowCovers(true), 500);
+      return () => clearTimeout(timer2);
     }, 1000);
     return () => clearTimeout(timer);
   };
@@ -35,9 +37,7 @@ const TracksDesktop = () => {
           >
             <div className="backdrop-blur-lg flex flex-col h-120 px-6 relative overflow-hidden">
               <div className="relative z-200 flex-1 flex flex-col items-center py-4 justify-center gap-4 text-white text-center">
-                <h2 className="font-pokemon-fire-red uppercase text-xl mb-2">
-                  {data.name}
-                </h2>
+                <h2 className="font-pokemon-fire-red text-xl mb-2">{data.name}</h2>
                 <p className="text-justify text-xs">{data.bigdesc}</p>
                 <a
                   href={data.registerLink}
