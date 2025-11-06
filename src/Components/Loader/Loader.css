@@ -1,17 +1,9 @@
-html, body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden; /* Prevent scrollbars */
-}
-
 #coming-soon {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  height: 100vh;  /* Full viewport height */
-  width: 100vw;   /* Full viewport width */
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
   overflow: hidden;
 }
 
@@ -33,9 +25,9 @@ html, body {
   justify-content: space-evenly;
 }
 .logo {
-    padding-top: 8rem;
-    scale: 1.5;
-    z-index: 2;
+  padding-top: 8rem;
+  scale: 1.5;
+  z-index: 2;
   width: 180px;
 }
 .background-layer {
@@ -72,8 +64,8 @@ html, body {
 
 .clouds1 {
   position: absolute;
-  top: 10%;             /* adjust vertical height */
-  left: 0;              /* send to left corner */
+  top: 10%; /* adjust vertical height */
+  left: 0; /* send to left corner */
   scale: 1.5;
   width: 20vw;
   image-rendering: pixelated;
@@ -82,8 +74,8 @@ html, body {
 .clouds2 {
   position: absolute;
   top: 10%;
-  right: 0;   
-  scale: 1.5;          /* send to right corner */
+  right: 0;
+  scale: 1.5; /* send to right corner */
   width: 22vw;
   image-rendering: pixelated;
 }
@@ -329,14 +321,14 @@ html, body {
   left: 3.5%;
   height: 2rem;
   border: solid 5px black;
-  background-color: transparent;    
+  background-color: transparent;
   overflow: hidden;
   position: relative;
-  align-items: center;   
-  image-rendering:pixelated;      
+  align-items: center;
+  image-rendering: pixelated;
   justify-content: flex-start;
-  padding: 0.3125rem;              /* 👈 inner spacing between box and white bar */
-  box-sizing: border-box;    
+  padding: 0.3125rem; /* 👈 inner spacing between box and white bar */
+  box-sizing: border-box;
   bottom: 3%;
   z-index: 10;
 }
