@@ -1,0 +1,150 @@
+/* This imports the Google Font for the pixel buttons */
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+#timeline{
+    background-image:url("images/timeline.png");
+    background-size: cover ;
+    background-repeat: no-repeat;
+}
+.container{
+    height:100vh;
+    width: 100%;
+    
+    justify-content: center;
+    align-items: center;
+    
+    
+    position :relative;
+}
+.img1{
+    position: absolute;
+    right:80%;
+    top:16%;
+    
+    
+    
+    height:10px;
+    width:5px;
+}
+.img2{
+    position: absolute;
+    left:80%;
+    top:16%;
+    
+
+    
+    height:10px;
+    width:5px;
+}
+.img3{
+    position: absolute;
+    right:59%;
+    top:30%;
+    
+
+    
+    height:2px;
+    width:2px;
+}
+.img4{
+    position: absolute;
+    left: 35.5%;
+    top: 16%;  
+
+
+
+    
+    height:490px;
+    width:573px;
+}
+
+.img4 img {
+    height: 100%; /* Make the image fill the container's height */
+    width: 100%;  /* Make the image fill the container's width */
+    object-fit: cover; /* This prevents the image from stretching/squashing */
+}
+
+/* Font face for Pokemon text */
+@font-face {
+font-family: "Pokemon Solid"; /* Using this name as it's in your CSS */
+src: url("/fonts/pokemon_fire_red.ttf") format("truetype"); /* Assuming this is the correct file for "Pokemon Solid" */
+font-weight: normal;
+font-style: normal;
+}
+
+/* UPDATED: Pokemon title style to match image */
+.pokemon-title, .pokemon-title-2 {
+    font-family: "Pokemon Solid", 'Times New Roman', Times, serif;
+    font-size: 3rem; /* 48px, adjust as needed */
+    color: #FFDE00; /* Pokemon Yellow */
+    -webkit-text-stroke: 2px #3B4CCA; /* Pokemon Blue outline */
+   -webkit-text-stroke: 2px #000;
+
+    text-shadow: 3px 3px 0 #00000080; /* Softer black shadow */
+    position: absolute; /* Layer it on top */
+    width: 100%;
+    left: 0;
+    text-align: center;
+    z-index: 2;         /* Add this: bring text to front */
+}
+
+.pokemon-title {
+    top: 20px;          /* Adjust vertical position inside frame */
+}
+
+.pokemon-title-2 {
+    bottom: 100px;      /* Adjust vertical position inside frame */
+}
+
+.buttons{
+    position: absolute;
+    /* Overlap effect from your request */
+    width: 110%; /* Make container wider than parent */
+    left: -5%;  /* Center the wider container */
+    bottom: 5px; /* Position at the very bottom of the frame */
+    text-align: center;
+    z-index: 2;
+    white-space: nowrap; /* Keep buttons in one line */
+}
+
+/* UPDATED: Button style to match the pixel-art image */
+.btn {
+font-family: 'Press Start 2P', cursive;
+color: #111827; /* Dark black text */
+text-transform: uppercase;
+font-size: 0.875rem; /* 14px */
+line-height: 1.25rem; /* 20px */
+
+padding-top: 0.75rem; /* 12px */
+padding-bottom: 0.75rem; /* 12px */
+padding-left: 1.5rem; /* 24px */
+padding-right: 1.5rem; /* 24px */
+
+background-color: #93c5fd; /* Light blue */
+border-radius: 0; /* Sharp corners */
+
+border: 2px solid #111827; /* Dark outer border */
+
+/* Inner light border */
+box-shadow: inset 0 0 0 2px #e5e7eb; /* light-gray-200 */
+
+transition-property: all;
+transition-duration: 100ms;
+
+cursor: pointer;
+margin-left: 0.25rem;
+margin-right: 0.25rem;
+
+/* Active state for press effect */
+transform-origin: center;
+}
+
+.btn:hover {
+background-color: #60a5fa; /* Slightly darker blue */
+}
+
+.btn:active {
+background-color: #3b82f6;
+/* Move button slightly down and right for a "press" effect */
+transform: translate(1px, 1px); 
+}
