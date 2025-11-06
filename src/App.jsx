@@ -6,7 +6,7 @@ import { Navbar, Footer } from "./Components";
 
 const App = () => {
   return (
-    <>
+    <main className="max-w-screen overflow-hidden">
       <Navbar />
       <Routes>
         <Route path="/" element={<Home />} />
@@ -16,7 +16,7 @@ const App = () => {
         <Route path="*" element={<Error />} />
       </Routes>
       <Footer />
-    </>
+    </main>
   );
 };
 
