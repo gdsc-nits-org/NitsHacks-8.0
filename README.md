@@ -22,3 +22,5 @@ This project uses Tailwind CSS v4 with CSS-based configuration. Custom GDSC colo
 
 Custom theme variables are defined in `src/index.css` using the `@theme` directive.
 All SASS modules have been removed and replaced with Tailwind utility classes.
+
+idk commiting to force new deployment, total bs
