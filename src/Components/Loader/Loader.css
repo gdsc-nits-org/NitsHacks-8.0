@@ -1,0 +1,353 @@
+#coming-soon {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  height: 100vh; /* Full viewport height */
+  width: 100vw; /* Full viewport width */
+  overflow: hidden;
+}
+
+.blueBg {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  background-color: #7ad4fb;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.comingContainer {
+  display: flex;
+  justify-content: space-evenly;
+}
+.logo {
+  padding-top: 8rem;
+  scale: 1.5;
+  z-index: 2;
+  width: 180px;
+}
+.background-layer {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-repeat: repeat-x;
+  overflow-y: hidden;
+  background-size: auto 100%;
+}
+/* .background-layer {
+  z-index: 0; 
+  bottom: 40%;  
+  width: 100%;
+  height: 30%; 
+  background-repeat: no-repeat;
+  background-size: cover; 
+  background-position: center bottom;
+  pointer-events: none;
+} */
+.clouds-bg {
+  z-index: 1;
+  height: 55vh;
+  scale: 2;
+  margin-bottom: 0;
+}
+.ground {
+  z-index: 2;
+  bottom: 0;
+  height: 25%;
+}
+
+.clouds1 {
+  position: absolute;
+  top: 10%; /* adjust vertical height */
+  left: 0; /* send to left corner */
+  scale: 1.5;
+  width: 20vw;
+  image-rendering: pixelated;
+}
+
+.clouds2 {
+  position: absolute;
+  top: 10%;
+  right: 0;
+  scale: 1.5; /* send to right corner */
+  width: 22vw;
+  image-rendering: pixelated;
+}
+
+.center-content {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.character-container {
+  position: relative;
+  display: flex;
+  width: 100vw;
+  align-items: flex-end;
+  gap: 8rem;
+  justify-content: center;
+  padding-right: 12vw;
+}
+.character-bike {
+  position: relative;
+  z-index: 11;
+}
+
+.character-pikachu {
+  position: relative;
+  z-index: 12;
+}
+.character-bike,
+.character-pikachu {
+  position: relative;
+  z-index: 11;
+  /* max-height: 100px; */
+  object-fit: contain;
+  padding-bottom: 2rem;
+}
+.character-bike {
+  max-height: 200px;
+}
+.character-pikachu {
+  height: 120px;
+  max-height: 120px;
+}
+
+.staticGrass {
+  position: absolute;
+  bottom: -1%;
+  left: 0;
+  width: 100%;
+  z-index: 1;
+  pointer-events: none;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+@keyframes bounce {
+  from {
+    transform: translateY(0);
+  }
+  to {
+    transform: translateY(-10px);
+  }
+}
+
+@media (max-width: 1024px) {
+  .blueBg {
+    padding-bottom: 10%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .clouds1 {
+    width: 200px;
+    margin-top: 30%;
+  }
+  .coming-soon-text {
+    font-size: 4.5rem;
+    margin-top: 5%;
+    text-shadow: 0.3rem 0.3rem 0 #204988;
+    letter-spacing: 0.15em;
+  }
+  .logo {
+    width: 200px;
+  }
+  .character-layer {
+    bottom: 28%;
+  }
+  .trainer {
+    width: 90px;
+  }
+  .pikachu {
+    width: 60px;
+  }
+}
+@media (max-width: 920px) {
+  .blueBg {
+    padding-bottom: 20%;
+  }
+  .coming-soon-text {
+    font-size: 3.5rem;
+    margin-top: 5%;
+    -webkit-text-stroke: 0.18rem #193087;
+    text-shadow: 0.1rem 0.1rem 0 #204988;
+    letter-spacing: 0.15em;
+  }
+}
+
+@media (max-width: 820px) {
+  .blueBg {
+    padding-bottom: 5%;
+  }
+  .comingContainer {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem 2rem;
+  }
+  .clouds1 {
+    position: absolute;
+    width: 250px;
+    opacity: 0.9;
+    z-index: 1;
+    top: 10%;
+  }
+  #cloud1 {
+    padding-top: 2vh;
+    left: 100%;
+  }
+  #cloud2 {
+    right: 100%;
+  }
+  .coming-soon-text {
+    font-size: 4rem;
+    white-space: nowrap;
+    text-align: center;
+    z-index: 10;
+    font-weight: 1000;
+    text-shadow: 0.2rem 0.2rem 0 #204988;
+    letter-spacing: 0.15em;
+  }
+}
+@media (max-width: 667px) {
+  #coming-soon {
+    padding: 2px 0;
+  }
+  .blueBg {
+    padding-bottom: 0%;
+  }
+  .ground {
+    height: 35%;
+  }
+  .logo {
+    width: 140px;
+  }
+  .character-layer {
+    bottom: 30%;
+  }
+  .trainer {
+    width: 80px;
+    margin-right: 10px;
+  }
+  .pikachu {
+    width: 50px;
+  }
+  .floating-cloud {
+    width: 120px;
+  }
+  .comingContainer {
+    position: relative;
+    display: flex-box;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    padding: 2rem 2rem;
+  }
+  .clouds1 {
+    position: absolute;
+    width: 150px;
+    opacity: 0.9;
+    z-index: 1;
+    top: 30%;
+  }
+  #cloud1 {
+    left: 2%;
+  }
+  #cloud2 {
+    right: 2%;
+  }
+  .coming-soon-text {
+    font-size: 2.5rem;
+    white-space: nowrap;
+    text-align: center;
+    z-index: 10;
+    font-weight: 1000;
+    text-shadow: 0.2rem 0.2rem 0 #204988;
+    -webkit-text-stroke: 0.15rem #193087;
+
+    letter-spacing: 0.1em;
+  }
+  .center-content {
+    justify-content: space-between;
+    padding-top: 20%;
+  }
+
+  .character-container {
+    margin: 0;
+    padding-right: 7rem;
+    gap: 2rem;
+  }
+  .character-pikachu {
+    margin-right: 0;
+    gap: 2rem;
+    max-height: 100px;
+  }
+  .character-bike {
+    margin-right: 0;
+    gap: 2rem;
+    max-height: 180px;
+  }
+
+  .lines {
+    height: 0.5rem;
+  }
+}
+
+/* Loader */
+.loader-container {
+  margin-top: 2%;
+  width: 30%;
+  left: 3.5%;
+  height: 2rem;
+  border: solid 5px black;
+  background-color: transparent;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  image-rendering: pixelated;
+  justify-content: flex-start;
+  padding: 0.3125rem; /* 👈 inner spacing between box and white bar */
+  box-sizing: border-box;
+  bottom: 3%;
+  z-index: 10;
+}
+
+.loader-bar {
+  height: 100%;
+  width: 0%;
+  background-color: #ffffff;
+  z-index: 10;
+  /* border-radius: 10px; */
+  animation: loading 3s linear forwards;
+}
+
+/* Animation that fills the bar */
+@keyframes loading {
+  from {
+    width: 0%;
+  }
+  to {
+    width: 100%;
+  }
+}

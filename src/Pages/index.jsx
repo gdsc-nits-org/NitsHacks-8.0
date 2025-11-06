@@ -1,5 +1,8 @@
 import Home from "./Home/Home";
 import Error from "./Error/Error";
+import Tracks from "./Tracks/Tracks";
+import Faq from "./Faq/Faq";
+import Timeline from "./Timeline/Timeline";
 import Team from "./Team/Team";
 
-export { Home, Error, Team };
+export { Home, Error, Tracks, Faq, Timeline, Team };

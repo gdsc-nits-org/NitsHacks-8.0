@@ -29,10 +29,58 @@
   --color-grey-text: rgba(101, 108, 115, 1);
   --color-grey-text-70: rgba(101, 108, 115, 0.7);
 }
+@font-face {
+  font-family: "Pocket Monk";
+  src: url("../public/fonts/PocketMonk.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Gill Sans";
+  src: url("../public/fonts/GillSans.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pokemon Solid";
+  src: url("../public/fonts/PokemonSolid.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pokemon Fire Red";
+  src: url("../public/fonts/pokemon_fire_red.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
 
-* {
-  box-sizing: border-box;
-  font-family: var(--font-poppins);
+.font-pokemon-fire-red {
+  font-family: "Pokemon Fire Red", sans-serif;
+}
+.font-gill-sans {
+  font-family: "Gill Sans", sans-serif;
+}
+.font-pocket-monk {
+  font-family: "Pocket Monk", sans-serif;
+}
+.font-pokemon-solid {
+  font-family: "Pokemon Solid", sans-serif;
+}
+@font-face {
+  font-family: "Space";
+  src: url("../public/fonts/SpaceMono-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@layer utilities {
+  .text-stroke-black {
+    -webkit-text-stroke: 1px black;
+    paint-order: stroke fill;
+  }
+}
+
+.font-space {
+  font-family: "Space", sans-serif;
 }
 @font-face {
   font-family: "PokemonFireRed";

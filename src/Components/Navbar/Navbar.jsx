@@ -1,6 +1,6 @@
 import { useState } from "react";
 import "./Navbar.css";
-import nitsHacksLogo from "/images/nits-hacks-logo.png";
+// import nitsHacksLogo from "../../../images/nits-hacks-logo.png";
 
 const MobileNavLink = ({ href, children, onClick }) => {
   return (
@@ -17,25 +17,32 @@ const Navbar = () => {
   const handleLinkClick = () => setIsMenuOpen(false);
 
   return (
-    <nav className="navbar-container">
+    <nav className="navbar-container max-w-screen">
       <div className="navbar-logo-container">
-        <img src={nitsHacksLogo} alt="NITS HACKS Logo" className="navbar-logo" />
+        <img
+          src="/images/nits-hacks-logo.png"
+          alt="NITS HACKS Logo"
+          className="w-16 h-16 md:w-20 md:h-20"
+        />
       </div>
 
       <div className="navbar-links-container-desktop">
-        <a href="#home" className="navbar-link">
+        <a href="/#home" className="navbar-link">
           Home
         </a>
-        <a href="#tracks" className="navbar-link">
+        <a href="/tracks" className="navbar-link">
           Tracks
         </a>
-        <a href="#timeline" className="navbar-link">
+        <a href="/timeline" className="navbar-link">
           Timeline
         </a>
-        <a href="#sponsors" className="navbar-link">
+        <a href="/#sponsors" className="navbar-link">
           Sponsors
         </a>
-        <a href="team" className="navbar-link">
+        <a href="/faq" className="navbar-link">
+          FAQ
+        </a>
+        <a href="/team" className="navbar-link">
           Teams
         </a>
       </div>
@@ -54,22 +61,29 @@ const Navbar = () => {
         className={isMenuOpen ? "mobile-menu-container show" : "mobile-menu-container"}
       >
         <div className="mobile-menu-logo-container">
-          <img src={nitsHacksLogo} alt="NITS HACKS Logo" className="navbar-logo" />
+          <img
+            src="/images/nits-hacks-logo.png"
+            alt="NITS HACKS Logo"
+            className="navbar-logo"
+          />
         </div>
 
-        <MobileNavLink href="#home" onClick={handleLinkClick}>
+        <MobileNavLink ink href="/#home" onClick={handleLinkClick}>
           Home
         </MobileNavLink>
-        <MobileNavLink href="#tracks" onClick={handleLinkClick}>
+        <MobileNavLink href="/tracks" onClick={handleLinkClick}>
           Tracks
         </MobileNavLink>
-        <MobileNavLink href="#timeline" onClick={handleLinkClick}>
+        <MobileNavLink href="/timeline" onClick={handleLinkClick}>
           Timeline
         </MobileNavLink>
-        <MobileNavLink href="#sponsors" onClick={handleLinkClick}>
+        <MobileNavLink href="/#sponsors" onClick={handleLinkClick}>
           Sponsors
         </MobileNavLink>
-        <MobileNavLink href="#team" onClick={handleLinkClick}>
+        <MobileNavLink href="/faq" onClick={handleLinkClick}>
+          FAQ
+        </MobileNavLink>
+        <MobileNavLink href="/team" onClick={handleLinkClick}>
           Teams
         </MobileNavLink>
       </div>

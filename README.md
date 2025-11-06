@@ -21,4 +21,4 @@ This project uses Tailwind CSS v4 with CSS-based configuration. Custom GDSC colo
 - `font-poppins` - Poppins font family
 
 Custom theme variables are defined in `src/index.css` using the `@theme` directive.
-All SASS modules have been removed and replaced with Tailwind utility classes.
+All SASS modules have been removed and replaced with Tailwind utility classes
