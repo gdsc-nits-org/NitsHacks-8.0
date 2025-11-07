@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Timeline = () => {
   const [currentDay, setCurrentDay] = useState(1);
@@ -34,12 +34,12 @@ const Timeline = () => {
 
   // Path segments connecting the days (only vertical and horizontal)
   const pathSegments = [
-    { x1: 15, y1: 85, x2: 15, y2: 28 },
-    { x1: 15, y1: 28, x2: 50, y2: 28 },
-    { x1: 50, y1: 28, x2: 50, y2: 15 },
-    { x1: 50, y1: 15, x2: 70, y2: 15 },
-    { x1: 70, y1: 15, x2: 70, y2: 52 },
-    { x1: 70, y1: 52, x2: 88, y2: 52 },
+    { id: 1, x1: 15, y1: 85, x2: 15, y2: 28 },
+    { id: 2, x1: 15, y1: 28, x2: 50, y2: 28 },
+    { id: 3, x1: 50, y1: 28, x2: 50, y2: 15 },
+    { id: 4, x1: 50, y1: 15, x2: 70, y2: 15 },
+    { id: 5, x1: 70, y1: 15, x2: 70, y2: 52 },
+    { id: 6, x1: 70, y1: 52, x2: 88, y2: 52 },
   ];
 
   const animateCharacter = (targetDay) => {
@@ -60,7 +60,7 @@ const Timeline = () => {
     const moveToNextPoint = () => {
       if (currentPointIndex < pathPoints.length) {
         setCharacterPosition(pathPoints[currentPointIndex]);
-        currentPointIndex++;
+        currentPointIndex += 1;
         setTimeout(moveToNextPoint, 300); // 300ms per segment
       } else {
         setIsAnimating(false);
@@ -83,13 +83,14 @@ const Timeline = () => {
 
     if (day.id === currentDay) {
       return `${baseStyle} transform scale-110 cursor-pointer`;
-    } else if (day.id < currentDay) {
-      return `${baseStyle} cursor-pointer hover:opacity-90`;
-    } else if (day.id === currentDay + 1) {
-      return `${baseStyle} cursor-pointer hover:scale-105`;
-    } else {
-      return `${baseStyle} cursor-not-allowed`;
     }
+    if (day.id < currentDay) {
+      return `${baseStyle} cursor-pointer hover:opacity-90`;
+    }
+    if (day.id === currentDay + 1) {
+      return `${baseStyle} cursor-pointer hover:scale-105`;
+    }
+    return `${baseStyle} cursor-not-allowed`;
   };
 
   const getColorClass = (color) => {
@@ -128,9 +129,9 @@ const Timeline = () => {
             </linearGradient>
           </defs>
 
-          {pathSegments.map((segment, index) => (
+          {pathSegments.map((segment) => (
             <line
-              key={index}
+              key={segment.id}
               x1={`${segment.x1}%`}
               y1={`${segment.y1}%`}
               x2={`${segment.x2}%`}
@@ -147,7 +148,9 @@ const Timeline = () => {
         <a
           href="/"
           className="absolute top-4 -left-4 md:left-4 bg-[url(/images/timeline/button.svg)] bg-center bg-cover w-60 h-16 scale-50 md:scale-75"
-        ></a>
+        >
+          {" "}
+        </a>
 
         {/* Day markers */}
         {days.map((day) => (
@@ -165,7 +168,9 @@ const Timeline = () => {
             <button
               onClick={() => handleDayClick(day.id)}
               className={`${getDayButtonStyle(day)} ${getColorClass(day.color)}`}
-            ></button>
+            >
+              {" "}
+            </button>
           </div>
         ))}
 

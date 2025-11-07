@@ -1,84 +1,85 @@
-import React from 'react'
-import './timeline.css' // <-- ERROR: Removed this line
-
-// Image paths
-const backgroundPattern = "/images/timeline.png";
-const img1 = "/images/dex 1.png";
-const img2 = "/images/dex 2.png";
-const img3 = "/images/TimelineFinal.png";
-const img4 = "/images/frametimeline.png"
-
+import { useMediaQuery } from "react-responsive";
+import { useNavigate } from "react-router-dom";
+import Button from "../Button/Button";
 
 const Timeline = () => {
-  return (
-    // Note: Removed the wrapping <div> with id="timeline" as 
-    // background is applied via className
-    <div
-      className="relative w-full bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: `url(${backgroundPattern})`, height: '100vh' }}
-      id="timeline" // Applying ID here for the CSS rule
-    >
-      {/* FIX: CSS ko seedhe component mein daal diya gaya hai 
-        taaki 'timeline.css' import error na aaye.
-      */}
-      
-      <div className="container">
+  const navigate = useNavigate();
+  const isDesktop = useMediaQuery({ minWidth: 1025 });
 
-        {/* FIXED: Changed class="img1" to className="img1" 
-        */}
-        <div className="img1">
-          <img
-            src={img1}
-            // Tailwind classes for sizing. You can also use CSS.
-            className="max-w-xs md:max-w-sm lg:max-w-md h-auto rounded-lg shadow-lg lg:max-h-[30rem]"
-          />
-        </div>
-
-        {/* FIXED: Changed class="img2" to className="img2" 
-        */}
-        <div className="img2">
-          <img
-            src={img2}
-            className="max-w-xs md:max-w-sm lg:max-w-md h-auto rounded-lg shadow-lg lg:max-h-[30rem]"
-          />
-        </div>
-        
-        {/* FIXED: Changed class="contain" to className="contain" 
-        */}
-        <div className="contain">
-          <div className="img4">
-            <h1 className="pokemon-title">Timeline</h1>
-            <img
-              src={img4}
-              alt="Timeline Map Frame" // Added alt text for accessibility
-            />
-            
-            <h1 className="pokemon-title-2">Tracks</h1>
-
-            {/* FIXED: Changed class="buttons" to className="buttons" 
-              FIXED: Changed class="btn" to className="btn"
-            */}
-            <div className="buttons"> 
-              <a className="btn">Software</a>
-              <a className="btn">Coding</a>
-              <a className="btn">UI/UX</a>
-            </div>
-            
+  const handleClick = (track) => {
+    navigate(`/tracks?track=${track}`);
+  };
+  if (isDesktop) {
+    return (
+      <section className="w-screen bg-[url(/images/testimonials/testimonialsBG.png)] py-32 px-20">
+        <div className="flex w-full justify-center">
+          <img className="h-[90%]" src="/images/tracks/dexLeft.png" alt="" />
+          <div className="relative backdrop-blur-2xl bg-[radial-gradient(ellipse_at_center,_#B0C2C624,_#B5DAE224)] flex flex-col items-center gap-6 px-16 py-8">
+            <h1 className="font-pocket-monk text-stroke-blue text-wider text-6xl md:text-7xl text-[#FFCB02] stroke-[#002067]">
+              Timeline
+            </h1>
+            <button
+              className="cursor-pointer"
+              onClick={() => {
+                navigate("/timeline");
+              }}
+            >
+              <img className="w-80" src="/images/timeline/mapDesk.svg" alt="map" />
+            </button>
+            <h1 className="font-pocket-monk text-stroke-blue text-wider text-6xl md:text-7xl text-[#FFCB02] text-stroke-[#002067]">
+              Tracks
+            </h1>
+            <ul className="flex gap-12 absolute bottom-8">
+              <li>
+                <Button onClick={() => handleClick(1)}>Coding</Button>
+              </li>
+              <li>
+                <Button onClick={() => handleClick(2)}>Software</Button>
+              </li>
+              <li>
+                <Button onClick={() => handleClick(3)}>UIUX</Button>
+              </li>
+            </ul>
           </div>
+          <img className="h-[90%]" src="/images/tracks/dexRight.png" alt="" />
         </div>
-        
-        <div className="img3">
-          <img
-            src={img3}
-            className="max-w-xs md:max-w-sm lg:max-w-md rounded-lg shadow-lg lg:max-h-52"
-          />
+      </section>
+    );
+  }
+  return (
+    <section className="w-screen bg-[url(/images/testimonials/testimonialsBG.png)] py-20 px-20">
+      <div className="flex flex-col w-full items-center">
+        <img className="w-full" src="/images/tracks/dexUp.png" alt="" />
+        <div className="backdrop-blur-2xl bg-[radial-gradient(ellipse_at_center,_#B0C2C624,_#B5DAE224)] flex flex-col items-center gap-4 py-4 w-full md:py-8">
+          <h1 className="font-pocket-monk text-stroke-blue text-wider text-5xl md:text-7xl text-[#FFCB02] stroke-[#002067]">
+            Timeline
+          </h1>
+          <button
+            onClick={() => {
+              navigate("/timeline");
+            }}
+          >
+            <img className="md:w-80" src="/images/timeline/map.svg" alt="map" />
+          </button>
+          <h1 className="font-pocket-monk text-stroke-blue text-wider text-5xl md:text-7xl text-[#FFCB02] text-stroke-[#002067]">
+            Tracks
+          </h1>
+          <ul className="flex flex-col gap-6">
+            <li>
+              <Button onClick={() => handleClick(1)}>Coding</Button>
+            </li>
+            <li>
+              <Button onClick={() => handleClick(2)}>Software</Button>
+            </li>
+            <li>
+              <Button onClick={() => handleClick(3)}>UIUX</Button>
+            </li>
+          </ul>
         </div>
-        
+        <img className="w-full mt-4" src="/images/tracks/dexDown.png" alt="" />
       </div>
-    </div>
-    
-  )
-}
+    </section>
+  );
+};
 
-export default Timeline
-
+export default Timeline;
