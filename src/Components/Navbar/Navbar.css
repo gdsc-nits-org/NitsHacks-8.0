@@ -17,7 +17,8 @@
   border-radius: 25px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   padding: 0 50px;
-  position: relative;
+  position: fixed;
+  z-index: 100;
 }
 
 .navbar-logo-container {
@@ -75,14 +76,14 @@
 @media (max-width: 1280px) {
   .navbar-container {
     justify-content: space-between;
-    padding: 0 30px;
+    padding: 10px 30px;
     gap: 0;
     background-color: #b0d0f0;
     background-image: none;
     border: none;
     border-radius: 0;
     box-shadow: none;
-    height: 80px;
+    height: auto;
   }
 
   .navbar-links-container-desktop {

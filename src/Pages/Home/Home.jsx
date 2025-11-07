@@ -1,9 +1,11 @@
-import { Faq } from "../../Components";
+import { About, Sponsor, Testimonials } from "../../Components";
 
 const Home = () => {
   return (
-    <main className="h-screen">
-      <Faq />
+    <main className="">
+      <About />
+      <Sponsor />
+      <Testimonials />
     </main>
   );
 };
