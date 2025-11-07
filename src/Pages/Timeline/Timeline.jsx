@@ -1,4 +1,4 @@
-import { useState, useEffect } from "react";
+import { useState } from "react";
 
 const Timeline = () => {
   const [currentDay, setCurrentDay] = useState(1);
@@ -12,8 +12,8 @@ const Timeline = () => {
     { id: 3, label: "DAY 3", x: 70, y: 15, color: "gray" },
     { id: 4, label: "DAY 4", x: 88, y: 52, color: "yellow" },
   ];
-  // Complete path with all waypoints
 
+  // Complete path with all waypoints
   const fullPath = [
     { x: 15, y: 85 }, // Day 1
     { x: 15, y: 28 }, // Day 2
@@ -23,8 +23,8 @@ const Timeline = () => {
     { x: 70, y: 52 }, // Waypoint
     { x: 88, y: 52 }, // Day 4
   ];
-  // Map day IDs to path indices
 
+  // Map day IDs to path indices
   const dayToPathIndex = {
     1: 0,
     2: 1,
@@ -60,8 +60,8 @@ const Timeline = () => {
     const moveToNextPoint = () => {
       if (currentPointIndex < pathPoints.length) {
         setCharacterPosition(pathPoints[currentPointIndex]);
-        currentPointIndex++;
-        setTimeout(moveToNextPoint, 300); // 300ms per segment
+        currentPointIndex += 1;
+        setTimeout(moveToNextPoint, 300);
       } else {
         setIsAnimating(false);
         setCurrentDay(targetDay);
@@ -83,30 +83,31 @@ const Timeline = () => {
 
     if (day.id === currentDay) {
       return `${baseStyle} transform scale-110 cursor-pointer`;
-    } else if (day.id < currentDay) {
-      return `${baseStyle} cursor-pointer hover:opacity-90`;
-    } else if (day.id === currentDay + 1) {
-      return `${baseStyle} cursor-pointer hover:scale-105`;
-    } else {
-      return `${baseStyle} cursor-not-allowed`;
     }
+    if (day.id < currentDay) {
+      return `${baseStyle} cursor-pointer hover:opacity-90`;
+    }
+    if (day.id === currentDay + 1) {
+      return `${baseStyle} cursor-pointer hover:scale-105`;
+    }
+    return `${baseStyle} cursor-not-allowed`;
   };
 
   const getColorClass = (color) => {
     const colors = {
-      red: "bg-[linear-gradient(to_bottom,_#FE4E5F_42%,_#A44659_59%,_#97374B_100%)]",
-      purple: "bg-[linear-gradient(to_bottom,_#A855F7_42%,_#6B21A8_59%,_#4C1D95_100%)]",
-      gray: "bg-[linear-gradient(to_bottom,_#A1A1AA_42%,_#6B7280_59%,_#374151_100%)]",
-      yellow: "bg-[linear-gradient(to_bottom,_#FBBF24_42%,_#D97706_59%,_#B45309_100%)]",
+      red: "bg-[linear-gradient(to_bottom,#FE4E5F_42%,#A44659_59%,#97374B_100%)]",
+      purple: "bg-[linear-gradient(to_bottom,#A855F7_42%,#6B21A8_59%,#4C1D95_100%)]",
+      gray: "bg-[linear-gradient(to_bottom,#A1A1AA_42%,#6B7280_59%,#374151_100%)]",
+      yellow: "bg-[linear-gradient(to_bottom,#FBBF24_42%,#D97706_59%,#B45309_100%)]",
     };
     return colors[color] || "bg-gray-500";
   };
 
   return (
-    <div className="absolute z-200 w-screen h-screen  flex items-center justify-center">
+    <div className="absolute z-200 w-screen h-screen flex items-center justify-center">
       <div className="relative h-screen w-screen aspect-video bg-blue-800 shadow-2xl overflow-hidden">
-        {/* Background map - replace with your actual map image */}
-        <div className="absolute inset-0 bg-[url(/images/timeline/TimelineFinal.png)] bg-cover bg-center"></div>
+        {/* Background map */}
+        <div className="absolute inset-0 bg-[url(/images/timeline/TimelineFinal.png)] bg-cover bg-center" />
 
         {/* SVG for path lines */}
         <svg
@@ -128,9 +129,9 @@ const Timeline = () => {
             </linearGradient>
           </defs>
 
-          {pathSegments.map((segment, index) => (
+          {pathSegments.map((segment) => (
             <line
-              key={index}
+              key={`segment-${segment.x1}-${segment.y1}-${segment.x2}-${segment.y2}`}
               x1={`${segment.x1}%`}
               y1={`${segment.y1}%`}
               x2={`${segment.x2}%`}
@@ -146,8 +147,11 @@ const Timeline = () => {
         {/* Back button */}
         <a
           href="/"
+          aria-label="Go back to home"
           className="absolute top-4 -left-4 md:left-4 bg-[url(/images/timeline/button.svg)] bg-center bg-cover w-60 h-16 scale-50 md:scale-75"
-        ></a>
+        >
+          <span className="sr-only">Back to Home</span>
+        </a>
 
         {/* Day markers */}
         {days.map((day) => (
@@ -157,19 +161,23 @@ const Timeline = () => {
             style={{ left: `${day.x}%`, top: `${day.y}%` }}
           >
             {/* Day label */}
-            <div className="absolute -top-8 md:-top-10 left-1/2 transform -translate-x-1/2 bg-[linear-gradient(to_bottom,_#E5E6E9_42%,_#B3B3B3_59%,_#B3AEAE_100%)] px-2 py-1 md:px-8 rounded text-xs md:text-sm font-bold text-gray-800 shadow whitespace-nowrap">
+            <div className="absolute -top-8 md:-top-10 left-1/2 transform -translate-x-1/2 bg-[linear-gradient(to_bottom,#E5E6E9_42%,#B3B3B3_59%,#B3AEAE_100%)] px-2 py-1 md:px-8 rounded text-xs md:text-sm font-bold text-gray-800 shadow whitespace-nowrap">
               {day.label}
             </div>
 
             {/* Day button */}
             <button
+              type="button"
               onClick={() => handleDayClick(day.id)}
+              aria-label={`Navigate to ${day.label}`}
               className={`${getDayButtonStyle(day)} ${getColorClass(day.color)}`}
-            ></button>
+            >
+              <span className="sr-only">{day.label}</span>
+            </button>
           </div>
         ))}
 
-        {/* Player character (on current day) */}
+        {/* Player character */}
         <div
           className="absolute w-8 h-8 md:w-10 md:h-10 transform -translate-x-1/2 -translate-y-1/2 z-30 transition-all duration-300 ease-linear"
           style={{
@@ -178,12 +186,12 @@ const Timeline = () => {
           }}
         >
           <div className="relative w-full h-full flex items-center justify-center">
-            {/* Simple character sprite */}
-            <img src="/images/timeline/character.svg" alt="" />
+            <img src="/images/timeline/character.svg" alt="Player character" />
           </div>
         </div>
       </div>
     </div>
   );
 };
+
 export default Timeline;

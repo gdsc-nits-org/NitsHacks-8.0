@@ -1,8 +1,18 @@
 import React, { useEffect } from "react";
 import { gsap } from "gsap";
 import "./Loader.css";
+import { useNavigate } from "react-router-dom";
+const Loader = (onEnter) => {
+  const navigate = useNavigate();
 
-const Loader = () => {
+  const handleEnter = () => {
+    if (onEnter) {
+      onEnter();
+    } else {
+      navigate("/navigation");
+    }
+  };
+
   useEffect(() => {
     gsap.to(".background-layer.ground", {
       backgroundPositionX: "-2048px",
@@ -51,9 +61,9 @@ const Loader = () => {
           </div>
         </div>
 
-        <div className="loader-container">
-          <div className="loader-bar"></div>
-        </div>
+        <button className="enter-button" onClick={handleEnter} aria-label="Enter">
+          <img src="/images/enter.svg" alt="Enter" />
+        </button>
       </div>
     </section>
   );
