@@ -1,12 +1,13 @@
 const HackCard = ({
   name = "Ash Ketchum",
   designation = "Member",
-  image = "",
-  facebook = "",
-  github = "",
-  codeforces = "",
-  linkedin = "",
+  image,
+  facebook,
+  github,
+  codeforces,
+  linkedin,
 }) => {
+  console.log(image);
   return (
     <div className="relative group  bg-[#FFE165] rounded-2xl border-8 border-[#FFE165] shadow-lg max-h-fit overflow-hidden max-w-72">
       <div className="bg-linear-to-t from-[#D3E1C3] to-[#CDC8C4]  rounded-xl px-2 py-4 w-full">
@@ -20,7 +21,7 @@ const HackCard = ({
           src="/images/teams/Stage.svg"
           alt=""
         />
-        <div className="rounded-md h-80 max-h-80 flex flex-col overflow-hidden border border-gray-300 w-full">
+        <div className="rounded-md h-80 max-h-80 flex flex-col overflow-hidden border border-gray-300 w-72">
           <img src={image} alt="avatar" className="w-full flex-1 object-cover" />
           <div className="flex absolute w-full bottom-0 flex-col translate-y-[20%] group-hover:translate-y-[-16%] items-center bg-[#d3e1c3] gap-2 transition-transform duration-300">
             <img className="w-full" src="/images/teams/border.svg" alt="border" />
