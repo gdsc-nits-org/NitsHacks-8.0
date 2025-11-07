@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import trackData from "../../assets/tracks.json";
-import { Button } from "../../Components";
 
 // Helper function to get track data by ID
 const getTrackData = (trackId) => {

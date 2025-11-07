@@ -1,7 +1,6 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import trackData from "../../assets/tracks.json";
-import { Button } from "../../Components";
 
 // Helper function now finds data by *numeric* ID
 const getTrackData = (trackId) => {
@@ -9,7 +8,6 @@ const getTrackData = (trackId) => {
   return trackData.find((t) => t.id === parseInt(trackId, 10)) || trackData[0];
 };
 
-<<<<<<< HEAD
 const TracksDesktop = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
