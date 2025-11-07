@@ -16,7 +16,6 @@
   "dependencies": {
     "@gsap/react": "^2.1.2",
     "@vitejs/plugin-react": "^4.2.1",
-    "lucide-react": "^0.548.0",
     "gsap": "^3.13.0",
     "lucide-react": "^0.552.0",
     "react": "^18.2.0",

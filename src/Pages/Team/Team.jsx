@@ -164,7 +164,7 @@ const Team = () => {
                   designation={member.designation}
                   github={member.git}
                   facebook={member.fb}
-                  codeforces={member.cf}
+                  codeforces={member.codeforces}
                   linkedin={member.linkedin}
                   image={member.img}
                 />
@@ -178,7 +178,7 @@ const Team = () => {
                   designation={member.designation}
                   github={member.git}
                   facebook={member.fb}
-                  codeforces={member.cf}
+                  codeforces={member.codeforces}
                   linkedin={member.linkedin}
                   image={member.img}
                 />
@@ -192,7 +192,7 @@ const Team = () => {
                   designation={member.designation}
                   github={member.git}
                   facebook={member.fb}
-                  codeforces={member.cf}
+                  codeforces={member.codeforces}
                   linkedin={member.linkedin}
                   image={member.img}
                 />
@@ -209,7 +209,7 @@ const Team = () => {
                   designation={member.designation}
                   github={member.git}
                   facebook={member.fb}
-                  codeforces={member.cf}
+                  codeforces={member.codeforces}
                   linkedin={member.linkedin}
                   image={member.img}
                 />
@@ -223,7 +223,7 @@ const Team = () => {
                   designation={member.designation}
                   github={member.git}
                   facebook={member.fb}
-                  codeforces={member.cf}
+                  codeforces={member.codeforces}
                   linkedin={member.linkedin}
                   image={member.img}
                 />
@@ -237,7 +237,7 @@ const Team = () => {
                   designation={member.designation}
                   github={member.git}
                   facebook={member.fb}
-                  codeforces={member.cf}
+                  codeforces={member.codeforces}
                   linkedin={member.linkedin}
                   image={member.img}
                 />
@@ -255,7 +255,7 @@ const Team = () => {
                   designation={member.designation}
                   github={member.git}
                   facebook={member.fb}
-                  codeforces={member.cf}
+                  codeforces={member.codeforces}
                   linkedin={member.linkedin}
                   image={member.img}
                 />
