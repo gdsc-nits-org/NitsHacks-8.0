@@ -95,6 +95,16 @@
   -ms-overflow-style: none;
   scrollbar-width: none;
 }
+.text-stroke-blue {
+  -webkit-text-stroke: 2px #002067;
+  text-stroke: 2px #002067;
+}
+@media (max-width: 768px) {
+  .text-stroke-blue {
+    -webkit-text-stroke: 1px #002067;
+    text-stroke: 1px #002067;
+  }
+}
 
 @keyframes shake {
   0%,

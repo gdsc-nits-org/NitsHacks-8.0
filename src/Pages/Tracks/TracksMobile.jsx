@@ -1,11 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
+import { useLocation, useNavigate } from "react-router-dom";
 import trackData from "../../assets/tracks.json";
+import { Button } from "../../Components";
 
 const TracksMobile = () => {
   const [idx, setIdx] = useState(0);
   const [bg, setBG] = useState("/images/tracks/codingBG.png");
   const [prevBG, setPrevBG] = useState("/images/tracks/codingBG.png");
   const [isOpen, setIsOpen] = useState(true);
+  const location = useLocation();
+  const navigate = useNavigate();
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const track = parseInt(params.get("track") || "1", 10); // default to 1
+    setIdx(track - 1);
+  }, [location.search]);
 
   const handleClick = (track) => {
     setIsOpen(false);
@@ -49,13 +58,8 @@ const TracksMobile = () => {
 
       {/* --- Main Content --- */}
       <div className="relative flex flex-col items-center justify-between py-8 h-full w-full z-10">
-        <div className="w-full flex justify-start pl-4 pt-4">
-          <a
-            href="/"
-            className="uppercase bg-[#FFCB02] border-2 border-[#002067] px-4 pb-2 pt-1 md:px-6 md:text-lg font-pokemon-solid text-white text-xs text-stroke-black"
-          >
-            Back
-          </a>
+        <div className="max-w-fit flex self-start pl-4 pt-4">
+          <Button onClick={() => navigate("/")}>Back</Button>
         </div>
 
         {/* your main section */}
@@ -70,10 +74,10 @@ const TracksMobile = () => {
               >
                 <div className="backdrop-blur-lg bg-white/30 h-full relative overflow-hidden w-full px-4 md:px-8">
                   <div className="relative z-200 flex flex-col md:gap-4 h-full items-center py-4 justify-center gap-1 text-white text-center">
-                    <h2 className="font-pokemon-fire-red uppercase text-lg md:text-xl mb-2">
+                    <h2 className="font-pocket-monk uppercase text-2xl md:text-xl mb-2">
                       {trackData[idx].name}
                     </h2>
-                    <p className="text-justify text-xs md:text-base">
+                    <p className="text-justify text-xs md:text-base font-gill-sans">
                       {trackData[idx].desc}
                     </p>
                     <a

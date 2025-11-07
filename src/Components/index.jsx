@@ -6,5 +6,16 @@ import Sponsor from "./Sponsors/Sponsors";
 import Testimonials from "./Testimonials/Testimonials";
 import GamePopup from "./GamePopup/GamePopup";
 import PokemonGame from "./PokemonGame/PokemonGame";
+import Timeline from "./Timeline/Timeline";
 
-export { Button, Navbar, Footer, About, Sponsor, Testimonials, GamePopup, PokemonGame };
+export {
+  Button,
+  Navbar,
+  Footer,
+  About,
+  Sponsor,
+  Testimonials,
+  GamePopup,
+  PokemonGame,
+  Timeline,
+};

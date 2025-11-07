@@ -1,11 +1,20 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 
+import { useLocation, useNavigate } from "react-router-dom";
 import trackData from "../../assets/tracks.json";
+import { Button } from "../../Components";
 
 const TracksDesktop = () => {
   const [isOpen, setIsOpen] = useState(true);
   const [showCovers, setShowCovers] = useState(true);
   const [data, setData] = useState(trackData[0]);
+  const location = useLocation();
+  const navigate = useNavigate();
+  useEffect(() => {
+    const params = new URLSearchParams(location.search);
+    const track = parseInt(params.get("track") || "1", 10); // default to 1
+    setData(trackData[track - 1] || trackData[0]);
+  }, [location.search]);
 
   const handleClick = (track) => {
     setIsOpen(false);
@@ -27,6 +36,9 @@ const TracksDesktop = () => {
   };
   return (
     <div className="flex flex-col py-10 h-screen absolute z-100 w-screen max-w-screen overflow-hidden bg-[url('/images/tracks/TrackFrame.png')] bg-center bg-cover">
+      <div className="max-w-fit flex self-start ml-20 pl-4 pt-4">
+        <Button onClick={() => navigate("/")}>Back</Button>
+      </div>
       <div className="flex-1 flex justify-center items-center">
         <div className="flex justify-center h-120 items-center w-[50vw]">
           <img className="h-120" src="/images/tracks/dexLeft.png" alt="" />
@@ -37,8 +49,8 @@ const TracksDesktop = () => {
           >
             <div className="backdrop-blur-lg flex flex-col h-120 px-6 relative overflow-hidden">
               <div className="relative z-200 flex-1 flex flex-col items-center py-4 justify-center gap-4 text-white text-center">
-                <h2 className="font-pokemon-fire-red text-xl mb-2">{data.name}</h2>
-                <p className="text-justify text-xs">{data.bigdesc}</p>
+                <h2 className="font-pocket-monk  text-3xl mb-2">{data.name}</h2>
+                <p className="text-justify font-gill-sans text-xs">{data.bigdesc}</p>
                 <a
                   href={data.registerLink}
                   className="font-pokemon-solid cursor-pointer max-w-fit text-stroke-black pt-0.8 pb-2 px-4 border-2 rounded-full border-white hover:scale-105 transition-all duration-150 ease-linear"
