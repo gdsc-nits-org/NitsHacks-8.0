@@ -1,12 +1,3 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden; /* Prevent scrollbars */
-}
-
 #coming-soon {
   margin: 0;
   padding: 0;
@@ -322,14 +313,23 @@ body {
     height: 0.5rem;
   }
 }
-.enter-button {
-  position: absolute;
-  bottom: 3rem;
-  right: 3rem;
-  background: transparent;
-  border: none;
-  cursor: pointer;
-  transition: transform 0.2s ease;
+
+/* Loader */
+.loader-container {
+  margin-top: 2%;
+  width: 30%;
+  left: 3.5%;
+  height: 2rem;
+  border: solid 5px black;
+  background-color: transparent;
+  overflow: hidden;
+  position: relative;
+  align-items: center;
+  image-rendering: pixelated;
+  justify-content: flex-start;
+  padding: 0.3125rem; /* 👈 inner spacing between box and white bar */
+  box-sizing: border-box;
+  bottom: 3%;
   z-index: 10;
 }
 

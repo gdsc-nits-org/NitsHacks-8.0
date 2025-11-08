@@ -7,7 +7,7 @@ const Testimonials = () => {
       <h1 className="text-center text-[#FFCB02] font-pocket-monk text-4xl lg:text-6xl mb-4 md:mb-12">
         Testimonails
       </h1>
-      <Marquee speed={100} direction="left" gradientColor="transparent">
+      <Marquee speed={40} direction="left" gradientColor="transparent">
         {testinomialsData.map((testimonial) => (
           <TestimonialCard
             key={testimonial.id}

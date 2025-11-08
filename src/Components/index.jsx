@@ -4,8 +4,9 @@ import Footer from "./Footer/Footer";
 import About from "./About/About";
 import Sponsor from "./Sponsors/Sponsors";
 import Testimonials from "./Testimonials/Testimonials";
-import LoadingScreen from "./LoadingScreen/LoadingScreen";
-import Navigation from "./Navigation/Navigation";
+import GamePopup from "./GamePopup/GamePopup";
+import PokemonGame from "./PokemonGame/PokemonGame";
+import Timeline from "./Timeline/Timeline";
 
 export {
   Button,
@@ -14,6 +15,7 @@ export {
   About,
   Sponsor,
   Testimonials,
-  LoadingScreen,
-  Navigation,
+  GamePopup,
+  PokemonGame,
+  Timeline,
 };
