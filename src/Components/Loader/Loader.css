@@ -1,3 +1,12 @@
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden; /* Prevent scrollbars */
+}
+
 #coming-soon {
   margin: 0;
   padding: 0;
@@ -6,8 +15,7 @@
   width: 100vw; /* Full viewport width */
   overflow: hidden;
 }
-
-.blueBg {
+.blueBg2 {
   position: relative;
   width: 100%;
   height: 100%;
@@ -19,16 +27,29 @@
   justify-content: space-between;
   align-items: center;
 }
+.blueBg {
+  position: relative;
+  width: 68%;
+  height: 90%;
+  background-color: #7ad4fb;
+  overflow: hidden;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  /* padding-top: 5%; */
+}
 
 .comingContainer {
   display: flex;
   justify-content: space-evenly;
 }
 .logo {
-  padding-top: 8rem;
-  scale: 1.5;
+  padding-top: 3rem;
+  scale: 1;
   z-index: 2;
-  width: 180px;
+  width: 120px;
 }
 .background-layer {
   position: absolute;
@@ -52,7 +73,7 @@
 } */
 .clouds-bg {
   z-index: 1;
-  height: 55vh;
+  height: 25vh;
   scale: 2;
   margin-bottom: 0;
 }
@@ -66,8 +87,8 @@
   position: absolute;
   top: 10%; /* adjust vertical height */
   left: 0; /* send to left corner */
-  scale: 1.5;
-  width: 20vw;
+  scale: 1;
+  width: 14vw;
   image-rendering: pixelated;
 }
 
@@ -75,8 +96,8 @@
   position: absolute;
   top: 10%;
   right: 0;
-  scale: 1.5; /* send to right corner */
-  width: 22vw;
+  scale: 1; /* send to right corner */
+  width: 14vw;
   image-rendering: pixelated;
 }
 
@@ -87,6 +108,7 @@
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  gap: 3.5rem;
 }
 
 .character-container {
@@ -94,13 +116,16 @@
   display: flex;
   width: 100vw;
   align-items: flex-end;
-  gap: 8rem;
+  gap: 4rem;
   justify-content: center;
-  padding-right: 12vw;
+  padding-right: 8vw;
 }
 .character-bike {
   position: relative;
   z-index: 11;
+}
+.blueBg2 {
+  display: none;
 }
 
 .character-pikachu {
@@ -113,14 +138,14 @@
   z-index: 11;
   /* max-height: 100px; */
   object-fit: contain;
-  padding-bottom: 2rem;
+  padding-bottom: 2.5rem;
 }
 .character-bike {
-  max-height: 200px;
+  max-height: 120px;
 }
 .character-pikachu {
   height: 120px;
-  max-height: 120px;
+  max-height: 75px;
 }
 
 .staticGrass {
@@ -131,6 +156,9 @@
   z-index: 1;
   pointer-events: none;
 }
+/* .loaderController{
+  display: block;
+} */
 
 @keyframes scroll {
   0% {
@@ -150,17 +178,45 @@
   }
 }
 
+@media (max-width: 1430px) {
+  .center-content {
+    gap: 1.1rem;
+  }
+  .blueBg2 {
+    /* padding-bottom: 10%; */
+    display: none;
+  }
+}
+@media (max-width: 1220px) {
+  .center-content {
+    gap: 0rem;
+  }
+  .logo {
+    width: 100px;
+  }
+  .blueBg2 {
+    /* padding-bottom: 10%; */
+    display: none;
+  }
+}
+
 @media (max-width: 1024px) {
   .blueBg {
-    padding-bottom: 10%;
+    /* padding-bottom: 10%; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
   }
+  .center-content {
+    gap: 1.5rem;
+  }
+  .loaderController {
+    transform: translateX(-40px);
+  }
   .clouds1 {
-    width: 200px;
-    margin-top: 30%;
+    width: 100px;
+    margin-top: 10%;
   }
   .coming-soon-text {
     font-size: 4.5rem;
@@ -169,10 +225,18 @@
     letter-spacing: 0.15em;
   }
   .logo {
-    width: 200px;
+    width: 70px;
   }
   .character-layer {
-    bottom: 28%;
+    /* bottom: 24%; */
+  }
+  .character-bike {
+    max-width: 60px;
+    padding-bottom: 2rem;
+  }
+  .character-pikachu {
+    max-width: 40px;
+    padding-bottom: 2rem;
   }
   .trainer {
     width: 90px;
@@ -180,10 +244,45 @@
   .pikachu {
     width: 60px;
   }
+  .blueBg2 {
+    /* padding-bottom: 10%; */
+    display: none;
+  }
 }
+
 @media (max-width: 920px) {
-  .blueBg {
-    padding-bottom: 20%;
+  .loaderController {
+    display: none;
+  }
+  .blueBg2 {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #7ad4fb;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .clouds1 {
+    width: 240px;
+    margin-top: 10%;
+  }
+  .clouds2 {
+    width: 240px;
+    margin-top: 10%;
+  }
+  .clouds-bg {
+    z-index: 1;
+    height: 45vh;
+    scale: 2;
+    margin-bottom: 0;
+  }
+  .logo {
+    width: 120px;
   }
   .coming-soon-text {
     font-size: 3.5rem;
@@ -191,6 +290,23 @@
     -webkit-text-stroke: 0.18rem #193087;
     text-shadow: 0.1rem 0.1rem 0 #204988;
     letter-spacing: 0.15em;
+  }
+  .character-bike {
+    max-height: 400px;
+    max-width: 200px;
+    height: 200px;
+    padding-bottom: 2rem;
+  }
+  .character-pikachu {
+    max-height: 100px;
+    max-width: 100px;
+    padding-bottom: 2rem;
+  }
+  .trainer {
+    width: 90px;
+  }
+  .pikachu {
+    width: 60px;
   }
 }
 
@@ -213,12 +329,13 @@
     z-index: 1;
     top: 10%;
   }
-  #cloud1 {
-    padding-top: 2vh;
-    left: 100%;
+  .clouds1 {
+    width: 240px;
+    margin-top: 10%;
   }
-  #cloud2 {
-    right: 100%;
+  .clouds2 {
+    width: 240px;
+    margin-top: 10%;
   }
   .coming-soon-text {
     font-size: 4rem;
@@ -313,41 +430,51 @@
     height: 0.5rem;
   }
 }
-
-/* Loader */
-.loader-container {
-  margin-top: 2%;
-  width: 30%;
-  left: 3.5%;
-  height: 2rem;
-  border: solid 5px black;
-  background-color: transparent;
-  overflow: hidden;
-  position: relative;
-  align-items: center;
-  image-rendering: pixelated;
-  justify-content: flex-start;
-  padding: 0.3125rem; /* 👈 inner spacing between box and white bar */
-  box-sizing: border-box;
-  bottom: 3%;
+.enter-button {
+  position: absolute;
+  bottom: 1rem;
+  right: 0;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  transition: transform 0.2s ease;
   z-index: 10;
+  scale: 0.55;
 }
 
-.loader-bar {
-  height: 100%;
-  width: 0%;
-  background-color: #ffffff;
-  z-index: 10;
-  /* border-radius: 10px; */
-  animation: loading 3s linear forwards;
+.enter-button:hover {
+  transform: scale(1.1);
 }
 
-/* Animation that fills the bar */
-@keyframes loading {
-  from {
-    width: 0%;
+.enter-button:active {
+  transform: scale(0.95);
+}
+
+.enter-button img {
+  width: 10rem;
+  height: auto;
+  filter: drop-shadow(0 4px 6px rgba(0, 0, 0, 0.3));
+}
+
+/* Responsive */
+
+@media (max-width: 1024px) {
+  .enter-button {
+    bottom: 0.6rem;
+    right: 0.1rem;
   }
-  to {
-    width: 100%;
+
+  .enter-button img {
+    width: 7rem;
+  }
+}
+@media (max-width: 920px) {
+  .enter-button {
+    bottom: 1rem;
+    right: 0rem;
+  }
+
+  .enter-button img {
+    width: 12rem;
   }
 }

@@ -16,8 +16,8 @@ const Timeline = () => {
     { id: 3, label: "DAY 3", x: 70, y: 15, color: "gray" },
     { id: 4, label: "DAY 4", x: 88, y: 52, color: "yellow" },
   ];
-  // Complete path with all waypoints
 
+  // Complete path with all waypoints
   const fullPath = [
     { x: 15, y: 85 }, // Day 1
     { x: 15, y: 28 }, // Day 2
@@ -27,8 +27,8 @@ const Timeline = () => {
     { x: 70, y: 52 }, // Waypoint
     { x: 88, y: 52 }, // Day 4
   ];
-  // Map day IDs to path indices
 
+  // Map day IDs to path indices
   const dayToPathIndex = {
     1: 0,
     2: 1,
@@ -111,10 +111,10 @@ const Timeline = () => {
 
   const getColorClass = (color) => {
     const colors = {
-      red: "bg-[linear-gradient(to_bottom,_#FE4E5F_42%,_#A44659_59%,_#97374B_100%)]",
-      purple: "bg-[linear-gradient(to_bottom,_#A855F7_42%,_#6B21A8_59%,_#4C1D95_100%)]",
-      gray: "bg-[linear-gradient(to_bottom,_#A1A1AA_42%,_#6B7280_59%,_#374151_100%)]",
-      yellow: "bg-[linear-gradient(to_bottom,_#FBBF24_42%,_#D97706_59%,_#B45309_100%)]",
+      red: "bg-[linear-gradient(to_bottom,#FE4E5F_42%,#A44659_59%,#97374B_100%)]",
+      purple: "bg-[linear-gradient(to_bottom,#A855F7_42%,#6B21A8_59%,#4C1D95_100%)]",
+      gray: "bg-[linear-gradient(to_bottom,#A1A1AA_42%,#6B7280_59%,#374151_100%)]",
+      yellow: "bg-[linear-gradient(to_bottom,#FBBF24_42%,#D97706_59%,#B45309_100%)]",
     };
     return colors[color] || "bg-gray-500";
   };
@@ -223,4 +223,5 @@ const Timeline = () => {
     </>
   );
 };
+
 export default Timeline;

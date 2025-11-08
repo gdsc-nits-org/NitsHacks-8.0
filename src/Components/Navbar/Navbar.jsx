@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useLocation } from "react-router-dom";
 import "./Navbar.css";
 // import nitsHacksLogo from "../../../images/nits-hacks-logo.png";
 
@@ -12,7 +13,10 @@ const MobileNavLink = ({ href, children, onClick }) => {
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
+  const hiddenRoutes = ["/", "/timeline", "/tracks"];
+  if (hiddenRoutes.includes(location.pathname)) {
+    return null; // don't render anything
+  }
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const handleLinkClick = () => setIsMenuOpen(false);
 
