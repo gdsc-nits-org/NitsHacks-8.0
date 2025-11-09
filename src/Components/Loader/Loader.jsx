@@ -1,4 +1,4 @@
-import React, { useEffect, useRef } from "react";
+import { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import "./Loader.css";
 import { useNavigate } from "react-router-dom";
@@ -25,7 +25,7 @@ const Loader = () => {
           ease: "power3.inOut",
           onComplete: () => {
             // Step 3: Navigate to /home after animation
-            // navigate("/home");
+            navigate("/home");
           },
         });
       },
@@ -150,7 +150,7 @@ const Loader = () => {
 
         <button
           className="enter-button"
-          onClick={()=> navigate("/home")}
+          onClick={() => navigate("/home")}
           aria-label="Enter"
           // ref={blueBgRef}
         >

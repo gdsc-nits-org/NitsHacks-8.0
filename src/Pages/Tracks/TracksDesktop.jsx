@@ -1,8 +1,9 @@
 import { useState, useEffect } from "react";
 import { useSearchParams } from "react-router-dom";
 import trackData from "../../assets/tracks.json";
+import { Button } from "../../Components";
+import { useNavigate } from "react-router-dom";
 
-// Helper function now finds data by *numeric* ID
 const getTrackData = (trackId) => {
   // Find the matching track, or default to the first track
   return trackData.find((t) => t.id === parseInt(trackId, 10)) || trackData[0];
@@ -11,14 +12,11 @@ const getTrackData = (trackId) => {
 const TracksDesktop = () => {
   const [searchParams, setSearchParams] = useSearchParams();
 
-  // FIX 1: Start the component in its 'closed' state
   const [isOpen, setIsOpen] = useState(false);
   const [showCovers, setShowCovers] = useState(false);
 
-  // Initialize 'data' state by reading the URL on first load
   const [data, setData] = useState(() => getTrackData(searchParams.get("track")));
-
-  // User's existing 'open' function (unchanged)
+  const navigate = useNavigate();
   const open = () => {
     setIsOpen(false);
     const timer = setTimeout(() => {
@@ -72,12 +70,9 @@ const TracksDesktop = () => {
 
   return (
     <div className="flex flex-col h-screen absolute z-100 w-screen max-w-screen overflow-hidden bg-[url('/images/tracks/TrackFrame.png')] bg-center bg-cover">
-      <a
-        href="/"
-        className="absolute top-4 -left-4 md:left-4 bg-[url(/images/timeline/button.svg)] bg-center bg-cover w-60 h-16 scale-50 md:scale-75 z-20"
-      >
-        {" "}
-      </a>
+      <Button onClick={() => navigate("/home")} className="max-w-fit left-20 top-10">
+        Back
+      </Button>
 
       {/* This 'pt-10' is correct */}
       <div className="flex-1 flex justify-center items-center pt-10">

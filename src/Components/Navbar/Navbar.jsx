@@ -1,7 +1,5 @@
-import { useState } from "react";
-import { useLocation } from "react-router-dom";
+import { useState, useEffect } from "react";
 import "./Navbar.css";
-// import nitsHacksLogo from "../../../images/nits-hacks-logo.png";
 
 const MobileNavLink = ({ href, children, onClick }) => {
   return (
@@ -13,15 +11,31 @@ const MobileNavLink = ({ href, children, onClick }) => {
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const hiddenRoutes = ["/", "/timeline", "/tracks"];
-  if (hiddenRoutes.includes(location.pathname)) {
-    return null; // don't render anything
-  }
+  const [isVisible, setIsVisible] = useState(false);
+
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const handleLinkClick = () => setIsMenuOpen(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar-container max-w-screen">
+    <nav
+      style={{ transform: isVisible ? "translateY(0)" : "translateY(-100%)" }}
+      // style={{ display: isVisible ? "flex" : "none" }}
+      className={`navbar-container max-w-screen transition-all duration-300 ease-linear`}
+    >
       <div className="navbar-logo-container">
         <img
           src="/images/nits-hacks-logo.png"
@@ -46,7 +60,7 @@ const Navbar = () => {
         <a href="/faq" className="navbar-link">
           FAQ
         </a>
-        <a href="/team" className="navbar-link">
+        <a href="/team" className="navbar-link mr-8">
           Teams
         </a>
       </div>
@@ -72,7 +86,7 @@ const Navbar = () => {
           />
         </div>
 
-        <MobileNavLink ink href="/#home" onClick={handleLinkClick}>
+        <MobileNavLink href="/#home" onClick={handleLinkClick}>
           Home
         </MobileNavLink>
         <MobileNavLink href="/tracks" onClick={handleLinkClick}>

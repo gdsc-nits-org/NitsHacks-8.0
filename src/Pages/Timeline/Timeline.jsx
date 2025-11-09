@@ -1,15 +1,15 @@
 import { useState } from "react";
 import GamePopup from "../../Components/GamePopup/GamePopup";
 import mapDataImport from "../../assets/mapData.json";
-
+import { Button } from "../../Components";
+import { useNavigate } from "react-router-dom";
 const Timeline = () => {
   const [currentDay, setCurrentDay] = useState(1);
   const [isAnimating, setIsAnimating] = useState(false);
   const [characterPosition, setCharacterPosition] = useState({ x: 15, y: 85 });
   const [isGameOpen, setIsGameOpen] = useState(false);
   const [selectedGameDay, setSelectedGameDay] = useState(null);
-
-  // Define the path coordinates as percentages for responsiveness
+  const navigate = useNavigate();
   const days = [
     { id: 1, label: "DAY 1", x: 15, y: 85, color: "red" },
     { id: 2, label: "DAY 2", x: 15, y: 28, color: "purple" },
@@ -162,12 +162,9 @@ const Timeline = () => {
           </svg>
 
           {/* Back button */}
-          <a
-            href="/"
-            className="absolute top-4 -left-4 md:left-4 bg-[url(/images/timeline/button.svg)] bg-center bg-cover w-60 h-16 scale-50 md:scale-75"
-          >
-            {" "}
-          </a>
+          <Button onClick={() => navigate("/home")} className="max-w-fit left-20 top-10">
+            Back
+          </Button>
 
           {/* Day markers */}
           {days.map((day) => (

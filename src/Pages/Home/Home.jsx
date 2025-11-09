@@ -1,8 +1,9 @@
-import { About, Sponsor, Testimonials, Timeline } from "../../Components";
+import { About, Sponsor, Navigation, Testimonials, Timeline } from "../../Components";
 
 const Home = () => {
   return (
     <main className="">
+      <Navigation />
       <About />
       <Timeline />
       <Sponsor />

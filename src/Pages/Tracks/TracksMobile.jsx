@@ -1,6 +1,8 @@
 import { useState, useEffect } from "react";
 import { useSearchParams, Link } from "react-router-dom";
 import trackData from "../../assets/tracks.json";
+import { useNavigate } from "react-router-dom";
+import { Button } from "../../Components";
 
 // Helper function to get track data by ID
 const getTrackData = (trackId) => {
@@ -18,7 +20,7 @@ const getTrackBG = (trackId) => {
 
 const TracksMobile = () => {
   const [searchParams, setSearchParams] = useSearchParams();
-
+  const navigate = useNavigate();
   const initialTrackId = searchParams.get("track") || trackData[0].id;
   const [data, setData] = useState(() => getTrackData(initialTrackId));
   const [bg, setBG] = useState(() => getTrackBG(initialTrackId));
@@ -70,7 +72,7 @@ const TracksMobile = () => {
   };
 
   return (
-    <div className="relative z-200 inset-0 h-auto w-screen overflow-visible flex flex-col">
+    <div className="relative z-200 inset-0 h-auto w-screen h-screen overflow-visible flex flex-col">
       {/* --- Background Transition Layer --- */}
       <div className="absolute inset-0 transition-opacity duration-700">
         <div
@@ -88,12 +90,9 @@ const TracksMobile = () => {
       <div className="relative flex flex-col items-center h-full w-full z-10">
         {/* 1. Back button */}
         <div className="w-full flex justify-start pl-4 pt-4 shrink-0 relative z-20">
-          <Link
-            to="/"
-            className="uppercase bg-[#FFCB02] border-2 border-[#002067] px-4 pb-2 pt-1 md:px-6 md:text-lg font-pokemon-solid text-white text-xs text-stroke-black"
-          >
+          <Button onClick={() => navigate("/home")} className="max-w-fit left-4 top-8">
             Back
-          </Link>
+          </Button>
         </div>
 
         {/* 2. Middle content */}
