@@ -295,5 +295,107 @@
     "linkedin": "https://www.linkedin.com/in/upamanyu-jit-phukan-a98359291/",
     "git": "https://github.com/upamanyu-jit-phukan",
     "codeforces": "https://codeforces.com/profile/Upamanyu_Phukan"
+  },
+  {
+    "id": 28,
+    "name": "Prof. Rahul Dev Misra",
+    "designation": "President, IIC",
+    "img": "https://res.cloudinary.com/dmezugavw/image/upload/v1730522543/rdmishra-chairman-research-promotion-cell-nit-silchar_ynrsas.jpg",
+    "git": "",
+    "role": "Faculty",
+    "linkedin": "",
+    "fb": "",
+    "codeforces": "",
+    "portfolio": "http://me.nits.ac.in/prof-r-d-misra/"
+  },
+  {
+    "id": 29,
+    "name": "Dr. Ashish B. Deoghare",
+    "designation": "IIC Coordinator",
+    "img": "https://res.cloudinary.com/dhry5xscm/image/upload/v1729517375/nits-hacks-7.0/abdeoghare_znphbt.jpg",
+    "git": "",
+    "role": "Faculty",
+    "linkedin": "",
+    "fb": "",
+    "codeforces": "",
+    "portfolio": "http://me.nits.ac.in/dr-a-b-deoghare/"
+  },
+  {
+    "id": 30,
+    "name": "Dr. Ripon Patgiri",
+    "designation": "Faculty Advisor, NITSHACKS",
+    "img": "https://cs.nits.ac.in/storage/FacultyDetails/IMG_1753450953688389c9983fc.jpg",
+    "git": "",
+    "role": "Faculty",
+    "linkedin": "",
+    "fb": "",
+    "codeforces": "",
+    "portfolio": "https://cs.nits.ac.in/faculties/ripon"
+  },
+  {
+    "id": 31,
+    "name": "Sahin Alam",
+    "designation": "Convener",
+    "img": "https://res.cloudinary.com/dg361q5uv/image/upload/v1729014745/team_img/oyiknerd4lqrxgjw9opa.webp",
+    "git": "https://github.com/ruler45",
+    "role": "Organisers",
+    "linkedin": "https://www.linkedin.com/in/sahin-alam-96250324a/",
+    "fb": "https://www.facebook.com/sahin.alam.9216778?mibextid=ZbWKwL",
+    "codeforces": ""
+  },
+  {
+    "id": 32,
+    "name": "Barnil Sarma",
+    "linkedin": "https://www.linkedin.com/in/barnil-sarma-34383a255",
+    "git": "https://github.com/barnilsarma",
+    "fb": "https://www.facebook.com/barnil.sarma.3/",
+    "designation": "Coordinator",
+    "role": "Organizers",
+    "img": "https://res.cloudinary.com/dg361q5uv/image/upload/v1729014507/team_img/fwdhqjmmim1i709goqfx.webp",
+    "codeforces": ""
+  },
+  {
+    "id": 33,
+    "name": "Rishi Raj Saha",
+    "linkedin": "https://www.linkedin.com/in/rishi-raj-saha-696b44257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "git": "https://github.com/rishinhk004",
+    "role": "Organizers",
+    "fb": "https://www.facebook.com/rishiraj.saha.353?mibextid=2JQ9oc",
+    "designation": "Coordinator",
+    "img": "https://res.cloudinary.com/dg361q5uv/image/upload/v1729013690/team_img/v50t4jgssgxz2kunywgf.webp",
+    "codeforces": ""
+  },
+  {
+    "id": 34,
+    "name": "Samarjit Roy",
+    "linkedin": "https://www.linkedin.com/in/samarjit-roy-368071257/",
+    "git": "https://github.com/Samarjit25",
+    "fb": "https://www.facebook.com/profile.php?id=100087733476599",
+    "designation": "Coordinator",
+    "role": "Organizers",
+    "img": "https://res.cloudinary.com/dg361q5uv/image/upload/v1729014578/team_img/sc1zjjsjiupc4hmaiygc.webp",
+    "codeforces": ""
+  },
+  {
+    "id": 35,
+    "name": "Jagatjyoti Deb",
+    "designation": "Coordinator",
+    "img": "https://res.cloudinary.com/dg361q5uv/image/upload/v1729014577/team_img/wrmhf7p0czwwddxyqxdz.webp",
+    "git": "",
+    "role": "Organisers",
+    "linkedin": "https://www.linkedin.com/in/jagatjyotideb/",
+    "fb": "https://www.facebook.com/profile.php?id=100084536361943",
+    "codeforces": ""
+  },
+  {
+    "id": 36,
+    "name": "Siddharth Ghosh",
+    "role": "Organisers",
+    "designation": "Chief Coordinator",
+    "img": "https://res.cloudinary.com/dhry5xscm/image/upload/v1693827576/GDSC%20images/WhatsApp_Image_2023-09-01_at_20.15.25_-_Siddharth_Ghosh_ofceqg.webp",
+    "git": "https://github.com/Z-Maniac-Sidd",
+    "linkedin": "https://www.linkedin.com/in/siddharth-ghosh-18ba29251/",
+    "fb": "https://www.linkedin.com/in/siddharth-ghosh-18ba29251/",
+    "codeforces": ""
   }
 ]
