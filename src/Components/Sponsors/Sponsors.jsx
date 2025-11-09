@@ -1,49 +1,49 @@
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Card from "./Card";
-
-const sponsorData = [
-  {
-    id: "amul-1",
-    logo: "/images/amul.png",
-    name: "AMUL",
-  },
-  {
-    id: "amul-2",
-    logo: "/images/amul.png",
-    name: "AMUL",
-  },
-  {
-    id: "amul-3",
-    logo: "/images/amul.png",
-    name: "AMUL",
-  },
-  {
-    id: "amul-4",
-    logo: "/images/amul.png",
-    name: "AMUL",
-  },
-  {
-    id: "amul-5",
-    logo: "/images/amul.png",
-    name: "AMUL",
-  },
-  {
-    id: "amul-6",
-    logo: "/images/amul.png",
-    name: "AMUL",
-  },
-  {
-    id: "amul-7",
-    logo: "/images/amul.png",
-    name: "AMUL",
-  },
-  {
-    id: "amul-8",
-    logo: "/images/amul.png",
-    name: "AMUL",
-  },
-];
+import sponsorData from "../../assets/sponsors.json";
+// const sponsorData = [
+//   {
+//     id: "amul-1",
+//     logo: "/images/amul.png",
+//     name: "AMUL",
+//   },
+//   {
+//     id: "amul-2",
+//     logo: "/images/amul.png",
+//     name: "AMUL",
+//   },
+//   {
+//     id: "amul-3",
+//     logo: "/images/amul.png",
+//     name: "AMUL",
+//   },
+//   {
+//     id: "amul-4",
+//     logo: "/images/amul.png",
+//     name: "AMUL",
+//   },
+//   {
+//     id: "amul-5",
+//     logo: "/images/amul.png",
+//     name: "AMUL",
+//   },
+//   {
+//     id: "amul-6",
+//     logo: "/images/amul.png",
+//     name: "AMUL",
+//   },
+//   {
+//     id: "amul-7",
+//     logo: "/images/amul.png",
+//     name: "AMUL",
+//   },
+//   {
+//     id: "amul-8",
+//     logo: "/images/amul.png",
+//     name: "AMUL",
+//   },
+// ];
 
 const Sponsors = () => {
   const containerRef = useRef(null);
@@ -77,7 +77,10 @@ const Sponsors = () => {
     >
       <div className="container mx-auto">
         <div className="flex items-center justify-center mt-10">
-          <img src="/images/SPONSORS.svg" className="w-full max-w-md" alt="Sponsors" />
+          {/* <img src="/images/SPONSORS.svg" className="w-full max-w-md" alt="Sponsors" /> */}
+          <h1 className="text-5xl text-center text-stroke tracking-wider md:text-9xl font-pocket-monk text-[#FFCB02]">
+            Previous Sponsors
+          </h1>
         </div>
         <div
           ref={containerRef}
@@ -97,7 +100,11 @@ const Sponsors = () => {
                 ${index % 2 === 1 ? "mt-38 md:mt-8" : ""}
               `}
             >
-              <Card logoImage={sponsor.logo} sponsorName={sponsor.name} />
+              <Card
+                type={sponsor.type}
+                logoImage={sponsor.img}
+                sponsorName={sponsor.name}
+              />
             </div>
           ))}
         </div>

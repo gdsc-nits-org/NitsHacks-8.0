@@ -33,5 +33,19 @@
     "name": "Sohail Kazi",
     "TrackParticipated": "Software Track",
     "desc": "Good competition and interesting problem statements. Received the prize money within a few weeks."
+  },
+  {
+    "id": 6,
+    "image": "https://res.cloudinary.com/dg361q5uv/image/upload/v1729015123/team_img/yw3f8ik0wkad4pvbzmjk.webp",
+    "name": "Piyush Chatterjee",
+    "TrackParticipated": "UI/UX Track",
+    "desc": "Winning the UI/UX track at NITS Hacks 7.0 was such an amazing experience! The Star Wars theme made it super fun, creative, and flashy to work on. I learned a lot about designing user-friendly interfaces,  and bringing ideas to life in a short time. It was a really exciting and memorable journey that helped me grow as a designer and have a great time doing it."
+  },
+  {
+    "id": 7,
+    "name": "Subhajyoti Dey",
+    "image": "https://res.cloudinary.com/dludtk5vz/image/upload/v1726422910/kweyyya52iqhl2ytlrvu.webp",
+    "TrackParticipated": "Software Track",
+    "desc": "Winning the software track at Nits Hacks 7.0 was an incredible moment for our team Directionless. We put a ton of hard work and dedication into our project, and seeing it recognized as the best in the software category feels amazing. This victory shows what we can achieve when we collaborate and push our limits. "
   }
 ]

@@ -1,11 +1,15 @@
 import { useState } from "react";
-
+import { useNavigate } from "react-router-dom";
+import GamePopup from "../../Components/GamePopup/GamePopup";
+import mapDataImport from "../../assets/mapData.json";
+import { Button } from "../../Components";
 const Timeline = () => {
   const [currentDay, setCurrentDay] = useState(1);
   const [isAnimating, setIsAnimating] = useState(false);
   const [characterPosition, setCharacterPosition] = useState({ x: 15, y: 85 });
-
-  // Define the path coordinates as percentages for responsiveness
+  const [isGameOpen, setIsGameOpen] = useState(false);
+  const [selectedGameDay, setSelectedGameDay] = useState(null);
+  const navigate = useNavigate();
   const days = [
     { id: 1, label: "DAY 1", x: 15, y: 85, color: "red" },
     { id: 2, label: "DAY 2", x: 15, y: 28, color: "purple" },
@@ -34,12 +38,12 @@ const Timeline = () => {
 
   // Path segments connecting the days (only vertical and horizontal)
   const pathSegments = [
-    { x1: 15, y1: 85, x2: 15, y2: 28 },
-    { x1: 15, y1: 28, x2: 50, y2: 28 },
-    { x1: 50, y1: 28, x2: 50, y2: 15 },
-    { x1: 50, y1: 15, x2: 70, y2: 15 },
-    { x1: 70, y1: 15, x2: 70, y2: 52 },
-    { x1: 70, y1: 52, x2: 88, y2: 52 },
+    { id: 1, x1: 15, y1: 85, x2: 15, y2: 28 },
+    { id: 2, x1: 15, y1: 28, x2: 50, y2: 28 },
+    { id: 3, x1: 50, y1: 28, x2: 50, y2: 15 },
+    { id: 4, x1: 50, y1: 15, x2: 70, y2: 15 },
+    { id: 5, x1: 70, y1: 15, x2: 70, y2: 52 },
+    { id: 6, x1: 70, y1: 52, x2: 88, y2: 52 },
   ];
 
   const animateCharacter = (targetDay) => {
@@ -61,7 +65,7 @@ const Timeline = () => {
       if (currentPointIndex < pathPoints.length) {
         setCharacterPosition(pathPoints[currentPointIndex]);
         currentPointIndex += 1;
-        setTimeout(moveToNextPoint, 300);
+        setTimeout(moveToNextPoint, 300); // 300ms per segment
       } else {
         setIsAnimating(false);
         setCurrentDay(targetDay);
@@ -72,9 +76,21 @@ const Timeline = () => {
   };
 
   const handleDayClick = (dayId) => {
-    if (!isAnimating && dayId !== currentDay) {
-      animateCharacter(dayId);
+    if (!isAnimating) {
+      if (dayId === currentDay) {
+        // Open game popup for current day
+        setSelectedGameDay(dayId);
+        setIsGameOpen(true);
+      } else {
+        // Animate to the clicked day
+        animateCharacter(dayId);
+      }
     }
+  };
+
+  const handleCloseGame = () => {
+    setIsGameOpen(false);
+    setSelectedGameDay(null);
   };
 
   const getDayButtonStyle = (day) => {
@@ -104,93 +120,104 @@ const Timeline = () => {
   };
 
   return (
-    <div className="absolute z-200 w-screen h-screen flex items-center justify-center">
-      <div className="relative h-screen w-screen aspect-video bg-blue-800 shadow-2xl overflow-hidden">
-        {/* Background map */}
-        <div className="absolute inset-0 bg-[url(/images/timeline/TimelineFinal.png)] bg-cover bg-center" />
+    <>
+      <div className="absolute z-200 w-screen h-screen  flex items-center justify-center">
+        <div className="relative h-screen w-screen aspect-video bg-blue-800 shadow-2xl overflow-hidden">
+          {/* Background map - replace with your actual map image */}
+          <div className="absolute inset-0 bg-[url(/images/timeline/TimelineFinal.png)] bg-cover bg-center"></div>
 
-        {/* SVG for path lines */}
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          className="absolute inset-0 w-full h-full pointer-events-none"
-        >
-          <defs>
-            <linearGradient
-              id="lineGradient"
-              x1="0%"
-              y1="0%"
-              x2="100%"
-              y2="0%"
-              gradientUnits="userSpaceOnUse"
-            >
-              <stop offset="0%" stopColor="#E5E6E9" />
-              <stop offset="42%" stopColor="#B3B3B3" />
-              <stop offset="100%" stopColor="#B3AEAE" />
-            </linearGradient>
-          </defs>
-
-          {pathSegments.map((segment) => (
-            <line
-              key={`segment-${segment.x1}-${segment.y1}-${segment.x2}-${segment.y2}`}
-              x1={`${segment.x1}%`}
-              y1={`${segment.y1}%`}
-              x2={`${segment.x2}%`}
-              y2={`${segment.y2}%`}
-              stroke="url(#lineGradient)"
-              strokeWidth="12"
-              strokeLinecap="round"
-              fill="none"
-            />
-          ))}
-        </svg>
-
-        {/* Back button */}
-        <a
-          href="/"
-          aria-label="Go back to home"
-          className="absolute top-4 -left-4 md:left-4 bg-[url(/images/timeline/button.svg)] bg-center bg-cover w-60 h-16 scale-50 md:scale-75"
-        >
-          <span className="sr-only">Back to Home</span>
-        </a>
-
-        {/* Day markers */}
-        {days.map((day) => (
-          <div
-            key={day.id}
-            className="absolute transform -translate-x-1/2 -translate-y-1/2 z-10"
-            style={{ left: `${day.x}%`, top: `${day.y}%` }}
+          {/* SVG for path lines */}
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            className="absolute inset-0 w-full h-full pointer-events-none"
           >
-            {/* Day label */}
-            <div className="absolute -top-8 md:-top-10 left-1/2 transform -translate-x-1/2 bg-[linear-gradient(to_bottom,#E5E6E9_42%,#B3B3B3_59%,#B3AEAE_100%)] px-2 py-1 md:px-8 rounded text-xs md:text-sm font-bold text-gray-800 shadow whitespace-nowrap">
-              {day.label}
-            </div>
+            <defs>
+              <linearGradient
+                id="lineGradient"
+                x1="0%"
+                y1="0%"
+                x2="100%"
+                y2="0%"
+                gradientUnits="userSpaceOnUse"
+              >
+                <stop offset="0%" stopColor="#E5E6E9" />
+                <stop offset="42%" stopColor="#B3B3B3" />
+                <stop offset="100%" stopColor="#B3AEAE" />
+              </linearGradient>
+            </defs>
 
-            {/* Day button */}
-            <button
-              type="button"
-              onClick={() => handleDayClick(day.id)}
-              aria-label={`Navigate to ${day.label}`}
-              className={`${getDayButtonStyle(day)} ${getColorClass(day.color)}`}
+            {pathSegments.map((segment) => (
+              <line
+                key={segment.id}
+                x1={`${segment.x1}%`}
+                y1={`${segment.y1}%`}
+                x2={`${segment.x2}%`}
+                y2={`${segment.y2}%`}
+                stroke="url(#lineGradient)"
+                strokeWidth="12"
+                strokeLinecap="round"
+                fill="none"
+              />
+            ))}
+          </svg>
+
+          {/* Back button */}
+          <Button onClick={() => navigate("/home")} className="max-w-fit left-20 top-10">
+            Back
+          </Button>
+
+          {/* Day markers */}
+          {days.map((day) => (
+            <div
+              key={day.id}
+              className="absolute transform -translate-x-1/2 -translate-y-1/2 z-10"
+              style={{ left: `${day.x}%`, top: `${day.y}%` }}
             >
-              <span className="sr-only">{day.label}</span>
-            </button>
-          </div>
-        ))}
+              {/* Day label */}
+              <div className="absolute -top-8 md:-top-10 left-1/2 transform -translate-x-1/2 bg-[linear-gradient(to_bottom,#E5E6E9_42%,#B3B3B3_59%,#B3AEAE_100%)] px-2 py-1 md:px-8 rounded text-xs md:text-sm font-bold text-gray-800 shadow whitespace-nowrap">
+                {day.label}
+              </div>
 
-        {/* Player character */}
-        <div
-          className="absolute w-8 h-8 md:w-10 md:h-10 transform -translate-x-1/2 -translate-y-1/2 z-30 transition-all duration-300 ease-linear"
-          style={{
-            left: `${characterPosition.x}%`,
-            top: `${characterPosition.y}%`,
-          }}
-        >
-          <div className="relative w-full h-full flex items-center justify-center">
-            <img src="/images/timeline/character.svg" alt="Player character" />
-          </div>
+              {/* Day button */}
+              <button
+                onClick={() => handleDayClick(day.id)}
+                className={`${getDayButtonStyle(day)} ${getColorClass(day.color)}`}
+              >
+                {" "}
+              </button>
+            </div>
+          ))}
+
+          {/* Player character (on current day) */}
+          <button
+            onClick={() => {
+              setSelectedGameDay(currentDay);
+              setIsGameOpen(true);
+            }}
+            className="absolute w-8 h-8 md:w-10 md:h-10 transform -translate-x-1/2 -translate-y-1/2 z-30 transition-all duration-300 ease-linear cursor-pointer hover:scale-110"
+            style={{
+              left: `${characterPosition.x}%`,
+              top: `${characterPosition.y}%`,
+            }}
+          >
+            <div className="relative w-full h-full flex items-center justify-center">
+              {/* Simple character sprite */}
+              <img src="/game/front.webp" alt="" />
+            </div>
+          </button>
         </div>
       </div>
-    </div>
+
+      {/* Game Popup */}
+      {isGameOpen && selectedGameDay && (
+        <GamePopup
+          isOpen={isGameOpen}
+          onClose={handleCloseGame}
+          mapData={mapDataImport[`day${selectedGameDay}`]}
+          dayNumber={selectedGameDay}
+        />
+      )}
+    </>
   );
 };
 

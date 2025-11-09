@@ -1,12 +1,3 @@
-html,
-body {
-  margin: 0;
-  padding: 0;
-  height: 100%;
-  width: 100%;
-  overflow: hidden; /* Prevent scrollbars */
-}
-
 #coming-soon {
   margin: 0;
   padding: 0;
@@ -15,8 +6,7 @@ body {
   width: 100vw; /* Full viewport width */
   overflow: hidden;
 }
-
-.blueBg {
+.blueBg2 {
   position: relative;
   width: 100%;
   height: 100%;
@@ -34,10 +24,10 @@ body {
   justify-content: space-evenly;
 }
 .logo {
-  padding-top: 8rem;
-  scale: 1.5;
+  padding-top: 3rem;
+  scale: 1;
   z-index: 2;
-  width: 180px;
+  width: 120px;
 }
 .background-layer {
   position: absolute;
@@ -61,7 +51,7 @@ body {
 } */
 .clouds-bg {
   z-index: 1;
-  height: 55vh;
+  height: 25vh;
   scale: 2;
   margin-bottom: 0;
 }
@@ -75,8 +65,8 @@ body {
   position: absolute;
   top: 10%; /* adjust vertical height */
   left: 0; /* send to left corner */
-  scale: 1.5;
-  width: 20vw;
+  scale: 1;
+  width: 14vw;
   image-rendering: pixelated;
 }
 
@@ -84,8 +74,8 @@ body {
   position: absolute;
   top: 10%;
   right: 0;
-  scale: 1.5; /* send to right corner */
-  width: 22vw;
+  scale: 1; /* send to right corner */
+  width: 14vw;
   image-rendering: pixelated;
 }
 
@@ -96,6 +86,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
+  gap: 3.5rem;
 }
 
 .character-container {
@@ -103,13 +94,16 @@ body {
   display: flex;
   width: 100vw;
   align-items: flex-end;
-  gap: 8rem;
+  gap: 4rem;
   justify-content: center;
-  padding-right: 12vw;
+  padding-right: 8vw;
 }
 .character-bike {
   position: relative;
   z-index: 11;
+}
+.blueBg2 {
+  display: none;
 }
 
 .character-pikachu {
@@ -122,14 +116,14 @@ body {
   z-index: 11;
   /* max-height: 100px; */
   object-fit: contain;
-  padding-bottom: 2rem;
+  padding-bottom: 2.5rem;
 }
 .character-bike {
-  max-height: 200px;
+  max-height: 120px;
 }
 .character-pikachu {
   height: 120px;
-  max-height: 120px;
+  max-height: 75px;
 }
 
 .staticGrass {
@@ -159,17 +153,45 @@ body {
   }
 }
 
+@media (max-width: 1430px) {
+  .center-content {
+    gap: 1.1rem;
+  }
+  .blueBg2 {
+    /* padding-bottom: 10%; */
+    display: none;
+  }
+}
+@media (max-width: 1220px) {
+  .center-content {
+    gap: 0rem;
+  }
+  .logo {
+    width: 100px;
+  }
+  .blueBg2 {
+    /* padding-bottom: 10%; */
+    display: none;
+  }
+}
+
 @media (max-width: 1024px) {
   .blueBg {
-    padding-bottom: 10%;
+    /* padding-bottom: 10%; */
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: space-between;
   }
+  .center-content {
+    gap: 1.5rem;
+  }
+  .loaderController {
+    transform: translateX(-40px);
+  }
   .clouds1 {
-    width: 200px;
-    margin-top: 30%;
+    width: 100px;
+    margin-top: 10%;
   }
   .coming-soon-text {
     font-size: 4.5rem;
@@ -178,10 +200,18 @@ body {
     letter-spacing: 0.15em;
   }
   .logo {
-    width: 200px;
+    width: 70px;
   }
   .character-layer {
-    bottom: 28%;
+    /* bottom: 24%; */
+  }
+  .character-bike {
+    max-width: 60px;
+    padding-bottom: 2rem;
+  }
+  .character-pikachu {
+    max-width: 40px;
+    padding-bottom: 2rem;
   }
   .trainer {
     width: 90px;
@@ -189,10 +219,45 @@ body {
   .pikachu {
     width: 60px;
   }
+  .blueBg2 {
+    /* padding-bottom: 10%; */
+    display: none;
+  }
 }
+
 @media (max-width: 920px) {
-  .blueBg {
-    padding-bottom: 20%;
+  .loaderController {
+    display: none;
+  }
+  .blueBg2 {
+    display: block;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #7ad4fb;
+    overflow: hidden;
+    z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .clouds1 {
+    width: 240px;
+    margin-top: 10%;
+  }
+  .clouds2 {
+    width: 240px;
+    margin-top: 10%;
+  }
+  .clouds-bg {
+    z-index: 1;
+    height: 45vh;
+    scale: 2;
+    margin-bottom: 0;
+  }
+  .logo {
+    width: 120px;
   }
   .coming-soon-text {
     font-size: 3.5rem;
@@ -200,6 +265,23 @@ body {
     -webkit-text-stroke: 0.18rem #193087;
     text-shadow: 0.1rem 0.1rem 0 #204988;
     letter-spacing: 0.15em;
+  }
+  .character-bike {
+    max-height: 400px;
+    max-width: 200px;
+    height: 200px;
+    padding-bottom: 2rem;
+  }
+  .character-pikachu {
+    max-height: 100px;
+    max-width: 100px;
+    padding-bottom: 2rem;
+  }
+  .trainer {
+    width: 90px;
+  }
+  .pikachu {
+    width: 60px;
   }
 }
 
@@ -222,12 +304,13 @@ body {
     z-index: 1;
     top: 10%;
   }
-  #cloud1 {
-    padding-top: 2vh;
-    left: 100%;
+  .clouds1 {
+    width: 240px;
+    margin-top: 10%;
   }
-  #cloud2 {
-    right: 100%;
+  .clouds2 {
+    width: 240px;
+    margin-top: 10%;
   }
   .coming-soon-text {
     font-size: 4rem;
@@ -324,13 +407,14 @@ body {
 }
 .enter-button {
   position: absolute;
-  bottom: 3rem;
-  right: 3rem;
+  bottom: 1rem;
+  right: 0;
   background: transparent;
   border: none;
   cursor: pointer;
   transition: transform 0.2s ease;
   z-index: 10;
+  scale: 0.55;
 }
 
 .enter-button:hover {
@@ -348,13 +432,40 @@ body {
 }
 
 /* Responsive */
-@media (max-width: 768px) {
+
+@media (max-width: 1024px) {
   .enter-button {
-    bottom: 2rem;
-    right: 2rem;
+    bottom: 0.6rem;
+    right: 0.1rem;
   }
 
   .enter-button img {
     width: 7rem;
+  }
+}
+@media (max-width: 920px) {
+  .enter-button {
+    bottom: 1rem;
+    right: 0rem;
+  }
+
+  .enter-button img {
+    width: 12rem;
+  }
+}
+
+@media (max-width: 920px) {
+  .enter-button {
+    bottom: 1rem;
+    right: 0rem;
+  }
+  .character-bike {
+    max-height: 150px;
+  }
+  .character-pikachu {
+    max-height: 80px;
+  }
+  .enter-button img {
+    width: 10rem;
   }
 }
