@@ -1,8 +1,8 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import GamePopup from "../../Components/GamePopup/GamePopup";
 import mapDataImport from "../../assets/mapData.json";
 import { Button } from "../../Components";
-import { useNavigate } from "react-router-dom";
 const Timeline = () => {
   const [currentDay, setCurrentDay] = useState(1);
   const [isAnimating, setIsAnimating] = useState(false);

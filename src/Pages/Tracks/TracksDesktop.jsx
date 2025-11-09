@@ -1,8 +1,8 @@
 import { useState, useEffect } from "react";
-import { useSearchParams } from "react-router-dom";
+import { useSearchParams , useNavigate } from "react-router-dom";
 import trackData from "../../assets/tracks.json";
 import { Button } from "../../Components";
-import { useNavigate } from "react-router-dom";
+
 
 const getTrackData = (trackId) => {
   // Find the matching track, or default to the first track

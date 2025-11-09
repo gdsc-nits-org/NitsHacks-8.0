@@ -37,16 +37,18 @@ const Navigation = () => {
   return (
     <section className="h-screen flex w-screen bg-[url(/images/NAVIGATIONBG.png)] bg-cover bg-center">
       <div className="w-1/2 relative">
-        <img
-          className={`absolute scale-120 top-[40%] left-[20%] lg:top-[23%] lg:left-[15%] -rotate-20 cursor-pointer transition-all duration-500 ${
-            isAnimating
-              ? "rotate-0 md:rotate-0 lg:rotate-0 scale-[3] md:scale-[3] lg:scale-[3] z-50 translate-[35%] md:translate-x-[35%] lg:translate-x-[35%"
-              : ""
-          }`}
-          src="/images/loaderController.png"
-          alt="nintendo"
-          onClick={handleControllerClick}
-        />
+        <button>
+          <img
+            className={`absolute scale-120 top-[40%] left-[20%] lg:top-[23%] lg:left-[15%] -rotate-20 cursor-pointer transition-all duration-500 ${
+              isAnimating
+                ? "rotate-0 md:rotate-0 lg:rotate-0 scale-[3] md:scale-[3] lg:scale-[3] z-50 translate-[35%] md:translate-x-[35%] lg:translate-x-[35%"
+                : ""
+            }`}
+            src="/images/loaderController.png"
+            alt="nintendo"
+            onClick={handleControllerClick}
+          />
+        </button>
       </div>
       <div className="w-1/2 relative">
         <img

@@ -34,7 +34,7 @@ const Navbar = () => {
     <nav
       style={{ transform: isVisible ? "translateY(0)" : "translateY(-100%)" }}
       // style={{ display: isVisible ? "flex" : "none" }}
-      className={`navbar-container max-w-screen transition-all duration-300 ease-linear`}
+      className="navbar-container max-w-screen transition-all duration-300 ease-linear"
     >
       <div className="navbar-logo-container">
         <img

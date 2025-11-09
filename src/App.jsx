@@ -1,6 +1,6 @@
 import { Routes, Route, useLocation } from "react-router-dom";
 
-import { Home, Error, Faq, Tracks, Timeline, Navigation } from "./Pages";
+import { Home, Error, Faq, Tracks, Timeline } from "./Pages";
 import { Navbar, Footer } from "./Components";
 import Loader from "./Components/Loader/Loader";
 
