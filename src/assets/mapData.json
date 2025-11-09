@@ -300,8 +300,8 @@
       "x": 2,
       "y": 7
     },
-    "title": "Opening Day 1",
-    "description": "Welcome to your first day! Navigate through the map to reach your destination."
+    "title": "Coding Track Prelims",
+    "description": "Online Coding Track Prelims - Test your competitive programming skills in our preliminary round."
   },
   "day2": {
     "background": "/game/pallet.webp",
@@ -604,8 +604,8 @@
       "x": 8,
       "y": 1
     },
-    "title": "Opening Day 2",
-    "description": "Continue your journey through Pallet Town. Find your way to the next checkpoint!"
+    "title": "Opening Ceremony",
+    "description": "Offline Opening Ceremony - Problem statements released for all tracks. Mid-evaluation submission deadline."
   },
   "day3": {
     "background": "/game/cinnabar.webp",
@@ -908,8 +908,8 @@
       "x": 5,
       "y": 3
     },
-    "title": "Opening Day 3",
-    "description": "Explore Cinnabar Island and discover new paths. Your adventure continues!"
+    "title": "Final Submission",
+    "description": "Final Submission - Submit your completed hackathon projects across all tracks."
   },
   "day4": {
     "background": "/game/lavendar.webp",
@@ -1212,7 +1212,7 @@
       "x": 13,
       "y": 5
     },
-    "title": "Opening Day 4",
-    "description": "Final day in Lavender Town! Navigate carefully to complete your journey."
+    "title": "Closing Ceremony",
+    "description": "Result Declaration & Closing Ceremony - Winners announced and celebration of all participants."
   }
 }
