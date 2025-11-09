@@ -3,6 +3,6 @@ import Error from "./Error/Error";
 import Tracks from "./Tracks/Tracks";
 import Faq from "./Faq/Faq";
 import Timeline from "./Timeline/Timeline";
-import Navigation from "../Components/Navigation/Navigation";
+import Team from "./Team/Team";
 
-export { Home, Error, Tracks, Faq, Timeline, Navigation };
+export { Home, Error, Tracks, Faq, Timeline, Team };

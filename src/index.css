@@ -8,6 +8,9 @@
   font-style: normal;
   font-display: swap;
 }
+* {
+  scroll-behavior: smooth;
+}
 @font-face {
   font-family: "Pokemon Fire Red";
   src: url("/fonts/pokemon_fire_red.ttf") format("truetype");
@@ -44,6 +47,12 @@
   font-style: normal;
 }
 @font-face {
+  font-family: "Gill Sans";
+  src: url("../public/fonts/GillSans.otf") format("opentype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
   font-family: "Pokemon Solid";
   src: url("../public/fonts/PokemonSolid.ttf") format("truetype");
   font-weight: normal;
@@ -58,6 +67,9 @@
 
 .font-pokemon-fire-red {
   font-family: "Pokemon Fire Red", sans-serif;
+}
+.font-gill-sans {
+  font-family: "Gill Sans", sans-serif;
 }
 .font-pocket-monk {
   font-family: "Pocket Monk", sans-serif;

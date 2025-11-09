@@ -40,12 +40,12 @@ const Navbar = () => {
         <img
           src="/images/nits-hacks-logo.png"
           alt="NITS HACKS Logo"
-          className="w-16 h-16 md:w-20 md:h-20"
+          className="w-auto h-16 md:w-auto md:h-20"
         />
       </div>
 
       <div className="navbar-links-container-desktop">
-        <a href="/#home" className="navbar-link">
+        <a href="/home" className="navbar-link">
           Home
         </a>
         <a href="/tracks" className="navbar-link">
@@ -54,7 +54,7 @@ const Navbar = () => {
         <a href="/timeline" className="navbar-link">
           Timeline
         </a>
-        <a href="/#sponsors" className="navbar-link">
+        <a href="/home#sponsors" className="navbar-link">
           Sponsors
         </a>
         <a href="/faq" className="navbar-link">
@@ -82,11 +82,11 @@ const Navbar = () => {
           <img
             src="/images/nits-hacks-logo.png"
             alt="NITS HACKS Logo"
-            className="navbar-logo"
+            className="h-16 w-auto md:h-20"
           />
         </div>
 
-        <MobileNavLink href="/#home" onClick={handleLinkClick}>
+        <MobileNavLink href="/home" onClick={handleLinkClick}>
           Home
         </MobileNavLink>
         <MobileNavLink href="/tracks" onClick={handleLinkClick}>
@@ -95,7 +95,7 @@ const Navbar = () => {
         <MobileNavLink href="/timeline" onClick={handleLinkClick}>
           Timeline
         </MobileNavLink>
-        <MobileNavLink href="/#sponsors" onClick={handleLinkClick}>
+        <MobileNavLink href="/home#sponsors" onClick={handleLinkClick}>
           Sponsors
         </MobileNavLink>
         <MobileNavLink href="/faq" onClick={handleLinkClick}>

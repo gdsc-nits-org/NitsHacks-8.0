@@ -2,7 +2,7 @@ import firstPokemon from "../../../public/images/pokeball.svg";
 import pokeball1 from "../../../public/images/pokeball1.svg";
 import pokeball2 from "../../../public/images/pokeball2.svg";
 import pokeball3 from "../../../public/images/pokeball3.svg";
-const Card = ({ logoImage, sponsorName }) => {
+const Card = ({ logoImage, sponsorName, type }) => {
   return (
     <div className="bg-blue-900 p-2 rounded-xl shadow-lg w-full max-w-56 mx-auto">
       <div className="relative bg-red-600 rounded-lg pb-2.5 flex flex-col gap-0.5 aspect-7/10">
@@ -30,11 +30,11 @@ const Card = ({ logoImage, sponsorName }) => {
         </div>
 
         <div className="bg-yellow-400 rounded-md p-0.5 text-center h-22 sm:h-20 mx-2.5 border-2 border-black ">
-          <p className="font-pocket-monk text-black text-2xl sm:text-3xl pt-2">
+          <p className="font-pocket-monk text-nowrap text-black text-2xl sm:text-3xl pt-2">
             {sponsorName}
           </p>
           <p className="text-[0.6rem] sm:text-xs text-black font-courier font-space">
-            Title Sponsor
+            {type}
           </p>
         </div>
 

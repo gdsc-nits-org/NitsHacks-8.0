@@ -68,12 +68,12 @@ const Loader = () => {
             alt="Loader Controller"
           />
           <div
-            className={`relative w-[68%] h-[92%] overflow-hidden z-1 flex flex-col justify-between items-center transition-colors duration-[1500ms] ease-in-out ${
+            className={`relative w-[68%] h-[92%] overflow-hidden z-1 flex flex-col justify-between items-center transition-colors delay-1500 duration-[1500ms] ease-in-out ${
               clicked ? "bg-black" : "bg-[#7ad4fb]"
             }`}
           >
             <div
-              className={`relative w-full transition-all duration-[1500ms] ease-in-out transform ${
+              className={`relative w-full transition-all duration-[1500ms] ease-in-out delay-1000 transform ${
                 clicked ? "opacity-0" : "opacity-100"
               }`}
               style={{ transformStyle: "preserve-3d" }}
