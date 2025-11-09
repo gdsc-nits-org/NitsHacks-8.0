@@ -1,9 +1,13 @@
-import { Faq } from "../../Components";
+import { About, Sponsor, Navigation, Testimonials, Timeline } from "../../Components";
 
 const Home = () => {
   return (
-    <main className="h-screen">
-      <Faq />
+    <main className="">
+      <Navigation />
+      <About />
+      <Timeline />
+      <Sponsor />
+      <Testimonials />
     </main>
   );
 };

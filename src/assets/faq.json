@@ -1,0 +1,52 @@
+[
+  {
+    "id": 1,
+    "question": "Q: Will the events be conducted online or offline?",
+    "answer": "A: The events will be a combination of both online and offline modes."
+  },
+  {
+    "id": 2,
+    "question": "Q: Are there prizes for winners?",
+    "answer": "A: Yes! There is a cash prize pool of 2 lakhs, along with additional goodies."
+  },
+  {
+    "id": 3,
+    "question": "Q: What is the minimum team size? Can I participate without a team?",
+    "answer": "A: For the UI/UX track, individual participation is allowed. However, for both the Coding and Software tracks, a team of at least 2 members is required."
+  },
+  {
+    "id": 4,
+    "question": "Q: Is there any registration fee?",
+    "answer": "A: No, registrations for the event are completely free of cost."
+  },
+  {
+    "id": 5,
+    "question": "Q: What is the eligibility criteria for participation?",
+    "answer": "A: Any student at the B.Tech level is eligible to participate."
+  },
+  {
+    "id": 6,
+    "question": "Q: What is the team size for each track?",
+    "answer": "A: For the Software Track, teams must have 2 to 5 members, while the Coding Track requires teams of 2 to 3 members."
+  },
+  {
+    "id": 7,
+    "question": "Q: Can students from other colleges participate remotely?",
+    "answer": "A: Yes, remote participation is permitted, but only for students outside of NIT Silchar."
+  },
+  {
+    "id": 8,
+    "question": "Q: I'm a beginner. Can I participate in the hackathon?",
+    "answer": "A: Absolutely! Beginners are welcome. The hackathon is open to participants of all skill levels. For the Software track, all you need are basic programming skills and a good problem-solving approach. In the UI/UX track, any level of creative design thinking is encouraged. This is a great opportunity to learn, collaborate, and gain experience!"
+  },
+  {
+    "id": 9,
+    "question": "Q: Are there any restrictions on the tools or technologies participants can use?",
+    "answer": "A: Participants can use any programming language, framework, or tools as long as they meet the requirements of the respective tracks."
+  },
+  {
+    "id": 10,
+    "question": "Q: Will accommodation and travel arrangements be provided for participants from other colleges?",
+    "answer": "A: Accommodation will be provided for participants from other colleges, subject to proper verification and availability; however, travel expenses will need to be covered by the participants themselves."
+  }
+]

@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "name": "Coding track",
+    "photo": "https://res.cloudinary.com/dhry5xscm/image/upload/v1730530020/nits-hacks-7.0/Coding_2_erebuh.png",
+    "desc": "Get ready for the thrilling Competitive Programming Contest of NITS HACKS 7.0 in association with Coding Club NIT Silchar, held alongside the event Tecnoesis, of NIT Silchar. The thrill and fun of team contests is back, with exciting prizes! ",
+    "registrationLink": "https://forms.gle/qLgM8Gi2deVjUU8f6",
+    "bigdesc": "Releasing Coding Track in NITS HACKS 7.0. Prepare for the electrifying Competitive Programming Contest at NITS HACKS 7.0! Step into a realm of challenges designed to push your coding prowess and be the sharpest mind behind the keyboard. This is more than just a contest—it’s an unforgettable experience to shape your coding journey. The coding competition is open to all undergraduate programmers in India and will be split into preliminary and final rounds according to ICPC guidelines. The final round, an online competition, awaits the top 30 preliminary teams, out of which 10 spots are reserved for the NITS Teams (excluding the top 20). Take on diverse problems, demonstrate your skills, and advance through the rounds and get a chance to win prizes worth 80k."
+  },
+  {
+    "id": 2,
+    "name": "Software track",
+    "photo": "https://res.cloudinary.com/dhry5xscm/image/upload/v1730542604/nits-hacks-7.0/sw_2_ikjolt.png",
+    "desc": "Welcome to the Software track, the place where idea meets technology. Under this track, participants will have the opportunity to solve real-world challenges across various domains, including AI-driven education, blockchain-based finance, healthcare, and more.",
+    "registrationLink": "https://forms.gle/qLgM8Gi2deVjUU8f6",
+    "bigdesc": "Get ready to embark on a journey of unparalleled innovation as NITS HACKS, the epicentre of technological brilliance, proudly presents the Software Track - a platform where your coding prowess meets real-world challenges! The Software Track challenges you to push the boundaries of your skills and craft groundbreaking solutions using your preferred tech stack, be it an Android app or a cutting-edge website. Within a specified time limit, participants will immerse themselves in the world of coding, building solutions that transcend the ordinary.\nRegistration is now open! Please click the provided link to complete your registration. Gear up for the ultimate tech adventure and seize the opportunity to be a part of something extraordinary. Note: For outside teams, travel and accommodation expenses would have to borne by the teams themselves."
+  },
+  {
+    "id": 3,
+    "name": "ui/ux track",
+    "photo": "https://res.cloudinary.com/dhry5xscm/image/upload/v1730542628/nits-hacks-7.0/uiux_2_ueo3gn.png",
+    "desc": "The UI/UX Track at NITS HACKS 7.0 offers an engaging opportunity for participants to showcase their design skills within the exciting theme of Star Wars. Participants will tackle two unique problem statements that challenge their creativity and innovation.",
+    "registrationLink": "https://forms.gle/qLgM8Gi2deVjUU8f6",
+    "bigdesc": "Hey Developers! Exciting news, <NITS::HACKS 7.0/> is back with its seventh edition so get ready to unleash your inner creative genius. We’re thrilled to bring back our popular UI/UX track!  After an overwhelming response last year, we’re excited to once again offer this specialised pathway for all you creative visionaries. In this edition, we’re putting a spotlight on UI/UX, giving tech enthusiasts a chance to dive into the captivating world of design and its vital role in technology. The UI/UX track is divided into three stages – mood boarding, designing, and prototyping, challenging all participants to merge creativity and technical prowess flawlessly. The winning team will embody excellence, showcasing a perfect blend of these essential skills. This track is the perfect place to learn, connect, and win big with cash prizes totaling INR 20 K and goodies for the winners. "
+  }
+]

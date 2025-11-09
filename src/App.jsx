@@ -1,19 +1,26 @@
-import { Routes, Route } from "react-router-dom";
+import { Routes, Route, useLocation } from "react-router-dom";
 
-import { Home, Error } from "./Pages";
-
+import { Home, Error, Faq, Tracks, Timeline } from "./Pages";
 import { Navbar, Footer } from "./Components";
+import Loader from "./Components/Loader/Loader";
 
 const App = () => {
+  const location = useLocation();
+  const hideNavbarFooter = ["/", "/tracks", "/timeline"].includes(location.pathname);
+
   return (
-    <>
-      <Navbar />
+    <main className="max-w-screen overflow-hidden">
+      {!hideNavbarFooter && <Navbar />}
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/" element={<Loader />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/timeline" element={<Timeline />} />
+        <Route path="/tracks" element={<Tracks />} />
+        <Route path="/faq" element={<Faq />} />
         <Route path="*" element={<Error />} />
       </Routes>
-      <Footer />
-    </>
+      {!hideNavbarFooter && <Footer />}
+    </main>
   );
 };
 
