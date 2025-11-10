@@ -11,11 +11,11 @@ const Faq = () => {
   };
 
   return (
-    <div className=" bg-[url('/images/faqBG.png')] bg-cover bg-center py-10 px-4 md:py-20">
+    <div className="min-h-screen bg-[url('/images/faqBG.png')] bg-cover bg-center bg-fixed py-10 px-4 md:py-20 overflow-x-hidden">
       <div className="flex flex-col items-center max-w-4xl md:max-w-5xl mx-auto px-4">
         <h1 className={styles.title}>FAQs</h1>
 
-        <div className="flex flex-col gap-2">
+        <div className="w-full flex flex-col gap-2">
           {FAQs.map((faq) => (
             <FaqItem
               key={faq.id}
