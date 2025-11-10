@@ -1,23 +1,11 @@
 @import "tailwindcss";
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@font-face {
-  font-family: "Pokemon Solid";
-  src: url("/fonts/PokemonSolid.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+
 * {
   scroll-behavior: smooth;
 }
-@font-face {
-  font-family: "Pokemon Fire Red";
-  src: url("/fonts/pokemon_fire_red.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-}
+
 @theme {
   --font-poppins: "Poppins", sans-serif;
   --font-pokemon: "'Pokemon Solid', sans-serif";
@@ -93,12 +81,6 @@
 .font-space {
   font-family: "Space", sans-serif;
 }
-@font-face {
-  font-family: "PokemonFireRed";
-  src: url("/fonts/PokemonFireRed.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -109,12 +91,10 @@
 }
 .text-stroke-blue {
   -webkit-text-stroke: 2px #002067;
-  text-stroke: 2px #002067;
 }
 @media (max-width: 768px) {
   .text-stroke-blue {
     -webkit-text-stroke: 1px #002067;
-    text-stroke: 1px #002067;
   }
 }
 

@@ -80,16 +80,18 @@ const TracksDesktop = () => {
           <div
             // This 'w-0' (from isOpen: false) is what makes it start closed
             className={`relative transition-all duration-500 ease-linear overflow-hidden ${
-              isOpen ? "w-96" : "w-0"
+              isOpen ? "w-[32rem]" : "w-0"
             }`}
           >
-            <div className="backdrop-blur-lg flex flex-col h-120 px-6 relative overflow-hidden">
+            <div className="backdrop-blur-xl bg-black/40 flex flex-col h-120 px-8 relative overflow-hidden">
               <div className="relative z-200 flex-1 flex flex-col items-center py-4 justify-center gap-4 text-white text-center">
-                <h2 className="font-pocket-monk  text-3xl mb-2">{data.name}</h2>
-                <p className="text-justify font-gill-sans text-xs">{data.bigdesc}</p>
+                <h2 className="font-pocket-monk text-4xl mb-2">{data.name}</h2>
+                <p className="text-justify font-pokemon-fire-red text-xs leading-relaxed">
+                  {data.bigdesc}
+                </p>
                 <a
                   href={data.registrationLink}
-                  className="font-pokemon-solid cursor-pointer max-w-fit text-stroke-black pt-0.8 pb-2 px-4 border-2 rounded-full border-white hover:scale-105 transition-all duration-150 ease-linear"
+                  className="font-pocket-monk cursor-pointer max-w-fit text-stroke-black pt-0.8 pb-2 px-4 border-2 rounded-full border-white hover:scale-105 transition-all duration-150 ease-linear"
                 >
                   Register Now
                 </a>
@@ -118,24 +120,24 @@ const TracksDesktop = () => {
       </div>
 
       {/* This 'pb-10' is correct */}
-      <div className="flex justify-center items-center gap-20 pb-10">
+      <div className="flex justify-center items-center gap-20 pb-12">
         <button onClick={() => handleClick(1)}>
           <img
-            className="h-24 hover:scale-105 transition-all duration-150 ease-linear"
+            className="h-28 hover:scale-105 transition-all duration-150 ease-linear"
             src="/images/tracks/codingGame.svg"
             alt="codingTrack"
           />
         </button>
         <button onClick={() => handleClick(2)}>
           <img
-            className="h-24 hover:scale-105 transition-all duration-150 ease-linear"
+            className="h-28 hover:scale-105 transition-all duration-150 ease-linear"
             src="/images/tracks/softwareGame.svg"
             alt="softwareTrack"
           />
         </button>
         <button onClick={() => handleClick(3)}>
           <img
-            className="h-24 hover:scale-105 transition-all duration-150 ease-linear"
+            className="h-28 hover:scale-105 transition-all duration-150 ease-linear"
             src="/images/tracks/uiuxGame.svg"
             alt="uiuxTrack"
           />
