@@ -174,7 +174,7 @@ const Timeline = () => {
               style={{ left: `${day.x}%`, top: `${day.y}%` }}
             >
               {/* Day label */}
-              <div className="absolute -top-8 md:-top-10 left-1/2 transform -translate-x-1/2 bg-[linear-gradient(to_bottom,#E5E6E9_42%,#B3B3B3_59%,#B3AEAE_100%)] px-2 py-1 md:px-8 rounded text-xs md:text-sm font-bold text-gray-800 shadow whitespace-nowrap">
+              <div className="absolute -top-8 md:-top-10 left-1/2 transform -translate-x-1/2 bg-[linear-gradient(to_bottom,#E5E6E9_42%,#B3B3B3_59%,#B3AEAE_100%)] px-2 py-1 md:px-8 rounded text-base md:text-base font-bold text-gray-600 shadow whitespace-nowrap">
                 {day.label}
               </div>
 

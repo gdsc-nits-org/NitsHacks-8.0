@@ -18,6 +18,7 @@ const App = () => {
         <Route path="/timeline" element={<Timeline />} />
         <Route path="/faq" element={<Faq />} />
         <Route path="/team" element={<Team />} />
+
         <Route path="*" element={<Error />} />
       </Routes>
       {!hideNavbarFooter && <Footer />}
