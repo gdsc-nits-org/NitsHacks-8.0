@@ -9,7 +9,7 @@
 @theme {
   --font-poppins: "Poppins", sans-serif;
   --font-pokemon: "'Pokemon Solid', sans-serif";
-  --font-pokemon-fire-red: "'Pokemon Fire Red', monospace";
+  --font-pokemon-fire-red: "'Pokemon Emerald', sans-serif";
 
   --color-gdsc-blue-1: #4885ed;
   --color-gdsc-blue-2: #4285f4;
@@ -30,31 +30,40 @@
 }
 @font-face {
   font-family: "Pocket Monk";
-  src: url("../public/fonts/PocketMonk.otf") format("opentype");
+  src: url("/fonts/PocketMonk.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Gill Sans";
-  src: url("../public/fonts/GillSans.otf") format("opentype");
+  src: url("/fonts/GillSans.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Pokemon Solid";
-  src: url("../public/fonts/PokemonSolid.ttf") format("truetype");
+  src: url("/fonts/PokemonSolid.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Pokemon Fire Red";
-  src: url("../public/fonts/pokemon_fire_red.ttf") format("truetype");
+  src: url("/fonts/pokemon_fire_red.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pokemon Emerald";
+  src: url("/fonts/pokemon-emerald.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 .font-pokemon-fire-red {
-  font-family: "Pokemon Fire Red", sans-serif;
+  font-family: "Pokemon Emerald", sans-serif;
+}
+.font-pokemon-emerald {
+  font-family: "Pokemon Emerald", sans-serif;
 }
 .font-gill-sans {
   font-family: "Gill Sans", sans-serif;
