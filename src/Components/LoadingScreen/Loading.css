@@ -17,11 +17,11 @@
 .logo-section {
   margin-top: 5rem;
 }
-
 .logo {
-  width: 18rem; /* increased size */
-  max-width: 90vw;
+  width: 60rem;
+  max-width: 120vw;
   height: auto;
+  transform: scale(1.05);
 }
 
 /* --- PIKACHU + BAR --- */
