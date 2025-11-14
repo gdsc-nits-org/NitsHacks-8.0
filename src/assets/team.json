@@ -23,15 +23,16 @@
   },
   {
     "id": 3,
-    "name": "Dishank Choudhury",
-    "designation": "Developer",
+    "name": "DIKSHA BHATTACHARJEE",
+    "designation": "UI/UX",
     "role": "Tech",
-    "img": "https://res.cloudinary.com/dq52438zg/image/upload/v1762527359/nits-hacks-7.0/tech-team/luqsv3gbd3g476ctqqk3.jpg",
-    "fb": "https://www.facebook.com/profile.php?id=61567024787802",
-    "linkedin": "https://www.linkedin.com/in/dishank-choudhury-56b565318",
-    "git": "https://github.com/di35117",
-    "codeforces": "https://codeforces.com/profile/Dishank35117"
+    "img": "https://res.cloudinary.com/dqobuxkcj/image/upload/v1762799788/Diksha_Bhattacharjee_ef1l63.jpg",
+    "fb": "https://www.facebook.com/profile.php?id=61567060391925&mibextid=rS40aB7S9Ucbxw6v",
+    "linkedin": "https://www.linkedin.com/in/diksha-bhattacharjee-1b5818325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
+    "git": "",
+    "codeforces": ""
   },
+  
   {
     "id": 4,
     "name": "Debarpan Roy",
@@ -144,14 +145,14 @@
   },
   {
     "id": 14,
-    "name": "DIKSHA BHATTACHARJEE",
-    "designation": "UI/UX",
+    "name": "Dishank Choudhury",
+    "designation": "Developer",
     "role": "Tech",
-    "img": "https://res.cloudinary.com/dqobuxkcj/image/upload/v1762799788/Diksha_Bhattacharjee_ef1l63.jpg",
-    "fb": "https://www.facebook.com/profile.php?id=61567060391925&mibextid=rS40aB7S9Ucbxw6v",
-    "linkedin": "https://www.linkedin.com/in/diksha-bhattacharjee-1b5818325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
-    "git": "",
-    "codeforces": ""
+    "img": "https://res.cloudinary.com/dq52438zg/image/upload/v1762527359/nits-hacks-7.0/tech-team/luqsv3gbd3g476ctqqk3.jpg",
+    "fb": "https://www.facebook.com/profile.php?id=61567024787802",
+    "linkedin": "https://www.linkedin.com/in/dishank-choudhury-56b565318",
+    "git": "https://github.com/di35117",
+    "codeforces": "https://codeforces.com/profile/Dishank35117"
   },
   {
     "id": 15,
