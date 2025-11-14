@@ -1,44 +1,53 @@
 import { useLayoutEffect, useRef } from "react";
 import { gsap } from "gsap";
 import Card from "./Card";
-import AmulLogo from "../../../public/images/amul.png";
-import sponsorsImg from "../../../public/images/SPONSORS.svg";
-const sponsorData = [
-  {
-    logo: AmulLogo,
-    name: "AMUL",
-  },
-  {
-    logo: AmulLogo,
-    name: "AMUL",
-  },
-  {
-    logo: AmulLogo,
-    name: "AMUL",
-  },
-  {
-    logo: AmulLogo,
-    name: "AMUL",
-  },
-  {
-    logo: AmulLogo,
-    name: "AMUL",
-  },
-  {
-    logo: AmulLogo,
-    name: "AMUL",
-  },
-  {
-    logo: AmulLogo,
-    name: "AMUL",
-  },
-  {
-    logo: AmulLogo,
-    name: "AMUL",
-  },
-];
+import sponsorData from "../../assets/sponsors.json";
+// const sponsorData = [
+//   {
+//     id: "amul-1",
+//     logo: "/images/amul.png",
+//     name: "AMUL",
+//   },
+//   {
+//     id: "amul-2",
+//     logo: "/images/amul.png",
+//     name: "AMUL",
+//   },
+//   {
+//     id: "amul-3",
+//     logo: "/images/amul.png",
+//     name: "AMUL",
+//   },
+//   {
+//     id: "amul-4",
+//     logo: "/images/amul.png",
+//     name: "AMUL",
+//   },
+//   {
+//     id: "amul-5",
+//     logo: "/images/amul.png",
+//     name: "AMUL",
+//   },
+//   {
+//     id: "amul-6",
+//     logo: "/images/amul.png",
+//     name: "AMUL",
+//   },
+//   {
+//     id: "amul-7",
+//     logo: "/images/amul.png",
+//     name: "AMUL",
+//   },
+//   {
+//     id: "amul-8",
+//     logo: "/images/amul.png",
+//     name: "AMUL",
+//   },
+// ];
+
 const Sponsors = () => {
   const containerRef = useRef(null);
+
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       gsap.matchMedia().add("(min-width: 768px)", () => {
@@ -60,21 +69,18 @@ const Sponsors = () => {
     }, containerRef);
     return () => ctx.revert();
   }, []);
+
   return (
     <div
       id="sponsors"
       className="min-h-screen bg-[url(/images/background.svg)] p-8 font-sans"
     >
       <div className="container mx-auto">
-        {/* <button>
-          <img
-            src={button}
-            alt="Go back"
-            className="w-30 md:w-48 md:ml-9 cursor-pointer"
-          />
-        </button> */}
         <div className="flex items-center justify-center mt-10">
-          <img src={sponsorsImg} className="w-full max-w-md" alt="Sponsors" />
+          {/* <img src="/images/SPONSORS.svg" className="w-full max-w-md" alt="Sponsors" /> */}
+          <h1 className="text-5xl text-center text-stroke tracking-wider md:text-9xl font-pocket-monk text-[#FFCB02]">
+            Previous Sponsors
+          </h1>
         </div>
         <div
           ref={containerRef}
@@ -86,6 +92,7 @@ const Sponsors = () => {
         >
           {sponsorData.map((sponsor, index) => (
             <div
+              key={sponsor.id}
               className={`
                 card-item
                 shrink-0 basis-[calc(50%-0.5rem)] 
@@ -93,7 +100,11 @@ const Sponsors = () => {
                 ${index % 2 === 1 ? "mt-38 md:mt-8" : ""}
               `}
             >
-              <Card logoImage={sponsor.logo} sponsorName={sponsor.name} />
+              <Card
+                type={sponsor.type}
+                logoImage={sponsor.img}
+                sponsorName={sponsor.name}
+              />
             </div>
           ))}
         </div>

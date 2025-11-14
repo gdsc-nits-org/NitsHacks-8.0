@@ -25,3 +25,6 @@ dist-ssr
 # Environment Variables
 *.env
 *.env.prod
+
+# Map Editor
+src/Pages/MapEditor

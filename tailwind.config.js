@@ -8,9 +8,14 @@ export default {
         "press-start": ['"Press Start 2P"', "cursive"], // The pixel font
         poppins: ['"Poppins"', "sans-serif"],
         pocket: ['"Pocket Monk"', "sans-serif"],
+        "pokemon-emerald": ['"Pokemon Emerald"', "sans-serif"],
       },
 
       colors: {},
+      screens: {
+        tablet: "640px",
+        lg: "1200px",
+      },
     },
   },
   plugins: [],

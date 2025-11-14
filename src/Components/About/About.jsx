@@ -30,28 +30,6 @@ const About = () => {
           </div>
         </div>
       </section>
-
-      {/* TECNOESIS SECTION */}
-      <section className="about-section">
-        <h2 className="about-heading">ABOUT TECNOESIS</h2>
-        <div className="about-box">
-          <p className="about-text">
-            <span className="highlight">TECNOESIS</span> is the annual techno-managerial
-            event of NIT Silchar, promising all tech geeks the ideal niche of fascinating
-            events, workshops, competitions and interactions worth a lifetime. This mega
-            event has left its mark as one of the most prominent techfests across the
-            country. The cauldron of enthusiasm and knowledge attracts various students,
-            presenting the chance to let their minds run wild with ideas, fostering the
-            inventors of the future.
-          </p>
-          <div className="brochure-banner-2">
-            <img src="/images/squirtle.png" alt="Squirtle" className="Squirtle" />
-
-            <button className="brochure-btn-2 text-nowrap">🌐 VISIT TECNOESIS</button>
-            <img src="/images/aboutPoke.png" alt="Pokeball" className="poke-icon" />
-          </div>
-        </div>
-      </section>
     </div>
   );
 };

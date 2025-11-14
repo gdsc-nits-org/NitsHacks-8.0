@@ -1,6 +1,5 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./Navbar.css";
-// import nitsHacksLogo from "../../../images/nits-hacks-logo.png";
 
 const MobileNavLink = ({ href, children, onClick }) => {
   return (
@@ -12,22 +11,41 @@ const MobileNavLink = ({ href, children, onClick }) => {
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [isVisible, setIsVisible] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
   const handleLinkClick = () => setIsMenuOpen(false);
 
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 50) {
+        setIsVisible(true);
+      } else {
+        setIsVisible(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
   return (
-    <nav className="navbar-container max-w-screen">
+    <nav
+      style={{ transform: isVisible ? "translateY(0)" : "translateY(-100%)" }}
+      // style={{ display: isVisible ? "flex" : "none" }}
+      className="navbar-container max-w-screen transition-all duration-300 ease-linear"
+    >
       <div className="navbar-logo-container">
         <img
           src="/images/nits-hacks-logo.png"
           alt="NITS HACKS Logo"
-          className="w-16 h-16 md:w-20 md:h-20"
+          className="w-auto h-16 md:w-auto md:h-20"
         />
       </div>
 
       <div className="navbar-links-container-desktop">
-        <a href="/#home" className="navbar-link">
+        <a href="/home" className="navbar-link">
           Home
         </a>
         <a href="/tracks" className="navbar-link">
@@ -36,13 +54,13 @@ const Navbar = () => {
         <a href="/timeline" className="navbar-link">
           Timeline
         </a>
-        <a href="/#sponsors" className="navbar-link">
+        <a href="/home#sponsors" className="navbar-link">
           Sponsors
         </a>
         <a href="/faq" className="navbar-link">
           FAQ
         </a>
-        <a href="/team" className="navbar-link">
+        <a href="/team" className="navbar-link mr-8">
           Teams
         </a>
       </div>
@@ -64,11 +82,11 @@ const Navbar = () => {
           <img
             src="/images/nits-hacks-logo.png"
             alt="NITS HACKS Logo"
-            className="navbar-logo"
+            className="h-16 w-auto md:h-20"
           />
         </div>
 
-        <MobileNavLink ink href="/#home" onClick={handleLinkClick}>
+        <MobileNavLink href="/home" onClick={handleLinkClick}>
           Home
         </MobileNavLink>
         <MobileNavLink href="/tracks" onClick={handleLinkClick}>
@@ -77,7 +95,7 @@ const Navbar = () => {
         <MobileNavLink href="/timeline" onClick={handleLinkClick}>
           Timeline
         </MobileNavLink>
-        <MobileNavLink href="/#sponsors" onClick={handleLinkClick}>
+        <MobileNavLink href="/home#sponsors" onClick={handleLinkClick}>
           Sponsors
         </MobileNavLink>
         <MobileNavLink href="/faq" onClick={handleLinkClick}>

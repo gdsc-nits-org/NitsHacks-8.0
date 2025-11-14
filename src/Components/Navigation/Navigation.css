@@ -1,0 +1,213 @@
+/* 🎨 FONT IMPORTS */
+@import url("https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap");
+
+/* 🔤 LOCAL FONT: Pokémon Fire Red */
+@font-face {
+  font-family: "PokemonFireRed";
+  src:
+    url("/fonts/pokemon_fire_red.woff2") format("woff2"),
+    url("/fonts/pokemon_fire_red.woff") format("woff"),
+    url("/fonts/pokemon_fire_red.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/* 🌈 MAIN BACKGROUND CONTAINER */
+.pokemon-bg {
+  width: 100%;
+  min-height: 100vh;
+  background: url("/images/navigationBg.png") no-repeat center center fixed;
+  background-size: cover;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-family: "PokemonFireRed", "Press Start 2P", sans-serif;
+  overflow-x: hidden;
+  padding: 4rem 3rem;
+  box-sizing: border-box;
+}
+
+/* 🧩 MAIN CONTENT LAYOUT */
+.content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+  gap: 5rem;
+  flex-wrap: wrap;
+}
+
+/* 🎮 LEFT SECTION — Nintendo Switch + Tracks Button */
+.main-device {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  transform: rotate(-10deg);
+  margin-left: 2rem;
+}
+
+.switch-img {
+  width: 50rem;
+  max-width: 90vw;
+  margin-bottom: 0;
+}
+
+.tracks-button {
+  width: 13rem;
+  height: 4rem;
+  font-size: 0.9rem;
+  transform: rotate(-20deg);
+  margin-top: -9rem;
+  display: inline-block;
+  z-index: 2;
+  border: none;
+  background: url("/images/buttonBg.png") no-repeat center/100% 100%;
+  text-transform: uppercase;
+  font-family: "PokemonFireRed", "Press Start 2P", sans-serif;
+  cursor: pointer;
+}
+
+/* 📱 RIGHT SECTION — Phone + Pokedex + Buttons */
+.right-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  margin-right: 5rem;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.phone-img {
+  width: 15rem;
+}
+
+.pokedex-img {
+  width: 11rem;
+}
+
+/* 🔘 BUTTONS — Shared Styles */
+.small-button,
+.small-button-2 {
+  background: url("/images/buttonBg.png") no-repeat center/100% 100%;
+  border: none;
+  font-family: "PokemonFireRed", "Press Start 2P", sans-serif;
+  text-transform: uppercase;
+  width: 7rem;
+  height: 3rem;
+  font-size: 0.6rem;
+  cursor: pointer;
+}
+
+.small-button-2 {
+  transform: rotate(5deg);
+}
+
+/* 📱 RESPONSIVE DESIGN (max-width: 768px) */
+@media (max-width: 768px) {
+  /* 🪩 Background optimized for mobile */
+  .pokemon-bg {
+    background: url("/images/navigationBgMobile.png") no-repeat center center fixed;
+    background-size: cover;
+    padding: 1rem;
+  }
+
+  /* 🧱 Layout adjustments for mobile */
+  .content {
+    flex-direction: row !important;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: nowrap;
+    width: 100%;
+    padding: 1rem;
+    gap: 0.5rem;
+  }
+
+  /* 🎮 LEFT SECTION — Smaller Switch and Tracks Button */
+  .main-device {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    transform: rotate(-6deg);
+    position: relative;
+    margin: 0;
+    margin-left: -1rem;
+    margin-top: 2rem;
+  }
+
+  /* 🔹 Switch resized for small screens */
+  .switch-img {
+    width: 200%;
+    max-width: 18rem;
+  }
+
+  /* 🔹 Tracks button scaled down */
+  .tracks-button {
+    margin-top: -3rem;
+    width: 3.5rem;
+    height: 1.2rem;
+    font-size: 0.4rem;
+    transform: rotate(-16deg);
+  }
+
+  /* 📱 RIGHT SECTION — Stacked vertically */
+  .right-section {
+    flex: 0 0 38%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 5rem;
+    margin: 0;
+  }
+
+  .card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.7rem;
+  }
+
+  /* 🔹 Slightly larger phone and pokedex for visibility */
+  .phone-img {
+    width: 6.5rem;
+    margin-bottom: -0.6rem;
+  }
+
+  .pokedex-img {
+    width: 5.8rem;
+  }
+
+  /* 🎯 Compact buttons */
+  .small-button {
+    width: 3rem;
+    height: 1rem;
+    font-size: 0.3rem;
+  }
+
+  .small-button-2 {
+    width: 2.5rem;
+    height: 0.9rem;
+    font-size: 0.3rem;
+    transform: rotate(3.5deg);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px); /* slight upward motion for smoothness */
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 4s ease-out forwards;
+}

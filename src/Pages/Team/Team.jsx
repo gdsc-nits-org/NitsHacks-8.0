@@ -5,12 +5,33 @@ import teamData from "../../assets/team.json";
 const Team = () => {
   const coreTeam = teamData.filter((member) => member.role === "Coreteam");
   const convener = teamData.filter((member) => member.role === "Convener");
-  const coordinator = teamData.filter((member) => member.role === "Coordinator");
+  const coordinator = teamData
+    .filter((member) => member.role === "Coordinator")
+    .sort((a, b) => a.designation.localeCompare(b.designation));
+
   const techLead = teamData.filter((member) => member.role === "Techlead");
   const tech = teamData.filter((member) => member.role === "Tech");
-  const organisers = teamData.filter((member) => member.role === "Organisers");
+  const organisers = teamData
+    .filter((member) => member.role === "Organisers")
+    .sort((a, b) => {
+      const priority = ["Coding", "Software", "UIUX"];
+
+      const aPriority = priority.some((key) =>
+        a.designation.toLowerCase().includes(key.toLowerCase())
+      );
+      const bPriority = priority.some((key) =>
+        b.designation.toLowerCase().includes(key.toLowerCase())
+      );
+
+      if (aPriority && !bPriority) return -1; // a comes first
+      if (!aPriority && bPriority) return 1; // b comes first
+
+      // If both have same priority, sort alphabetically
+      return a.designation.localeCompare(b.designation);
+    });
+
   // const volunteers = teamData.filter((member) => member.role === "volunteer");
-  // const faculty = teamData.filter((member) => member.role === "Faculty");
+  const faculty = teamData.filter((member) => member.role === "Faculty");
   const setter = teamData.filter((member) => member.role === "Prob");
 
   // return (
@@ -134,7 +155,7 @@ const Team = () => {
   // );
 
   return (
-    <div className="relative flex flex-col justify-start items-center max-w-screen min-h-screen z-1 mt-17 md:mt-20 bg-[#A7D2F6] ">
+    <div className="relative flex flex-col justify-start items-center max-w-screen min-h-screen z-1 bg-[#A7D2F6] ">
       <img
         src="/images/teams/upperBg.svg"
         alt="Pokédex frame"
@@ -153,9 +174,23 @@ const Team = () => {
               Teams
             </h1>
           </div>
-
           <div className="flex flex-col gap-4 items-center">
             <h2 className="font-pocket-monk text-3xl">Core Members</h2>
+            <div className="team-grid">
+              {faculty.map((member) => (
+                <TeamCard
+                  key={member.id}
+                  name={member.name}
+                  designation={member.designation}
+                  github={member.git}
+                  facebook={member.fb}
+                  codeforces={member.codeforces}
+                  linkedin={member.linkedin}
+                  image={member.img}
+                  portfolio={member.portfolio}
+                />
+              ))}
+            </div>
             <div className="team-grid">
               {convener.map((member) => (
                 <TeamCard

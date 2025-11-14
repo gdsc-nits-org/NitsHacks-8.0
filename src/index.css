@@ -1,16 +1,15 @@
 @import "tailwindcss";
 
 @import url("https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap");
-@font-face {
-  font-family: "Pokemon Solid";
-  src: url("/fonts/PokemonSolid.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
+
+* {
+  scroll-behavior: smooth;
 }
+
 @theme {
   --font-poppins: "Poppins", sans-serif;
   --font-pokemon: "'Pokemon Solid', sans-serif";
+  --font-pokemon-fire-red: "'Pokemon Emerald', sans-serif";
 
   --color-gdsc-blue-1: #4885ed;
   --color-gdsc-blue-2: #4285f4;
@@ -31,31 +30,40 @@
 }
 @font-face {
   font-family: "Pocket Monk";
-  src: url("../public/fonts/PocketMonk.otf") format("opentype");
+  src: url("/fonts/PocketMonk.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Gill Sans";
-  src: url("../public/fonts/GillSans.otf") format("opentype");
+  src: url("/fonts/GillSans.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Pokemon Solid";
-  src: url("../public/fonts/PokemonSolid.ttf") format("truetype");
+  src: url("/fonts/PokemonSolid.ttf") format("truetype");
   font-weight: normal;
   font-style: normal;
 }
 @font-face {
   font-family: "Pokemon Fire Red";
-  src: url("../public/fonts/pokemon_fire_red.ttf") format("truetype");
+  src: url("/fonts/pokemon_fire_red.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Pokemon Emerald";
+  src: url("/fonts/pokemon-emerald.otf") format("opentype");
   font-weight: normal;
   font-style: normal;
 }
 
 .font-pokemon-fire-red {
-  font-family: "Pokemon Fire Red", sans-serif;
+  font-family: "Pokemon Emerald", sans-serif;
+}
+.font-pokemon-emerald {
+  font-family: "Pokemon Emerald", sans-serif;
 }
 .font-gill-sans {
   font-family: "Gill Sans", sans-serif;
@@ -82,12 +90,6 @@
 .font-space {
   font-family: "Space", sans-serif;
 }
-@font-face {
-  font-family: "PokemonFireRed";
-  src: url("/fonts/PokemonFireRed.ttf") format("truetype");
-  font-weight: normal;
-  font-style: normal;
-}
 
 .no-scrollbar::-webkit-scrollbar {
   display: none;
@@ -95,4 +97,44 @@
 .no-scrollbar {
   -ms-overflow-style: none;
   scrollbar-width: none;
+}
+.text-stroke-blue {
+  -webkit-text-stroke: 2px #002067;
+}
+@media (max-width: 768px) {
+  .text-stroke-blue {
+    -webkit-text-stroke: 1px #002067;
+  }
+}
+
+@keyframes shake {
+  0%,
+  100% {
+    transform: translate(-50%, -50%) translateX(0);
+  }
+  25% {
+    transform: translate(-50%, -50%) translateX(-4px);
+  }
+  75% {
+    transform: translate(-50%, -50%) translateX(4px);
+  }
+}
+
+.animate-shake {
+  animation: shake 0.2s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.4s ease-out forwards;
 }
