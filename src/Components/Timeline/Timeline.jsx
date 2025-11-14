@@ -61,7 +61,7 @@ const Timeline = () => {
           >
             <img className="md:w-80" src="/images/timeline/map.svg" alt="map" />
           </button>
-          <h1 className="font-pocket-monk text-stroke-blue text-wider text-5xl md:text-7xl text-[#FFCB02] text-stroke-[#002067]">
+          <h1 className="font-pocket-monk text-stroke-blue text-wider text-5xl md:text-7xl text-[#be2c18] text-stroke-[#002067]">
             Tracks
           </h1>
           <ul className="flex flex-col gap-6">

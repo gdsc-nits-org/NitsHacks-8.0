@@ -229,13 +229,13 @@ const PokemonGame = ({ mapData, onComplete }) => {
                 className="w-full h-auto"
                 style={{ imageRendering: "pixelated" }}
               />
-              <div className="absolute inset-0 flex items-center justify-center pt-1">
+              <div className="absolute inset-0 flex items-center justify-center pt-0 -mt-5">
                 <h2
-                  className="text-sm sm:text-l md:text-xl lg:text-2xl font-bold text-yellow-400 uppercase tracking-wider px-2 sm:px-4"
+                  className="text-sm sm:text-l md:text-xl lg:text-3xl font-bold text-red-400 uppercase tracking-wider px-5 sm:px-5 text-center"
                   style={{
                     fontFamily: "'Pokemon Solid', sans-serif",
                     textShadow: "2px 2px 0px #000",
-                    letterSpacing: "0.3em",
+                    letterSpacing: "0.2em",
                   }}
                 >
                   {mapData.title || "Opening Day"}
@@ -257,7 +257,7 @@ const PokemonGame = ({ mapData, onComplete }) => {
               }}
             >
               <div
-                className="text-gray-900 text-xs sm:text-sm leading-relaxed relative z-10"
+                className="text-gray-500 text-lg sm:text-base leading-relaxed relative z-12"
                 style={{
                   fontFamily: "'Pokemon Fire Red', monospace",
                   letterSpacing: "0.02em",
