@@ -81,7 +81,15 @@ const Navigation = () => {
             alt="nintendo"
           />
           <div className="absolute w-[65%] h-[89%] -top-[-7%] left-[17.5%] bg-black rounded-xl overflow-hidden z-10 flex justify-center items-center pointer-events-none">
-            <h1 className="font-pocket-monk text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl underline text-[#968718] opacity-0 animate-fadeIn tracking-wider">
+            <h1
+              className="font-pocket-monk text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl text-[#e1e0d9] opacity-0 animate-fadeIn tracking-wider"
+              style={{
+                textShadow:
+                  "3px 3px 0px #002067, -1px -1px 0px #002067, 1px -1px 0px #002067, -1px 1px 0px #002067, 1px 1px 0px #002067",
+                WebkitTextStroke: "1px #002067",
+              }}
+            >
+              {" "}
               Tracks
             </h1>
           </div>
