@@ -2,7 +2,6 @@ import React from "react";
 import "./Footer.css";
 
 const backgroundPattern = "/images/footerbg.png";
-const visitTechnoesisBtn = "/images/visittechno.png";
 const contactUsText = "/images/Contact Us.png";
 const instagramIcon = "/images/insta.png";
 const linkedinIcon = "/images/linkedin.png";
@@ -16,19 +15,6 @@ const Footer = () => {
       <div className="footer-container">
         <div className="footer-main">
           <div className="footer-left">
-            <a
-              href="https://tecnoesis.co.in/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="visit-technoesis"
-            >
-              <img
-                src={visitTechnoesisBtn}
-                alt="Visit Technoesis Button"
-                className="visit-technoesis-img"
-              />
-            </a>
-
             <div className="contact-section">
               <img src={contactUsText} alt="Contact Us" className="contact-us-img" />
 
