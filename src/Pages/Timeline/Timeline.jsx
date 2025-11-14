@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import GamePopup from "../../Components/GamePopup/GamePopup";
 import mapDataImport from "../../assets/mapData.json";
@@ -9,7 +9,23 @@ const Timeline = () => {
   const [characterPosition, setCharacterPosition] = useState({ x: 15, y: 85 });
   const [isGameOpen, setIsGameOpen] = useState(false);
   const [selectedGameDay, setSelectedGameDay] = useState(null);
+  const [showHint, setShowHint] = useState(true);
   const navigate = useNavigate();
+
+  // Hide hint after 8 seconds or when game is opened
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowHint(false);
+    }, 8000);
+
+    return () => clearTimeout(timer);
+  }, []);
+
+  useEffect(() => {
+    if (isGameOpen) {
+      setShowHint(false);
+    }
+  }, [isGameOpen]);
   const days = [
     { id: 1, label: "DAY 1", x: 15, y: 85, color: "red" },
     { id: 2, label: "DAY 2", x: 15, y: 28, color: "purple" },
@@ -174,7 +190,7 @@ const Timeline = () => {
               style={{ left: `${day.x}%`, top: `${day.y}%` }}
             >
               {/* Day label */}
-              <div className="absolute -top-8 md:-top-10 left-1/2 transform -translate-x-1/2 bg-[linear-gradient(to_bottom,#E5E6E9_42%,#B3B3B3_59%,#B3AEAE_100%)] px-2 py-1 md:px-8 rounded text-xs md:text-sm font-bold text-gray-800 shadow whitespace-nowrap">
+              <div className="absolute -top-8 md:-top-10 left-1/2 transform -translate-x-1/2 bg-[linear-gradient(to_bottom,#E5E6E9_42%,#B3B3B3_59%,#B3AEAE_100%)] px-2 py-1 md:px-8 rounded text-base md:text-base font-bold text-gray-600 shadow whitespace-nowrap">
                 {day.label}
               </div>
 
@@ -203,6 +219,20 @@ const Timeline = () => {
             <div className="relative w-full h-full flex items-center justify-center">
               {/* Simple character sprite */}
               <img src="/game/front.webp" alt="" />
+
+              {/* Pokemon-themed hint tooltip */}
+              {showHint && (
+                <div className="absolute -top-20 md:-top-24 left-1/2 transform -translate-x-1/2 whitespace-nowrap pointer-events-none">
+                  <div className="relative bg-white rounded-2xl px-4 py-2 md:px-6 md:py-3 shadow-lg border-4 border-gray-800 animate-bounce">
+                    <p className="text-xs md:text-sm font-pokemon-fire-red text-gray-800 font-bold">
+                      Click me to catch &apos;em all! 🎮
+                    </p>
+                    {/* Speech bubble tail */}
+                    <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-l-transparent border-r-transparent border-t-gray-800"></div>
+                    <div className="absolute -bottom-1 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-6 border-r-6 border-t-6 border-l-transparent border-r-transparent border-t-white"></div>
+                  </div>
+                </div>
+              )}
             </div>
           </button>
         </div>

@@ -17,11 +17,11 @@
 .logo-section {
   margin-top: 5rem;
 }
-
 .logo {
-  width: 18rem; /* increased size */
-  max-width: 90vw;
+  width: 75rem;
+  max-width: 140vw;
   height: auto;
+  transform: scale(1.1);
 }
 
 /* --- PIKACHU + BAR --- */
@@ -36,7 +36,7 @@
 }
 
 .pikachu {
-  width: 9rem; /* increased size */
+  width: 9rem;
   height: auto;
   margin-bottom: 1.5rem;
   animation: pikachuRun 1s linear infinite;
@@ -117,7 +117,7 @@
 /* --- RESPONSIVE --- */
 @media (max-width: 768px) {
   .logo {
-    width: 14rem;
+    width: 18rem; /* increased from 14rem */
   }
 
   .pikachu {
@@ -132,7 +132,7 @@
 
 @media (max-width: 480px) {
   .logo {
-    width: 10rem;
+    width: 14rem; /* increased from 10rem */
   }
 
   .pikachu {
