@@ -85,7 +85,12 @@ const TracksDesktop = () => {
           >
             <div className="backdrop-blur-xl bg-black/40 flex flex-col h-120 px-8 relative overflow-hidden">
               <div className="relative z-200 flex-1 flex flex-col items-center py-4 justify-center gap-4 text-white text-center">
-                <h2 className="font-pocket-monk text-4xl mb-2">{data.name}</h2>
+                <span className="flex flex-col">
+                  <h2 className="font-pocket-monk text-4xl">{data.name}</h2>
+                  <h2 className="font-pocket-monk uppercase text-xl mb-2">
+                    {data.subHeading}
+                  </h2>
+                </span>
                 <p className="text-justify font-pokemon-fire-red text-xs leading-relaxed">
                   {data.bigdesc}
                 </p>

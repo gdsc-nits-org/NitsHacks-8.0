@@ -107,9 +107,12 @@ const TracksMobile = () => {
               >
                 <div className="backdrop-blur-xl bg-black/40 h-full relative overflow-y-auto w-full px-6 md:px-10">
                   <div className="relative z-200 flex flex-col md:gap-4 h-full items-center py-4 justify-center gap-2 text-white text-center">
-                    <h2 className="font-pocket-monk uppercase text-xl md:text-2xl mb-2">
-                      {data.name}
-                    </h2>
+                    <span className="flex flex-col">
+                      <h2 className="font-pocket-monk text-2xl">{data.name}</h2>
+                      <h2 className="font-pocket-monk uppercase text-md mb-2">
+                        {data.subHeading}
+                      </h2>
+                    </span>
                     <p className="text-justify font-pokemon-fire-red text-xs md:text-sm leading-relaxed">
                       {data.desc}
                     </p>
