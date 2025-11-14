@@ -72,7 +72,7 @@ const TracksMobile = () => {
   };
 
   return (
-    <div className="relative z-200 inset-0 h-auto w-screen h-screen overflow-visible flex flex-col">
+    <div className="relative z-200 inset-0 w-screen h-screen overflow-visible flex flex-col">
       {/* --- Background Transition Layer --- */}
       <div className="absolute inset-0 transition-opacity duration-700">
         <div
@@ -98,22 +98,27 @@ const TracksMobile = () => {
         {/* 2. Middle content */}
         <div className="flex items-center justify-center flex-1  py-4 relative z-10">
           <div className="flex flex-col pt-6">
-            <img className="w-72 md:w-120" src="/images/tracks/dexUp.png" alt="" />
-            <div className="w-72 md:w-120">
+            <img className="w-80 md:w-[32rem]" src="/images/tracks/dexUp.png" alt="" />
+            <div className="w-80 md:w-[32rem]">
               <div
                 className={`relative transition-all duration-500 ease-linear overflow-hidden ${
-                  isOpen ? "h-52 md:h-80" : "h-0"
+                  isOpen ? "h-64 md:h-96" : "h-0"
                 }`}
               >
-                <div className="backdrop-blur-lg bg-white/30 h-full relative overflow-y-auto w-full px-4 md:px-8">
-                  <div className="relative z-200 flex flex-col md:gap-4 h-full items-center py-4 justify-center gap-1 text-white text-center">
-                    <h2 className="font-pokemon-fire-red uppercase text-lg md:text-xl mb-2">
-                      {data.name}
-                    </h2>
-                    <p className="text-justify text-xs md:text-base">{data.desc}</p>
+                <div className="backdrop-blur-xl bg-black/40 h-full relative overflow-y-auto w-full px-6 md:px-10">
+                  <div className="relative z-200 flex flex-col md:gap-4 h-full items-center py-4 justify-center gap-2 text-white text-center">
+                    <span className="flex flex-col">
+                      <h2 className="font-pocket-monk text-2xl">{data.name}</h2>
+                      <h2 className="font-pocket-monk uppercase text-md mb-2">
+                        {data.subHeading}
+                      </h2>
+                    </span>
+                    <p className="text-justify font-pokemon-fire-red text-xs md:text-sm leading-relaxed">
+                      {data.desc}
+                    </p>
                     <a
                       href={data.registrationLink}
-                      className="font-pokemon-solid mt-2 md:mt-4 max-w-fit text-xs text-stroke-black pt-1 pb-2 px-4 border-2 rounded-full border-white hover:scale-105 transition-all duration-150 ease-linear"
+                      className="font-pocket-monk mt-2 md:mt-4 max-w-fit text-xs text-stroke-black pt-1 pb-2 px-4 border-2 rounded-full border-white hover:scale-105 transition-all duration-150 ease-linear"
                     >
                       Register Now
                     </a>
@@ -121,29 +126,29 @@ const TracksMobile = () => {
                 </div>
               </div>
             </div>
-            <img className="w-72 md:w-120" src="/images/tracks/dexDown.png" alt="" />
+            <img className="w-80 md:w-[32rem]" src="/images/tracks/dexDown.png" alt="" />
           </div>
         </div>
 
         {/* 3. Bottom buttons */}
-        <div className="flex justify-center items-center gap-2 px-8 pb-8 shrink-0 relative z-20">
+        <div className="flex justify-center items-center gap-2 px-8 pb-4 shrink-0 relative z-20">
           <button onClick={() => handleClick(1)}>
             <img
-              className="h-24 hover:scale-105 transition-all duration-150 ease-linear"
+              className="h-32 hover:scale-105 transition-all duration-150 ease-linear"
               src="/images/tracks/codingGame.svg"
               alt="codingTrack"
             />
           </button>
           <button onClick={() => handleClick(2)}>
             <img
-              className="h-24 hover:scale-105 transition-all duration-150 ease-linear"
+              className="h-32 hover:scale-105 transition-all duration-150 ease-linear"
               src="/images/tracks/softwareGame.svg"
               alt="softwareTrack"
             />
           </button>
           <button onClick={() => handleClick(3)}>
             <img
-              className="h-24 hover:scale-105 transition-all duration-150 ease-linear"
+              className="h-32 hover:scale-105 transition-all duration-150 ease-linear"
               src="/images/tracks/uiuxGame.svg"
               alt="uiuxTrack"
             />

@@ -23,15 +23,16 @@
   },
   {
     "id": 3,
-    "name": "Dishank Choudhury",
-    "designation": "Developer",
+    "name": "DIKSHA BHATTACHARJEE",
+    "designation": "UI/UX",
     "role": "Tech",
-    "img": "https://res.cloudinary.com/dq52438zg/image/upload/v1762527359/nits-hacks-7.0/tech-team/luqsv3gbd3g476ctqqk3.jpg",
-    "fb": "https://www.facebook.com/profile.php?id=61567024787802",
-    "linkedin": "https://www.linkedin.com/in/dishank-choudhury-56b565318",
-    "git": "https://github.com/di35117",
-    "codeforces": "https://codeforces.com/profile/Dishank35117"
+    "img": "https://res.cloudinary.com/dqobuxkcj/image/upload/v1762799788/Diksha_Bhattacharjee_ef1l63.jpg",
+    "fb": "https://www.facebook.com/profile.php?id=61567060391925&mibextid=rS40aB7S9Ucbxw6v",
+    "linkedin": "https://www.linkedin.com/in/diksha-bhattacharjee-1b5818325?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app ",
+    "git": "",
+    "codeforces": ""
   },
+  
   {
     "id": 4,
     "name": "Debarpan Roy",
@@ -144,6 +145,28 @@
   },
   {
     "id": 14,
+    "name": "Dishank Choudhury",
+    "designation": "Developer",
+    "role": "Tech",
+    "img": "https://res.cloudinary.com/dq52438zg/image/upload/v1762527359/nits-hacks-7.0/tech-team/luqsv3gbd3g476ctqqk3.jpg",
+    "fb": "https://www.facebook.com/profile.php?id=61567024787802",
+    "linkedin": "https://www.linkedin.com/in/dishank-choudhury-56b565318",
+    "git": "https://github.com/di35117",
+    "codeforces": "https://codeforces.com/profile/Dishank35117"
+  },
+  {
+    "id": 15,
+    "name": "SUROJIT ROY",
+    "designation": "UI/UX",
+    "role": "Tech",
+    "img": "https://res.cloudinary.com/dqobuxkcj/image/upload/v1762799815/Surojit_Roy_lgns4z.jpg",
+    "fb": "https://www.facebook.com/share/1BUb3dj493/",
+    "linkedin": "https://www.linkedin.com/in/surojit-roy-135919379?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
+    "git": "https://github.com/SurojitRoy25",
+    "codeforces": ""
+  },
+  {
+    "id": 16,
     "name": "Mriganka Dey",
     "designation": "TechLead",
     "role": "Techlead",
@@ -154,7 +177,7 @@
     "codeforces": ""
   },
   {
-    "id": 15,
+    "id": 17,
     "name": "Astitwa Ray",
     "designation": "Coding Track Head",
     "role": "Organisers",
@@ -165,7 +188,7 @@
     "codeforces": "https://codeforces.com/profile/astitwaroy"
   },
   {
-    "id": 16,
+    "id": 18,
     "name": "Anmol Swarup Sahoo",
     "designation": "Editorial Head",
     "role": "Organisers",
@@ -176,7 +199,7 @@
     "codeforces": ""
   },
   {
-    "id": 17,
+    "id": 19,
     "name": "Tapasya Bhattacharjee",
     "designation": "Design Head",
     "role": "Organisers",
@@ -187,7 +210,7 @@
     "codeforces": "https://codeforces.com/profile/tapasyabhatt"
   },
   {
-    "id": 18,
+    "id": 20,
     "name": "Dhananjoy Das",
     "designation": "Marketing Head",
     "role": "Organisers",
@@ -198,7 +221,7 @@
     "codeforces": ""
   },
   {
-    "id": 19,
+    "id": 21,
     "name": "Vikrant Agarwala",
     "designation": "Marketing Head",
     "role": "Organisers",
@@ -209,7 +232,7 @@
     "codeforces": "https://codeforces.com/profile/V1rus_17"
   },
   {
-    "id": 20,
+    "id": 22,
     "name": "Subrata Lodh",
     "designation": "Outreach Head",
     "role": "Organisers",
@@ -220,7 +243,7 @@
     "codeforces": ""
   },
   {
-    "id": 21,
+    "id": 23,
     "name": "Abhinav Narayan Dev",
     "designation": "Management Head",
     "role": "Organisers",
@@ -231,7 +254,7 @@
     "codeforces": "https://codeforces.com/profile/Abhinav1569"
   },
   {
-    "id": 22,
+    "id": 24,
     "name": "Piyush Chatterjee",
     "designation": "TechLead",
     "role": "Techlead",
@@ -242,7 +265,7 @@
     "codeforces": ""
   },
   {
-    "id": 23,
+    "id": 26,
     "name": "Anirban Bora",
     "designation": "Software Track Head",
     "role": "Organisers",
@@ -253,7 +276,7 @@
     "codeforces": ""
   },
   {
-    "id": 25,
+    "id": 27,
     "name": "Kaushik Bhowmick",
     "designation": "Outreach Head",
     "role": "Organisers",
@@ -264,7 +287,7 @@
     "codeforces": ""
   },
   {
-    "id": 26,
+    "id": 28,
     "name": "Gauri Jain",
     "designation": "Design Head",
     "role": "Organisers",
@@ -275,7 +298,7 @@
     "codeforces": "https://codeforces.com/profile/gaurijain2004"
   },
   {
-    "id": 27,
+    "id": 29,
     "name": "Upamanyu Jit Phukan",
     "designation": "Coding Track Head",
     "role": "Organisers",
@@ -287,7 +310,7 @@
   },
 
   {
-    "id": 28,
+    "id": 30,
     "name": "Prof. Rahul Dev Misra",
     "designation": "President, IIC",
     "img": "https://res.cloudinary.com/dmezugavw/image/upload/v1730522543/rdmishra-chairman-research-promotion-cell-nit-silchar_ynrsas.jpg",
@@ -299,7 +322,7 @@
     "portfolio": "http://me.nits.ac.in/prof-r-d-misra/"
   },
   {
-    "id": 29,
+    "id": 31,
     "name": "Dr. Ashish B. Deoghare",
     "designation": "IIC Coordinator",
     "img": "https://res.cloudinary.com/dhry5xscm/image/upload/v1729517375/nits-hacks-7.0/abdeoghare_znphbt.jpg",
@@ -311,7 +334,7 @@
     "portfolio": "http://me.nits.ac.in/dr-a-b-deoghare/"
   },
   {
-    "id": 30,
+    "id": 32,
     "name": "Dr. Ripon Patgiri",
     "designation": "Faculty Advisor, NITSHACKS",
     "img": "https://cs.nits.ac.in/storage/FacultyDetails/IMG_1753450953688389c9983fc.jpg",
@@ -323,7 +346,7 @@
     "portfolio": "https://cs.nits.ac.in/faculties/ripon"
   },
   {
-    "id": 31,
+    "id": 33,
     "name": "Sahin Alam",
     "designation": "Convener",
     "img": "https://res.cloudinary.com/dg361q5uv/image/upload/v1729014745/team_img/oyiknerd4lqrxgjw9opa.webp",
@@ -334,7 +357,7 @@
     "codeforces": ""
   },
   {
-    "id": 32,
+    "id": 34,
     "name": "Barnil Sarma",
     "linkedin": "https://www.linkedin.com/in/barnil-sarma-34383a255",
     "git": "https://github.com/barnilsarma",
@@ -345,7 +368,7 @@
     "codeforces": ""
   },
   {
-    "id": 33,
+    "id": 35,
     "name": "Rishi Raj Saha",
     "linkedin": "https://www.linkedin.com/in/rishi-raj-saha-696b44257?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app",
     "git": "https://github.com/rishinhk004",
@@ -356,7 +379,7 @@
     "codeforces": ""
   },
   {
-    "id": 34,
+    "id": 36,
     "name": "Samarjit Roy",
     "linkedin": "https://www.linkedin.com/in/samarjit-roy-368071257/",
     "git": "https://github.com/Samarjit25",
@@ -367,7 +390,7 @@
     "codeforces": ""
   },
   {
-    "id": 35,
+    "id": 37,
     "name": "Jagatjyoti Deb",
     "designation": "Coordinator",
     "img": "https://res.cloudinary.com/dg361q5uv/image/upload/v1729014577/team_img/wrmhf7p0czwwddxyqxdz.webp",
@@ -378,7 +401,7 @@
     "codeforces": ""
   },
   {
-    "id": 36,
+    "id": 38,
     "name": "Siddharth Ghosh",
     "role": "Coordinator",
     "designation": "Chief Coordinator",
@@ -396,17 +419,18 @@
     "linkedin": "https://www.linkedin.com/in/saibalik-chakraborty-802137284/",
     "cf": "https://codeforces.com/profile/SuperNovaDs",
     "fb": "https://www.facebook.com/profile.php?id=61553583980749",
-    "id": 37
+    "id": 39
   },
   {
     "role": "Prob",
     "name": "Hirak Rajbonshi",
     "designation": "Problem Setter",
-    "cf": "https://codeforces.com/profile/karock",
+    "codeforces": "https://codeforces.com/profile/karock",
+    "git": "https://github.com/hirakRajbonshi",
     "linkedin": "https://www.linkedin.com/in/hirak-rajbonshi-baa6a628a/",
     "fb": "https://www.facebook.com/hirak.rajbonshi.7?mibextid=ZbWKwL",
     "img": "https://res.cloudinary.com/gdsc-photo/image/upload/v1726288668/hhwia4wcqmraaypee6y8.webp",
-    "id": 38
+    "id": 40
   },
   {
     "role": "Organisers",
@@ -416,6 +440,17 @@
     "linkedin": "https://www.linkedin.com/in/jitamanyu-phukan-562728280",
     "git": "https://github.com/procoast",
     "fb": "https://m.facebook.com/profile.php?id=100070630387563&name=xhp_nt__fb__action__open_user",
-    "id": 39
+    "id": 41
+  },
+  {
+    "id": 42,
+    "name": "Rahul Kumar",
+    "designation": "UI/UX",
+    "role": "Tech",
+    "img": "https://res.cloudinary.com/dv7jsvmit/image/upload/v1757753889/profile_photos/rahul_kumar.jpg",
+    "fb": "https://www.facebook.com/profile.php?id=61565220262684",
+    "linkedin": "https://www.linkedin.com/in/rahul-kumar-262272325/",
+    "git": "https://gdscnits.in/github.com/xrk9",
+    "codeforces": ""
   }
 ]
