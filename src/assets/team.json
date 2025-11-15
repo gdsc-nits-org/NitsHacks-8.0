@@ -462,5 +462,48 @@
     "fb": "https://www.facebook.com/profile.php?id=61550684457505",
     "img": "https://res.cloudinary.com/dqobuxkcj/image/upload/v1763151416/1704519662144_x1s8mu.jpg",
     "id": 43
+  },
+  {
+    "id": 44,
+    "name": "Aayan Borah Kalita",
+    "designation": "Coordinator",
+    "role": "Coordinator",
+    "img": "https://res.cloudinary.com/dhry5xscm/image/upload/v1730129772/nits-hacks-7.0/ayan_yawymg.jpg",
+    "git": "",
+    "linkedin": "https://www.linkedin.com/in/aayanborahkalita/",
+    "fb": "https://www.facebook.com/profile.php?id=100087922154594",
+    "codeforces": "https://codeforces.com/profile/GetRekt"
+  },
+  {
+    "id": 45,
+    "name": "Sohail Kazi",
+    "designation": "Coordinator",
+    "role": "Coordinator",
+    "img": "https://res.cloudinary.com/dhry5xscm/image/upload/v1730129772/nits-hacks-7.0/sohail_ouhcak.jpg",
+    "git": "",
+    "linkedin": "https://www.linkedin.com/in/sohail-kazi-951677249/",
+    "fb": "",
+    "codeforces": "https://codeforces.com/profile/sohailkazi"
+  },
+  {
+    "id": 46,
+    "name": "Rishi Jha",
+    "designation": "Coordinator",
+    "role": "Coordinator",
+    "img": "https://res.cloudinary.com/dhry5xscm/image/upload/v1730054693/nits-hacks-7.0/WhatsApp_Image_2024-10-28_at_12.12.33_AM_snesjr.jpg",
+    "git": "",
+    "linkedin": "https://www.linkedin.com/in/rishi-jha-3604191a3",
+    "fb": ""
+  },
+  {
+    "id": 47,
+    "name": "Nawadeep Atreya",
+    "designation": "Coordinator",
+    "role": "Coordinator",
+    "img": "https://res.cloudinary.com/dhry5xscm/image/upload/v1730129772/nits-hacks-7.0/WhatsApp_Image_2024-10-27_at_18.51.46_4309b3c7_-_Nawadeep_Atreya_fv3y4l.jpg",
+    "git": "",
+    "linkedin": "https://www.linkedin.com/in/nawadeepatreya/",
+    "fb": "https://www.facebook.com/nawadeep.atreya.5",
+    "codeforces": "https://codeforces.com/profile/Atreya45"
   }
 ]
