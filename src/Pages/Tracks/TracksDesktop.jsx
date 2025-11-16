@@ -98,7 +98,7 @@ const TracksDesktop = () => {
                   href={data.registrationLink}
                   className="font-pocket-monk cursor-pointer max-w-fit text-stroke-black pt-0.8 pb-2 px-4 border-2 rounded-full border-white hover:scale-105 transition-all duration-150 ease-linear"
                 >
-                  Coming Soon ....
+                  Register Now !
                 </a>
               </div>
 

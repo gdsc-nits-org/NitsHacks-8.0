@@ -120,7 +120,7 @@ const TracksMobile = () => {
                       href={data.registrationLink}
                       className="font-pocket-monk mt-2 md:mt-4 max-w-fit text-xs text-stroke-black pt-1 pb-2 px-4 border-2 rounded-full border-white hover:scale-105 transition-all duration-150 ease-linear"
                     >
-                      Register Now
+                      Register Now !
                     </a>
                   </div>
                 </div>
