@@ -1,17 +1,17 @@
 [
   {
     "id": 1,
-    "name": "Swaglok",
-    "img": "https://res.cloudinary.com/dg361q5uv/image/upload/v1730541271/rgih5oohiuvgfe2mzt1a.png",
-    "uri": "https://www.instagram.com/shop_swaglok/?hl=en",
+    "name": "Campus Craft",
+    "img": "https://res.cloudinary.com/dwzakk4bw/image/upload/v1763371727/campus_kmquvp.jpg",
+    "uri": "",
     "type": "MERCHANDISE PARTNER"
   },
   {
     "id": 2,
-    "name": "Cipher Schools",
-    "img": "https://res.cloudinary.com/dg361q5uv/image/upload/v1730541435/nsz2zdttjfxqd6kleypl.png",
-    "uri": "https://www.cipherschools.com/",
-    "type": "EDUCATION PARTNER"
+    "name": "Gplus",
+    "img": "https://res.cloudinary.com/dwzakk4bw/image/upload/v1763371539/gplus_cdwjtw.avif",
+    "uri": "https://guwahatiplus.com/",
+    "type": "MEDIA PARTNER"
   },
   {
     "id": 3,
@@ -22,44 +22,9 @@
   },
   {
     "id": 4,
-    "name": "NordVPN",
-    "img": "https://res.cloudinary.com/dg361q5uv/image/upload/v1730541636/kszkbvtylmynriqatipq.png",
-    "uri": "https://nordvpn.com/hackathons",
-    "type": "RESOURCE PARTNER"
-  },
-  {
-    "id": 5,
-    "name": "NordPass",
-    "img": "https://res.cloudinary.com/dg361q5uv/image/upload/v1730541635/ebzdpt9gvncxdzygk59z.png",
-    "uri": "https://nordpass.com/",
-    "type": "RESOURCE PARTNER"
-  },
-  {
-    "id": 6,
-    "name": "Incogni",
-    "img": "https://res.cloudinary.com/dg361q5uv/image/upload/v1730541861/xbqr3sl7hvb9kqdxotpl.png",
-    "uri": "https://incogni.com/",
-    "type": "RESOURCE PARTNER"
-  },
-  {
-    "id": 7,
-    "name": "Saily",
-    "img": "https://res.cloudinary.com/dg361q5uv/image/upload/v1730541862/g9rpdil5vczblh3twqce.png",
-    "uri": "https://saily.com/",
-    "type": "RESOURCE PARTNER"
-  },
-  {
-    "id": 8,
-    "name": "Campus Karma",
-    "img": "https://res.cloudinary.com/dg361q5uv/image/upload/v1730541872/ouf2onrs9hwbi6cxeu71.png",
-    "uri": "https://www.campuskarma.in/",
-    "type": "MEDIA PARTNER"
-  },
-  {
-    "id": 9,
-    "name": "Flatlogic",
-    "img": "https://res.cloudinary.com/dg361q5uv/image/upload/v1730541874/z1ax5amhtioauubdpdkv.png",
-    "uri": "https://flatlogic.com/",
-    "type": "EVENT PARTNER"
+    "name": "Edu Vitae",
+    "img": "https://res.cloudinary.com/dwzakk4bw/image/upload/v1763371945/edu_vitae_exl5q0.jpg",
+    "uri": "https://eduvitae.in/",
+    "type": "EDUCATION PARTNER"
   }
 ]
