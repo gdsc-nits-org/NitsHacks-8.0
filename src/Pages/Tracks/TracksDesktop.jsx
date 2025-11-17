@@ -75,15 +75,15 @@ const TracksDesktop = () => {
 
       {/* This 'pt-10' is correct */}
       <div className="flex-1 flex justify-center items-center pt-10">
-        <div className="flex justify-center h-120 items-center w-[50vw]">
+        <div className="flex justify-center h-120 items-center w-[66vw] xl:w-[53vw]">
           <img className="h-120" src="/images/tracks/dexLeft.png" alt="" />
           <div
             // This 'w-0' (from isOpen: false) is what makes it start closed
             className={`relative transition-all duration-500 ease-linear overflow-hidden ${
-              isOpen ? "w-[32rem]" : "w-0"
+              isOpen ? "w-[40rem]" : "w-0"
             }`}
           >
-            <div className="backdrop-blur-xl bg-black/40 flex flex-col h-120 px-8 relative overflow-hidden">
+            <div className="backdrop-blur-xl bg-black/40 flex flex-col h-120 px-4 relative overflow-hidden">
               <div className="relative z-200 flex-1 flex flex-col items-center py-4 justify-center gap-4 text-white text-center">
                 <span className="flex flex-col">
                   <h2 className="font-pocket-monk text-4xl">{data.name}</h2>
@@ -91,7 +91,7 @@ const TracksDesktop = () => {
                     {data.subHeading}
                   </h2>
                 </span>
-                <p className="text-justify font-pokemon-fire-red text-xs leading-relaxed">
+                <p className="text-justify font-pokemon-fire-red text-xs leading-normal">
                   {data.bigdesc}
                 </p>
                 <a
