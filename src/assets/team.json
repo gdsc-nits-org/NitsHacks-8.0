@@ -264,6 +264,17 @@
     "codeforces": ""
   },
   {
+    "id": 25,
+    "name": "Manash Pratim Goswami",
+    "designation": "Software Track Head",
+    "role": "Organisers",
+    "img": "https://res.cloudinary.com/dg361q5uv/image/upload/v1763487241/WhatsApp_Image_2025-11-16_at_9.34.11_PM_1_emyoep.jpg",
+    "fb": "https://www.facebook.com/share/17bn4Ax4nh/",
+    "linkedin": "https://www.linkedin.com/in/manash-pratim-goswami-477352289/",
+    "git": "https://github.com/Manashgoswamii",
+    "codeforces": "https://codeforces.com/profile/Manashgoswamii"
+  },
+  {
     "id": 26,
     "name": "Anirban Bora",
     "designation": "Software Track Head",
@@ -307,7 +318,6 @@
     "git": "https://github.com/upamanyu-jit-phukan",
     "codeforces": "https://codeforces.com/profile/Upamanyu_Phukan"
   },
-
   {
     "id": 30,
     "name": "Prof. Rahul Dev Misra",
@@ -416,8 +426,9 @@
     "designation": "TechLead",
     "img": "https://res.cloudinary.com/gdsc-photo/image/upload/v1729606585/p18e08hqxxclb7xmr2yf.webp",
     "linkedin": "https://www.linkedin.com/in/saibalik-chakraborty-802137284/",
-    "cf": "https://codeforces.com/profile/SuperNovaDs",
+    "codeforces": "https://codeforces.com/profile/SuperNovaDs",
     "fb": "https://www.facebook.com/profile.php?id=61553583980749",
+    "git": "",
     "id": 39
   },
   {
