@@ -79,7 +79,7 @@ const Sponsors = () => {
         <div className="flex items-center justify-center mt-10">
           {/* <img src="/images/SPONSORS.svg" className="w-full max-w-md" alt="Sponsors" /> */}
           <h1 className="text-5xl text-center text-stroke tracking-wider md:text-9xl font-pocket-monk text-[#FFCB02]">
-            Previous Sponsors
+            Sponsors
           </h1>
         </div>
         <div
