@@ -2,6 +2,8 @@
   {
     "id": 1,
     "name": "Coding track",
+    "subHeading": "algorithmic excellence & ideation",
+
     "photo": "https://res.cloudinary.com/dhry5xscm/image/upload/v1730530020/nits-hacks-7.0/Coding_2_erebuh.png",
     "desc": "Get ready for the thrilling Competitive Programming Contest of NITS HACKS 8.0 in association with Coding Club NIT Silchar, held alongside the event Tecnoesis, of NIT Silchar. The thrill and fun of team contests is back, with exciting prizes! ",
     "registrationLink": "https://unstop.com/p/coding-track-nits-hacks-80-nits-hacks-80-national-institute-of-technology-nit-silchar-1590743",
@@ -19,6 +21,8 @@
   {
     "id": 3,
     "name": "ui/ux track",
+    "subHeading": "ideation, design and innovation",
+
     "photo": "https://res.cloudinary.com/dhry5xscm/image/upload/v1730542628/nits-hacks-7.0/uiux_2_ueo3gn.png",
     "desc": "The UI/UX Track at NITS HACKS 8.0 offers an engaging opportunity for participants to showcase their design skills within the exciting theme of Star Wars. Participants will tackle two unique problem statements that challenge their creativity and innovation.",
     "registrationLink": "https://unstop.com/hackathons/uiux-track-nits-hacks-80-national-institute-of-technology-nit-silchar-1593198",
